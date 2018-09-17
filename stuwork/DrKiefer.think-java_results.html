@@ -7,8 +7,7 @@ Run date: 2018-09-16
 
 ----------------------------------------------------------
 [STUDENT INIT] DrKiefer
-[SETUP] Creating student dir:  ./stuwork/DrKiefer
-[FRESH & CLEAN] @ ./stuwork/DrKiefer/think-java-DrKiefer
+[CLEANUP] Removing project dir: ./stuwork/DrKiefer/think-java-DrKiefer
 [GITWORK]
 [Attempting DL:https://github.com/SwettSoquelHS/think-java-DrKiefer.git]
 Cloning into 'think-java-DrKiefer'...
@@ -16,6 +15,7 @@ Cloning into 'think-java-DrKiefer'...
 [GITWORK DONE]
 
 *[BEGIN chapter2]
+  [EXPECTED TARGETS] ['Date', 'Time']]
 [COMPILING] Date.java
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
@@ -38,9 +38,11 @@ Time Since Midnight: 12: 0: 21
 <--
 	[OUTPUT OK]
 
+[SUMMARY] ['Date: PASS', 'Time: PASS']
 [DONE chapter2]
 
 *[BEGIN chapter3]
+  [EXPECTED TARGETS] ['Exercise3', 'Exercise4']]
 [COMPILING] Exercise3.java
 	[SUCCESSFUL COMPILE] Exercise3.java
 [RUNNING] Exercise3
@@ -53,13 +55,18 @@ Time Since Midnight: 12: 0: 21
 -->
 	[ERROR] Runtime Error @ java Exercise4
 
+[SUMMARY] ['Exercise3: RUNTIME ERROR', 'Exercise4: RUNTIME ERROR']
 [DONE chapter3]
 
 *[BEGIN chapter4]
+  [EXPECTED TARGETS] ['Exercise4', 'Exercise5']]
 [COMPILING] Exercise4.java
 	[ERROR] Missing Compile Target:Exercise4.java
 [COMPILING] Exercise5.java
 	[ERROR] Missing Compile Target:Exercise5.java
+[SUMMARY] ['Exercise4: MISSING', 'Exercise5: MISSING']
 [DONE chapter4]
+[ASSIGNMENT DONE] asignment_1
+          [SCORE] 0.50
 
 </pre></body></html>

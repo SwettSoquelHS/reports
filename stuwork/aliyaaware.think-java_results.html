@@ -7,8 +7,7 @@ Run date: 2018-09-16
 
 ----------------------------------------------------------
 [STUDENT INIT] aliyaaware
-[SETUP] Creating student dir:  ./stuwork/aliyaaware
-[FRESH & CLEAN] @ ./stuwork/aliyaaware/think-java-aliyaaware
+[CLEANUP] Removing project dir: ./stuwork/aliyaaware/think-java-aliyaaware
 [GITWORK]
 [Attempting DL:https://github.com/SwettSoquelHS/think-java-aliyaaware.git]
 Cloning into 'think-java-aliyaaware'...
@@ -16,6 +15,7 @@ Cloning into 'think-java-aliyaaware'...
 [GITWORK DONE]
 
 *[BEGIN chapter2]
+  [EXPECTED TARGETS] ['Date', 'Time']]
 [COMPILING] Date.java
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
@@ -40,9 +40,11 @@ American format:
 			                                                                  ^
 	3 errors
 	
+[SUMMARY] ['Date: PASS', 'Time: COMPILE ERROR']
 [DONE chapter2]
 
 *[BEGIN chapter3]
+  [EXPECTED TARGETS] ['Exercise3', 'Exercise4']]
 [COMPILING] Exercise3.java
 	[SUCCESSFUL COMPILE] Exercise3.java
 [RUNNING] Exercise3
@@ -51,13 +53,18 @@ American format:
 
 [COMPILING] Exercise4.java
 	[ERROR] Missing Compile Target:Exercise4.java
+[SUMMARY] ['Exercise3: RUNTIME ERROR', 'Exercise4: MISSING']
 [DONE chapter3]
 
 *[BEGIN chapter4]
+  [EXPECTED TARGETS] ['Exercise4', 'Exercise5']]
 [COMPILING] Exercise4.java
 	[ERROR] Missing Compile Target:Exercise4.java
 [COMPILING] Exercise5.java
 	[ERROR] Missing Compile Target:Exercise5.java
+[SUMMARY] ['Exercise4: MISSING', 'Exercise5: MISSING']
 [DONE chapter4]
+[ASSIGNMENT DONE] asignment_1
+          [SCORE] 0.25
 
 </pre></body></html>
