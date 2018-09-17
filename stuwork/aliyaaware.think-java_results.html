@@ -29,18 +29,15 @@ American format:
 	[OUTPUT OK]
 
 [COMPILING] Time.java
-	[ERROR] javac failed Time.java Time.java:10: ')' expected
-			System.out.println("It has been "answer+ " seconds since midnight");
-			                                 ^
-	Time.java:10: not a statement
-			System.out.println("It has been "answer+ " seconds since midnight");
-			                                       ^
-	Time.java:10: ';' expected
-			System.out.println("It has been "answer+ " seconds since midnight");
-			                                                                  ^
-	3 errors
+	[SUCCESSFUL COMPILE] Time.java
+[RUNNING] Time
+-->
+It has been 50400 seconds since midnight
 	
-[SUMMARY] ['Date: PASS', 'Time: COMPILE ERROR']
+<--
+	[OUTPUT OK]
+
+[SUMMARY] ['Date: PASS', 'Time: PASS']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -59,14 +56,20 @@ American format:
 *[BEGIN chapter4]
   [EXPECTED TARGETS] ['Multadd']]
 [COMPILING] Multadd.java
-	[ERROR] javac failed Multadd.java Multadd.java:21: missing return statement
-		}
-		^
-	1 error
+	[SUCCESSFUL COMPILE] Multadd.java
+[RUNNING] Multadd
+-->
+5.0
+	0.16066013601703433
+	5.298317366548037
+	1.0303150673048738
 	
-[SUMMARY] ['Multadd: COMPILE ERROR']
+<--
+	[OUTPUT OK]
+
+[SUMMARY] ['Multadd: PASS']
 [DONE chapter4]
 [ASSIGNMENT DONE] asignment_1
-          [SCORE] 0.55
+          [SCORE] 0.75
 
 </pre></body></html>

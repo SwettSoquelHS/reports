@@ -29,27 +29,17 @@ American Format:
 	[OUTPUT OK]
 
 [COMPILING] Time.java
-	[ERROR] javac failed Time.java Time.java:10: ';' expected
-			hour = 12
-			         ^
-	Time.java:11: ';' expected
-			minute = 15
-			           ^
-	Time.java:12: ';' expected
-			second = 5
-			          ^
-	Time.java:14: ';' expected
-			time_since_midnight = 24 - hour
-			                               ^
-	Time.java:16: illegal start of expression
-			System.out.println("Number of seconds since midnight: " + );
-			                                                          ^
-	Time.java:17: illegal start of expression
-			System.out.println("Number of seconds left in day: " + );
-			                                                       ^
-	6 errors
+	[SUCCESSFUL COMPILE] Time.java
+[RUNNING] Time
+-->
+Time(in seconds) elasped since midnight: 66001
+	Time(in seconds) left in day: 20399
+	Percent of day passed: 76.3900462962963%
 	
-[SUMMARY] ['Date: PASS', 'Time: COMPILE ERROR']
+<--
+	[OUTPUT OK]
+
+[SUMMARY] ['Date: PASS', 'Time: PASS']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -68,8 +58,8 @@ Enter seconds: 13 seconds = 0 hours, 0.0 minutes, and 13 seconds
 [RUNNING] Exercise4
 -->
 Enter a number: Your guess is: 13
-	The number I was thinking of was: 89
-	You were off by: 76
+	The number I was thinking of was: 69
+	You were off by: 56
 	
 <--
 	[OUTPUT OK]
@@ -93,6 +83,6 @@ Enter a number: Your guess is: 13
 [SUMMARY] ['Multadd: PASS']
 [DONE chapter4]
 [ASSIGNMENT DONE] asignment_1
-          [SCORE] 0.90
+          [SCORE] 1.00
 
 </pre></body></html>

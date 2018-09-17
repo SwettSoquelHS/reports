@@ -48,9 +48,30 @@ Time:
 
 *[BEGIN chapter4]
   [EXPECTED TARGETS] ['Multadd']]
-	[ERROR] No chapter work for:chapter4
+[COMPILING] Multadd.java
+	[ERROR] javac failed Multadd.java Multadd.java:6: <identifier> expected
+	System.out.println("Exercise 6...");
+	                  ^
+	Multadd.java:6: illegal start of type
+	System.out.println("Exercise 6...");
+	                   ^
+	Multadd.java:9: <identifier> expected
+			System.out.println("multAdd"
+			                  ^
+	Multadd.java:9: illegal start of type
+			System.out.println("multAdd"
+			                   ^
+	Multadd.java:9: ')' expected
+			System.out.println("multAdd"
+			                            ^
+	Multadd.java:12: ';' expected
+		public static double Multadd(double a, double b, double c){
+		      ^
+	6 errors
+	
+[SUMMARY] ['Multadd: COMPILE ERROR']
 [DONE chapter4]
 [ASSIGNMENT DONE] asignment_1
-          [SCORE] 0.20
+          [SCORE] 0.50
 
 </pre></body></html>
