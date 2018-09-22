@@ -1,8 +1,33 @@
-import sys, os, time, subprocess
+import sys, os, time, subprocess, getpass
 from datetime import date
 from subprocess import Popen, PIPE, STDOUT
 
-STUDENTS = [('sut name, stu email' , 'stugithubusername')]
+STUDENTS = [('Aaron, afaun29@sccs-stu.net' , 'asianaaron2'), 
+    ('Adam, ARashid81@sccs-stu.net' , 'AdamRashid'), 
+    ('Aliya, AWare06@sccs-stu.net' , 'aliyaaware'), 
+    ('Bea, BLarson82@sccs-stu.net' , 'bealarson82'), 
+    ('Cole, CSchomer84@sccs-stu.net' , 'coleschomer'), 
+    ('Cristian, CAyala17@sccs-stu.net' , 'Crevin921'), 
+    ('Elizabeth, ELindquist18@sccs-stu.net' , 'bethtojatjar'), 
+    ('Gabe, GRoessler59@sccs-stu.net' , 'gaberoessler'), 
+    ('Jacob, jrogers74@sccs-stu.net' , 'Jake4902'), 
+    ('Jaden, JNgo96@sccs-stu.net' , 'jadenngo13'), 
+    ('Josh, JFlippo66@sccs-stu.net' , 'heypoppins'), 
+    ('Joshua, JMandell69@sccs-stu.net' , 'banjojeebus'), 
+    ('Kayla, KYoung58@sccs-stu.net' , 'KaylaRidesBikes'), 
+    ('Kia, kfouts48@sccs-stu.net' , 'kaifouts'), 
+    ('Liam, LSmith93@sccs-stu.net' , '1amsmith1020'), 
+    ('Marcus, MPantzloff42@sccs-stu.net' , 'Marcus620'), 
+    ('Max, MKaehler51@sccs-stu.net' , 'maxckaeh'), 
+    ('Michael, MVollmer05@sccs-stu.net' , 'MegaMichael1000'), 
+    ('Nick, NPoletti49@sccs-stu.net' , 'NickPoletti1'), 
+    ('NotSwett, notswetty@gmail.com' , 'notswett'), 
+    ('Reid, RLuhn20@sccs-stu.net' , 'ReidLuhn'), 
+    ('Sam, SPaniccia70@sccs-stu.net' , 'slammensam'), 
+    ('Samuel, SMussetter85@sccs-stu.net' , 'DrKiefer'), 
+    ('Shane, SBaxter70@sccs-stu.net' , 'shanebaxter101'), 
+    ('Theo, TFeldman44@sccs-stu.net' , 'Fwuff547'), 
+    ('Thomas, TPipitone89@sccs-stu.net' , 'tpipitone')]
 
 
 # print(students)
@@ -10,7 +35,10 @@ if sys.argv[1] is None:
     sys.exit(1)
 
 
+
 #github URL pattern
+#https://github.com/SwettSoquelHS/think-java-Fwuff547
+#https://github.com/SwettSoquelHS/think-java-Fwuff547.git
 HTTPS_STR = "https://"
 GITHUB_PROJ_BASE_URL= "github.com/SwettSoquelHS/"
 
@@ -33,11 +61,21 @@ specificUser = None
 if len(sys.argv) > 2:
     specificUser = sys.argv[2]
 
+sysUser = input("Enter the git user:")
+sysPwd = getpass.getpass(prompt='Enter github pwd for '+ sysUser +'? ')
+
+
+def gitPull():
+    if True:            
+        output = subprocess.check_output( ['git','pull'] , cwd=REPORT_DIR, 
+                stderr=subprocess.STDOUT)        
+
+
 def saveReportToGit(stu_to_report, reportFile):
     if True:
         stuCode = makeProjURL(HTTPS_STR+GITHUB_PROJ_BASE_URL, projName, studentGithubUser)
         printToReport(studentReport, "[Attempting DL:" + stuCode + ".git]")        
-        gitURL = HTTPS_STR + "fixuser:fixpwd@" + REPORTS 
+        gitURL = HTTPS_STR + sysUser + ":" + sysPwd + "@" + REPORTS 
 
         output = subprocess.check_output( ['git','add', "."] , cwd=REPORT_DIR, 
                 stderr=subprocess.STDOUT)        
@@ -54,7 +92,7 @@ def saveReportToGit(stu_to_report, reportFile):
 
 
 #<td>Student Code Base</td><td>Live Demo</td> <td>Report</td>
-def printTR(displayCodeBaseStr, codeURL, liveDisplay, liveURL, stuReport):
+def printTR(displayCodeBaseStr, codeURL, liveDisplay, liveURL, stuReport, theScore):
     result = '<tr><td><a href="' + codeURL + '">' + displayCodeBaseStr + "</a></td>"
     
     if liveDisplay != 'N/A':
@@ -65,21 +103,38 @@ def printTR(displayCodeBaseStr, codeURL, liveDisplay, liveURL, stuReport):
     if stuReport is None:
         result += '<td> N/A </td>'
     else:
-        result += '<td><a href="'+ stuReport +'">Report Results</a></td>'
+        result += '<td><a href="'+ stuReport +'">Report Results</a>'
+
+    if theScore is None:
+        result += "</td>"
+    else:
+        result += "<td>" + str(theScore) + "</td>"
     return result +'</tr>'
 
 def makeProjURL(base, proj, user):
     return base + proj + "-" + user
 
 
-def createClassReport(projName, stu_report_map, liveDemo  ):
+def createClassReport(projName, stu_report_map, liveDemo, scores  ):
     print("[FINALIZING] Running " + projName + " summary...")
-    reportFile = REPORT_DIR + "/" + projName + ".html"
+    reportFile = projName + ".html"
+    if not (scores is None):
+        reportFile = "admin-" + reportFile
+
+    reportFile = REPORT_DIR + "/" + reportFile
+
+
     with open(reportFile , "w") as file:
         file.write("<html><head><title>"+projName + " class report</title></head><body>")
-        file.write("<table><tr><td>Student Code Base</td><td>Live Demo</td> <td>Report</td> </tr>")
+        file.write("<table><tr><td>Student Code Base</td><td>Live Demo</td> <td>Report</td>")
+        if scores is None:
+            file.write(" </tr>")
+        else:
+            file.write("<td> Score Value </td></tr>")
+
         for student in STUDENTS:
             studentGit = student[1]
+            stuName = student[0].split()[0]
             
             stuCode = makeProjURL(HTTPS_STR+GITHUB_PROJ_BASE_URL, projName, studentGit)
             stuSite ='N/A'
@@ -90,8 +145,13 @@ def createClassReport(projName, stu_report_map, liveDemo  ):
             if studentGit in stu_report_map.keys():
                 stuReport = stu_report_map[studentGit]
 
+            theScore = None
+            if not (scores is None):
+                theScore = scores[student[1]].values()
+
+
             #def     printTR(  display,            codeURL, liveDisplay, liveURL, stuReport):
-            stuRow = printTR(student[0].split()[0], stuCode, stuSite, stuSite, stuReport )
+            stuRow = printTR(stuName, stuCode, stuSite, stuSite, stuReport, theScore )
             file.write(stuRow)
             
         file.write("</table></body><html>")
@@ -137,7 +197,7 @@ def checkClean(studentProjectDirectory, studentReport, studentWorkingDirectory):
 def syncGitBase(projName, studentGithubUser, studentReport, studentWorkingDirectory):
     stuCode = makeProjURL(HTTPS_STR+GITHUB_PROJ_BASE_URL, projName, studentGithubUser)
     printToReport(studentReport, "[Attempting DL:" + stuCode + ".git]")        
-    gitURL = HTTPS_STR + "fixuser:fixpwd@" + makeProjURL(GITHUB_PROJ_BASE_URL, projName, studentGithubUser)+".git"
+    gitURL = HTTPS_STR + sysUser + ":" + sysPwd + "@" + makeProjURL(GITHUB_PROJ_BASE_URL, projName, studentGithubUser)+".git"
 
     output = subprocess.check_output( ['git','clone', gitURL] , cwd=studentWorkingDirectory, 
                 stderr=subprocess.STDOUT)        
@@ -203,9 +263,9 @@ def handle_think_java( stuProjDir, studentReport ):
         "checkWith": "COMPILES"      #How to verify assignment
     }
 
-    ch6Descriptor = {
+    ch4Descriptor = {
         "assignment_dir": "chapter4",
-        "targets" : ["Exercise4", "Exercise5"], #Files to look for
+        "targets" : ["Multadd"], #Files to look for
         "score" : 0.4 ,              #weight for the assignment
         "checkWith": "COMPILES"      #How to verify assignment
     }
@@ -213,11 +273,12 @@ def handle_think_java( stuProjDir, studentReport ):
     #Assignments are collection of chapter assignments
     think_java_assignments = {
         "asignment_1" : {   #<-- key, value is map 
-            "work": [ch2Descriptor, ch3Descriptor, ch6Descriptor],
+            "work": [ch2Descriptor, ch3Descriptor, ch4Descriptor],
             "enabled": True,
             "name": "First Assignment" }
     }
 
+    assign_to_score = {}
     for key in think_java_assignments.keys():
         asignment = think_java_assignments[key]
         if not asignment["enabled"]:
@@ -268,6 +329,8 @@ def handle_think_java( stuProjDir, studentReport ):
         
         printToReport(studentReport, "[ASSIGNMENT DONE] " + key)
         printToReport(studentReport, "          [SCORE] {0:1.2f}".format(asg_score))
+        assign_to_score[key] = asg_score
+    return assign_to_score
 
 
 ###
@@ -275,6 +338,9 @@ def handle_think_java( stuProjDir, studentReport ):
 # Begin progam heavy lifting, loop over students, pull git, run work for project
 #
 ##
+gitPull()
+
+scores = {}
 for student in STUDENTS:
     studentReport = []
     studentGithubUser = student[1]
@@ -310,7 +376,8 @@ for student in STUDENTS:
 
 
     if projName == 'think-java':
-        handle_think_java(stuProjDir, studentReport)
+
+        scores[studentGithubUser] = handle_think_java(stuProjDir, studentReport)
 
         reportFile = writeStudentResultReport(student[1], projName, REPORT_DIR + "/" + OUTPUT_DIR, 
                 studentReport)
@@ -320,8 +387,26 @@ for student in STUDENTS:
         
 #end of work, save results to the internet
 if projName in ['think-java']:
-    reportFile = createClassReport(projName, stu_to_report, None) 
+    reportFile = createClassReport(projName, stu_to_report, None, None) 
+
+    #so scores should look like {'stu name': {'assignment name': score}}
+    createClassReport(projName, stu_to_report, None, scores) 
     saveReportToGit(stu_to_report, reportFile)
+    
+    
+    
 else:
-    reportFile = createClassReport(projName, stu_to_report, None)
+    #todo: need to update
+    reportFile = createClassReport(projName, stu_to_report, None, None)
+
+    #so scores should look like {'stu name': {'assignment name': score}}
+    createClassReport(projName, stu_to_report, None, scores) 
     saveReportToGit(stu_to_report, reportFile)
+
+
+
+
+
+
+
+
