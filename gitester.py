@@ -162,7 +162,7 @@ def writeStudentResultReport(student, project, out_dir, log_data):
 
         file_obj.write("\n</pre></body></html>")
         file_obj.close()
-    return student + "." + project + "_results.html"
+    return   projName + "/" +student + "." + project + "_results.html"
 
 
 def checkClean(studentProjectDirectory, studentReport, studentWorkingDirectory):
