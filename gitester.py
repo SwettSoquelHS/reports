@@ -41,11 +41,9 @@ if len(sys.argv) > 2:
     specificUser = sys.argv[2]
 
 
-# sysUser = input("Enter the git user:")
-# sysPwd = getpass.getpass(prompt='Enter github pwd for '+ sysUser +'? ')
+sysUser = input("Enter the git user:")
+sysPwd = getpass.getpass(prompt='Enter github pwd for '+ sysUser +'? ')
 
-sysUser = 'jswett77'
-sysPwd = 'th3p00psmith'
 
 if not os.path.exists(REPORT_DIR + "/" +projName):    
     os.makedirs(REPORT_DIR + "/" +projName)
