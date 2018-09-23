@@ -2,32 +2,9 @@ import sys, os, time, subprocess, getpass
 from datetime import date
 from subprocess import Popen, PIPE, STDOUT
 
-STUDENTS = [('Aaron, afaun29@sccs-stu.net' , 'asianaaron2'), 
-    ('Adam, ARashid81@sccs-stu.net' , 'AdamRashid'), 
-    ('Aliya, AWare06@sccs-stu.net' , 'aliyaaware'), 
-    ('Bea, BLarson82@sccs-stu.net' , 'bealarson82'), 
-    ('Cole, CSchomer84@sccs-stu.net' , 'coleschomer'), 
-    ('Cristian, CAyala17@sccs-stu.net' , 'Crevin921'), 
-    ('Elizabeth, ELindquist18@sccs-stu.net' , 'bethtojatjar'), 
-    ('Gabe, GRoessler59@sccs-stu.net' , 'gaberoessler'), 
-    ('Jacob, jrogers74@sccs-stu.net' , 'Jake4902'), 
-    ('Jaden, JNgo96@sccs-stu.net' , 'jadenngo13'), 
-    ('Josh, JFlippo66@sccs-stu.net' , 'heypoppins'), 
-    ('Joshua, JMandell69@sccs-stu.net' , 'banjojeebus'), 
-    ('Kayla, KYoung58@sccs-stu.net' , 'KaylaRidesBikes'), 
-    ('Kia, kfouts48@sccs-stu.net' , 'kaifouts'), 
-    ('Liam, LSmith93@sccs-stu.net' , '1amsmith1020'), 
-    ('Marcus, MPantzloff42@sccs-stu.net' , 'Marcus620'), 
-    ('Max, MKaehler51@sccs-stu.net' , 'maxckaeh'), 
-    ('Michael, MVollmer05@sccs-stu.net' , 'MegaMichael1000'), 
-    ('Nick, NPoletti49@sccs-stu.net' , 'NickPoletti1'), 
-    ('NotSwett, notswetty@gmail.com' , 'notswett'), 
-    ('Reid, RLuhn20@sccs-stu.net' , 'ReidLuhn'), 
-    ('Sam, SPaniccia70@sccs-stu.net' , 'slammensam'), 
-    ('Samuel, SMussetter85@sccs-stu.net' , 'DrKiefer'), 
-    ('Shane, SBaxter70@sccs-stu.net' , 'shanebaxter101'), 
-    ('Theo, TFeldman44@sccs-stu.net' , 'Fwuff547'), 
-    ('Thomas, TPipitone89@sccs-stu.net' , 'tpipitone')]
+import loadStudents
+
+STUDENTS = loadStudents.getStudents()
 
 
 # print(students)
@@ -45,8 +22,10 @@ GITHUB_PROJ_BASE_URL= "github.com/SwettSoquelHS/"
 #gitHubDempURL
 GITHUB_DEMO_BASE_URL = "https://swettsoquelhs.github.io/"
 
-OUTPUT_DIR = './stuwork/'
-REPORT_DIR = './reports'
+OUTPUT_DIR = './stuwork'
+REPORT_DIR = './stureports'
+ 
+ #./stuwork//asianaaron2.think-java_results.html
 
 
 REPORTS = "github.com/SwettSoquelHS/reports.git"
@@ -54,15 +33,18 @@ REPORTS = "github.com/SwettSoquelHS/reports.git"
 #projName
 projName = sys.argv[1]
 
-OK_TO_REUSE = False
+OK_TO_REUSE = True
 stu_to_report = {}
 
 specificUser = None
 if len(sys.argv) > 2:
     specificUser = sys.argv[2]
 
-sysUser = input("Enter the git user:")
-sysPwd = getpass.getpass(prompt='Enter github pwd for '+ sysUser +'? ')
+# sysUser = input("Enter the git user:")
+# sysPwd = getpass.getpass(prompt='Enter github pwd for '+ sysUser +'? ')
+
+sysUser = 'jswett77'
+sysPwd = 'th3p00psmith'
 
 
 def gitPull():
@@ -133,8 +115,8 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
             file.write("<td> Score Value </td></tr>")
 
         for student in STUDENTS:
-            studentGit = student[1]
-            stuName = student[0].split()[0]
+            studentGit = student[2]
+            stuName = student[0]
             
             stuCode = makeProjURL(HTTPS_STR+GITHUB_PROJ_BASE_URL, projName, studentGit)
             stuSite ='N/A'
@@ -147,7 +129,7 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
 
             theScore = None
             if not (scores is None):
-                theScore = scores[student[1]].values()
+                theScore = scores[student[2]].values()
 
 
             #def     printTR(  display,            codeURL, liveDisplay, liveURL, stuReport):
@@ -162,7 +144,7 @@ def printToReport(log_list, message):
     print(message)
     log_list.append(message)
     
-
+#writeStudentResultReport(student[2], projName, REPORT_DIR , studentReport)
 def writeStudentResultReport(student, project, out_dir, log_data):
     reportFile = out_dir+"/"+student + "." + project + "_results.html"
     with open(reportFile , "w") as file_obj:
@@ -338,19 +320,19 @@ def handle_think_java( stuProjDir, studentReport ):
 # Begin progam heavy lifting, loop over students, pull git, run work for project
 #
 ##
-gitPull()
+# gitPull()
 
 scores = {}
 for student in STUDENTS:
     studentReport = []
-    studentGithubUser = student[1]
+    studentGithubUser = student[2]
 
     printToReport(studentReport, "\n----------------------------------------------------------")
     printToReport(studentReport, "[STUDENT INIT] " + studentGithubUser)
     
     #Make the student directory in case it doesn't exist.
     stuProj = projName+"-"+studentGithubUser
-    stuDir = OUTPUT_DIR + studentGithubUser
+    stuDir = OUTPUT_DIR + "/"+ studentGithubUser
     stuProjDir =  stuDir + "/"+ stuProj
 
     if not os.path.exists(stuDir):
@@ -379,9 +361,9 @@ for student in STUDENTS:
 
         scores[studentGithubUser] = handle_think_java(stuProjDir, studentReport)
 
-        reportFile = writeStudentResultReport(student[1], projName, REPORT_DIR + "/" + OUTPUT_DIR, 
-                studentReport)
-        stu_to_report[ studentGithubUser ] = OUTPUT_DIR + "/" + reportFile
+        reportFile = writeStudentResultReport(student[2], projName, REPORT_DIR , studentReport)
+
+        stu_to_report[ studentGithubUser ] = reportFile
             #end of each student
 
         
@@ -402,11 +384,4 @@ else:
     #so scores should look like {'stu name': {'assignment name': score}}
     createClassReport(projName, stu_to_report, None, scores) 
     saveReportToGit(stu_to_report, reportFile)
-
-
-
-
-
-
-
 
