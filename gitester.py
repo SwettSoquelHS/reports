@@ -61,13 +61,14 @@ def saveReportToGit(stu_to_report, reportFile):
         printToReport(studentReport, "[Attempting DL:" + stuCode + ".git]")        
         gitURL = HTTPS_STR + sysUser + ":" + sysPwd + "@" + REPORTS 
 
-        output = subprocess.check_output( ['git','add', "."] , cwd=REPORT_DIR, 
+        output = subprocess.check_output( ['git','add', "."] ,  
                 stderr=subprocess.STDOUT)        
 
-        output = subprocess.check_output( ['git','commit', '-m "report check in '+ str(date.today())+'"'] , cwd=REPORT_DIR, 
+        output = subprocess.check_output( ['git','commit', '-m "report check in '+ str(date.today())+'"'] , 
+
                 stderr=subprocess.STDOUT)        
 
-        output = subprocess.check_output( ['git','push', gitURL] , cwd=REPORT_DIR, 
+        output = subprocess.check_output( ['git','push', gitURL] ,  
                 stderr=subprocess.STDOUT)        
         printToReport(studentReport, output.decode("utf-8").replace("\n", "\n\t"))
         printToReport(studentReport, "[REPORT DONE]")
@@ -370,11 +371,17 @@ for student in STUDENTS:
 
         
 #end of work, save results to the internet
+
+Popen( ['rm','-rf', OUTPUT_DIR] )
+
 if projName in ['think-java']:
     reportFile = createClassReport(projName, stu_to_report, None, None) 
 
     #so scores should look like {'stu name': {'assignment name': score}}
     createClassReport(projName, stu_to_report, None, scores) 
+
+
+
     saveReportToGit(stu_to_report, reportFile)
     
     
