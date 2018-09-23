@@ -61,14 +61,13 @@ def saveReportToGit(stu_to_report, reportFile):
         printToReport(studentReport, "[Attempting DL:" + stuCode + ".git]")        
         gitURL = HTTPS_STR + sysUser + ":" + sysPwd + "@" + REPORTS 
 
-        output = subprocess.check_output( ['git','add', "."] ,  
+        output = subprocess.check_output( ['git','add', "."] , cwd=REPORT_DIR, 
                 stderr=subprocess.STDOUT)        
 
-        output = subprocess.check_output( ['git','commit', '-m "report check in '+ str(date.today())+'"'] , 
-
+        output = subprocess.check_output( ['git','commit', '-m "report check in '+ str(date.today())+'"'] , cwd=REPORT_DIR, 
                 stderr=subprocess.STDOUT)        
 
-        output = subprocess.check_output( ['git','push', gitURL] ,  
+        output = subprocess.check_output( ['git','push', gitURL] , cwd=REPORT_DIR, 
                 stderr=subprocess.STDOUT)        
         printToReport(studentReport, output.decode("utf-8").replace("\n", "\n\t"))
         printToReport(studentReport, "[REPORT DONE]")
