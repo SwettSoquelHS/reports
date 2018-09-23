@@ -40,11 +40,15 @@ specificUser = None
 if len(sys.argv) > 2:
     specificUser = sys.argv[2]
 
+
 # sysUser = input("Enter the git user:")
 # sysPwd = getpass.getpass(prompt='Enter github pwd for '+ sysUser +'? ')
 
 sysUser = 'jswett77'
 sysPwd = 'th3p00psmith'
+
+if not os.path.exists(REPORT_DIR + "/" +projName):    
+    os.makedirs(REPORT_DIR + "/" +projName)
 
 
 def gitPull():
@@ -146,7 +150,7 @@ def printToReport(log_list, message):
     
 #writeStudentResultReport(student[2], projName, REPORT_DIR , studentReport)
 def writeStudentResultReport(student, project, out_dir, log_data):
-    reportFile = out_dir+"/"+student + "." + project + "_results.html"
+    reportFile = out_dir+"/" + projName + "/" +student + "." + project + "_results.html"
     with open(reportFile , "w") as file_obj:
         today = str(date.today())
         file_obj.write("<html><head><title>"+project+" status</title></head><body>\n")
@@ -311,7 +315,7 @@ def handle_think_java( stuProjDir, studentReport ):
         
         printToReport(studentReport, "[ASSIGNMENT DONE] " + key)
         printToReport(studentReport, "          [SCORE] {0:1.2f}".format(asg_score))
-        assign_to_score[key] = asg_score
+        assign_to_score[key] = "{0:1.2f}".format(asg_score)
     return assign_to_score
 
 
