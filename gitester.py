@@ -254,12 +254,40 @@ def handle_think_java( stuProjDir, studentReport ):
         "checkWith": "COMPILES"      #How to verify assignment
     }
 
+
+    ch6Descriptor = {
+        "assignment_dir": "chapter6",
+        "targets" : ["Exercise4", "Exercise5"], #Files to look for
+        "score" : 0.4 ,              #weight for the assignment
+        "checkWith": "COMPILES"      #How to verify assignment
+    }
+
+    swetterCise1 = {
+        "assignment_dir": "chapter6",
+        "targets" : ["Swettercise"], #Files to look for
+        "score" : 0.4 ,              #weight for the assignment
+        "checkWith": "COMPILES"      #How to verify assignment
+    }
+
+
+
     #Assignments are collection of chapter assignments
     think_java_assignments = {
         "asignment_1" : {   #<-- key, value is map 
             "work": [ch2Descriptor, ch3Descriptor, ch4Descriptor],
-            "enabled": True,
-            "name": "First Assignment" }
+            "enabled": False,
+            "name": "First Assignment, Ch2-Ch4" },
+
+        "asignment_2" : {   #<-- key, value is map 
+            "work": [ch6Descriptor],
+            "enabled": False,
+            "name": "Second Assignment, Ch 6" },
+
+        "asignment_3" : {   #<-- key, value is map 
+            "work": [swetterCise1],
+            "enabled": False,
+            "name": "Third Assignment, Swettercise" },
+
     }
 
     assign_to_score = {}
@@ -268,7 +296,7 @@ def handle_think_java( stuProjDir, studentReport ):
         if not asignment["enabled"]:
             continue
 
-        asg_score = 1.0        
+        asg_score = 1.0 
         for chapterWork in asignment["work"]:
             #a chapterWork is a chDescriptor, e.g. ch2ch2Descriptor
             #so chapterWrok is a dictionary
