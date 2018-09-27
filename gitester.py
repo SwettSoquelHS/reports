@@ -303,8 +303,7 @@ def handle_think_java( stuProjDir, studentReport ):
 
         printToReport(studentReport, "[Assignment]  >" + key + "<")
         printToReport(studentReport, "  [DESC] " + think_java_assignments[key]["desc"])
-
-        printToReport(studentReport, "\n*[BEGIN " + chapter + "]")
+        
         asg_score = 1.0 
         for chapterWork in asignment["work"]:
             #a chapterWork is a chDescriptor, e.g. ch2ch2Descriptor
