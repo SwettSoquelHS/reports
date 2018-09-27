@@ -1,21 +1,25 @@
 import sys, os, time, subprocess, getpass
 from datetime import date
 from subprocess import Popen, PIPE, STDOUT
-
 import loadStudents
+import argparse
 
-STUDENTS = loadStudents.getStudents()
+
+# Stuff we need, joy.
+PARSER = argparse.ArgumentParser()
+PARSER.add_argument("project", help="Github project to pull.")
+PARSER.add_argument("-a", "--assignment", help="Assignment within the project.")
+PARSER.add_argument("-s", "--student", help="Only on the student specified.")
+args = PARSER.parse_args()
 
 
-# print(students)
-if sys.argv[1] is None:
-    sys.exit(1)
-
+#If a specific student was specified then only that student will be run
+STUDENTS = loadStudents.getStudents(args.student)
 
 
 #github URL pattern
-#https://github.com/SwettSoquelHS/think-java-Fwuff547
-#https://github.com/SwettSoquelHS/think-java-Fwuff547.git
+#https://github.com/SwettSoquelHS/github-proj-stuGuthubuser
+#https://github.com/SwettSoquelHS/github-proj-stuGuthubuser.git
 HTTPS_STR = "https://"
 GITHUB_PROJ_BASE_URL= "github.com/SwettSoquelHS/"
 
@@ -25,13 +29,14 @@ GITHUB_DEMO_BASE_URL = "https://swettsoquelhs.github.io/"
 OUTPUT_DIR = './stuwork'
 REPORT_DIR = './stureports'
  
- #./stuwork//asianaaron2.think-java_results.html
-
 
 REPORTS = "github.com/SwettSoquelHS/reports.git"
 
+#assignMent
+assignment = args.assignment
+
 #projName
-projName = sys.argv[1]
+projName = args.project
 
 OK_TO_REUSE = True
 stu_to_report = {}
@@ -189,7 +194,7 @@ def syncGitBase(projName, studentGithubUser, studentReport, studentWorkingDirect
     printToReport(studentReport, "[GITWORK DONE]")
 
 def tryCompile( studentReport, chapterDir, javaFile):
-    deduction = 0
+    error_code = 0
     printToReport(studentReport, "[COMPILING] " + javaFile)
     
     if os.path.isfile(chapterDir+'/'+ javaFile):
@@ -199,36 +204,36 @@ def tryCompile( studentReport, chapterDir, javaFile):
         if p.returncode != 0: 
             printToReport(studentReport, 
                 "\t[ERROR] javac failed " + javaFile + " " + output.decode("utf-8").replace("\n", "\n\t"))
-            deduction = 1
+            error_code = 1
         else:
             printToReport(studentReport, "\t[SUCCESSFUL COMPILE] " + javaFile)
     else:
         printToReport(studentReport, "\t[ERROR] Missing Compile Target:" + javaFile)
-        deduction = 2
+        error_code = 2
 
-    return deduction
+    return error_code
 
 def tryRun( studentReport, chapterDir, target):
-    deduction = 0
+    error_code = 0
     #try running
     javaClass = target + ".class"
     if os.path.isfile(chapterDir+'/'+ javaClass):
         printToReport(studentReport, "[RUNNING] " + target + "\n-->")
         p = Popen(['java', target], cwd=chapterDir,
                     stdout=PIPE, stdin=PIPE, stderr=PIPE)                            
-        stdout_data = p.communicate(input=b'13\n')[0]
+        stdout_data = p.communicate(input=b'13\n')
 
         if p.returncode != 0: 
             printToReport(studentReport, "\t[ERROR] Runtime Error @ java " + target + "\n" +  
-                stdout_data.decode("utf-8").replace("\n", "\n\t") )
-            deduction = 3
+                stdout_data[0].decode("utf-8").replace("\n", "\n\t") )
+            error_code = 3
         else:
-            printToReport(studentReport, stdout_data.decode("utf-8").replace("\n", "\n\t"))
+            printToReport(studentReport, stdout_data[1].decode("utf-8").replace("\n", "\n\t"))
             printToReport(studentReport, "<--\n\t[OUTPUT OK]\n" )
     else:
-        deduction = 1
+        error_code = 1
 
-    return deduction
+    return error_code
 
 
 def handle_think_java( stuProjDir, studentReport ):
@@ -275,18 +280,18 @@ def handle_think_java( stuProjDir, studentReport ):
     think_java_assignments = {
         "asignment_1" : {   #<-- key, value is map 
             "work": [ch2Descriptor, ch3Descriptor, ch4Descriptor],
-            "enabled": False,
-            "name": "First Assignment, Ch2-Ch4" },
+            "enabled": True,
+            "desc": "First Assignment, Ch2-Ch4" },
 
         "asignment_2" : {   #<-- key, value is map 
             "work": [ch6Descriptor],
             "enabled": False,
-            "name": "Second Assignment, Ch 6" },
+            "desc": "Second Assignment, Ch 6" },
 
         "asignment_3" : {   #<-- key, value is map 
             "work": [swetterCise1],
             "enabled": False,
-            "name": "Third Assignment, Swettercise" },
+            "desc": "Third Assignment, Swettercise" },
 
     }
 
@@ -296,6 +301,10 @@ def handle_think_java( stuProjDir, studentReport ):
         if not asignment["enabled"]:
             continue
 
+        printToReport(studentReport, "[Assignment]  >" + key + "<")
+        printToReport(studentReport, "  [DESC] " + think_java_assignments[key]["desc"])
+
+        printToReport(studentReport, "\n*[BEGIN " + chapter + "]")
         asg_score = 1.0 
         for chapterWork in asignment["work"]:
             #a chapterWork is a chDescriptor, e.g. ch2ch2Descriptor
@@ -306,15 +315,20 @@ def handle_think_java( stuProjDir, studentReport ):
             #This directory should exist if code has been submitted to git
             chapterDir = stuProjDir + "/" + chapter
 
-            printToReport(studentReport,    "  [EXPECTED TARGETS] " + str(chapterWork['targets']) + "]")
+            printToReport(studentReport,    "  [EXPECTING TARGETS] " + str(chapterWork['targets']) + "]")
             if os.path.exists(chapterDir):
                 target_errors = {}
                 for target in chapterWork['targets']:
-                    # chapter/target looks like ./stuwork/studentName/think-java-studentName/chapter2                    
+                    # chapter/target looks like ./stuwork/studentName/think-java-studentName/chapter2
                     javaFile = target + ".java"
                     target_errors[target] = tryCompile(studentReport, chapterDir, javaFile)
-                    if 3 == tryRun(studentReport, chapterDir, target):
-                        target_errors[target] = 3
+
+                    if chapterWork["checkWith"] == "COMPILES":
+                        if 3 == tryRun(studentReport, chapterDir, target):
+                            target_errors[target] = 3
+                    elif chapterWork["checkWith"] == "TEST":
+                        tests = chapterWork["checkWith"]
+
                 target_summary = []
                 for target in target_errors.keys():
                     if target_errors[target] == 0:
@@ -350,7 +364,8 @@ def handle_think_java( stuProjDir, studentReport ):
 # Begin progam heavy lifting, loop over students, pull git, run work for project
 #
 ##
-# gitPull()
+
+gitPull()
 
 scores = {}
 for student in STUDENTS:
@@ -388,11 +403,8 @@ for student in STUDENTS:
 
 
     if projName == 'think-java':
-
         scores[studentGithubUser] = handle_think_java(stuProjDir, studentReport)
-
         reportFile = writeStudentResultReport(student[2], projName, REPORT_DIR , studentReport)
-
         stu_to_report[ studentGithubUser ] = reportFile
             #end of each student
 
