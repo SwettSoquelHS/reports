@@ -3,6 +3,7 @@ from datetime import date
 from subprocess import Popen, PIPE, STDOUT
 import loadStudents
 import argparse
+import scorehistory
 
 
 # Stuff we need, joy.
@@ -44,6 +45,10 @@ stu_to_report = {}
 specificUser = None
 if len(sys.argv) > 2:
     specificUser = sys.argv[2]
+
+#score history
+scoreHistory = projName + ".json"
+scorehistory.load(scoreHistory)
 
 
 sysUser = input("Enter the git user:")
@@ -105,6 +110,8 @@ def makeProjURL(base, proj, user):
 
 
 def createClassReport(projName, stu_report_map, liveDemo, scores  ):
+    #scores looks like:
+    #{'user': { 'assign name': score}}
     print("[FINALIZING] Running " + projName + " summary...")
     reportFile = projName + ".html"
     if not (scores is None):
@@ -112,6 +119,15 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
 
     reportFile = REPORT_DIR + "/" + reportFile
 
+    scoreHeaderStr = ''
+    if scores is not None:
+        #{'asianaaron2': {'asignment_1': '0.55'}
+        for student in scores.keys():
+            stuScores = scores[student]
+            for asignmentKey in stuScores.keys(): 
+                scoreHeaderStr = scoreHeaderStr + '<td>' + asignmentKey + '</td>'
+        break
+        scoreHeaderStr = scoreHeaderStr + "\n"    
 
     with open(reportFile , "w") as file:
         file.write("<html><head><title>"+projName + " class report</title></head><body>")
@@ -119,7 +135,7 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
         if scores is None:
             file.write(" </tr>")
         else:
-            file.write("<td> Score Value </td></tr>")
+            file.write(scoreHeaderStr + "</tr>")
 
         for student in STUDENTS:
             studentGit = student[2]
@@ -136,7 +152,11 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
 
             theScore = None
             if not (scores is None):
-                theScore = scores[student[2]].values()
+                for asg in scores[studentGit].keys():
+                    theScore = scores[studentGit][asg] 
+                    oldScore = scorehistory.getPrevScore(asg, studentGit)
+                    if theScore != oldScore and not(oldScore is None):
+                        theScore = 'WAS: ' + str(oldScore) + ' vs NOW: ' + str(theScore)
 
 
             #def     printTR(  display,            codeURL, liveDisplay, liveURL, stuReport):
@@ -236,7 +256,7 @@ def tryRun( studentReport, chapterDir, target):
     return error_code
 
 
-def handle_think_java( stuProjDir, studentReport ):
+def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
     #Chapter assignments
     ch2Descriptor = {
         "assignment_dir": "chapter2",
@@ -278,17 +298,17 @@ def handle_think_java( stuProjDir, studentReport ):
 
     #Assignments are collection of chapter assignments
     think_java_assignments = {
-        "asignment_1" : {   #<-- key, value is map 
+        "Think Java: 1" : {   #<-- key, value is map 
             "work": [ch2Descriptor, ch3Descriptor, ch4Descriptor],
             "enabled": True,
             "desc": "First Assignment, Ch2-Ch4" },
 
-        "asignment_2" : {   #<-- key, value is map 
+        "Think Java: 2" : {   #<-- key, value is map 
             "work": [ch6Descriptor],
             "enabled": False,
             "desc": "Second Assignment, Ch 6" },
 
-        "asignment_3" : {   #<-- key, value is map 
+        "Think Java: 3" : {   #<-- key, value is map 
             "work": [swetterCise1],
             "enabled": False,
             "desc": "Third Assignment, Swettercise" },
@@ -297,15 +317,15 @@ def handle_think_java( stuProjDir, studentReport ):
 
     assign_to_score = {}
     for key in think_java_assignments.keys():
-        asignment = think_java_assignments[key]
-        if not asignment["enabled"]:
+        assignment = think_java_assignments[key]
+        if not assignment["enabled"]:
             continue
 
         printToReport(studentReport, "[Assignment]  >" + key + "<")
         printToReport(studentReport, "  [DESC] " + think_java_assignments[key]["desc"])
         
         asg_score = 1.0 
-        for chapterWork in asignment["work"]:
+        for chapterWork in assignment["work"]:
             #a chapterWork is a chDescriptor, e.g. ch2ch2Descriptor
             #so chapterWrok is a dictionary
             chapter = chapterWork["assignment_dir"]
@@ -349,12 +369,20 @@ def handle_think_java( stuProjDir, studentReport ):
                 asg_score = asg_score - chapterWork['score']
 
             printToReport(studentReport, "[DONE "+chapter+"]")
-
+        passing = asg_score > .8
         asg_score = max(0.0, asg_score)
+        asg_score = "{0:1.2f}".format(asg_score)
+        oldScore = scorehistory.setScore( key, studentGithubUser, asg_score)
         
+        assign_to_score[key] = asg_score
+
         printToReport(studentReport, "[ASSIGNMENT DONE] " + key)
-        printToReport(studentReport, "          [SCORE] {0:1.2f}".format(asg_score))
-        assign_to_score[key] = "{0:1.2f}".format(asg_score)
+        
+        
+        if passing:
+            asg_score = '<font face="verdana" color="green">'+asg_score+'</font>'
+
+        printToReport(studentReport, "          [SCORE] " + asg_score)
     return assign_to_score
 
 
@@ -402,7 +430,7 @@ for student in STUDENTS:
 
 
     if projName == 'think-java':
-        scores[studentGithubUser] = handle_think_java(stuProjDir, studentReport)
+        scores[studentGithubUser] = handle_think_java(stuProjDir, studentReport, studentGithubUser)
         reportFile = writeStudentResultReport(student[2], projName, REPORT_DIR , studentReport)
         stu_to_report[ studentGithubUser ] = reportFile
             #end of each student
@@ -414,14 +442,11 @@ Popen( ['rm','-rf', OUTPUT_DIR] )
 
 if projName in ['think-java']:
     reportFile = createClassReport(projName, stu_to_report, None, None) 
-
+    
     #so scores should look like {'stu name': {'assignment name': score}}
     createClassReport(projName, stu_to_report, None, scores) 
-
-
-
-    saveReportToGit(stu_to_report, reportFile)
-    
+    scorehistory.save(scoreHistory)
+    #saveReportToGit(stu_to_report, reportFile)
     
     
 else:
@@ -430,5 +455,6 @@ else:
 
     #so scores should look like {'stu name': {'assignment name': score}}
     createClassReport(projName, stu_to_report, None, scores) 
-    saveReportToGit(stu_to_report, reportFile)
+    scorehistory.save(scoreHistory)
+    #saveReportToGit(stu_to_report, reportFile)
 
