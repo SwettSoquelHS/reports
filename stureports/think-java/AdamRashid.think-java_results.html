@@ -20,66 +20,36 @@ Cloning into 'think-java-AdamRashid'...
 
 *[BEGIN chapter2]
   [EXPECTING TARGETS] ['Date', 'Time']]
-[COMPILING] Date.java
-	[SUCCESSFUL COMPILE] Date.java
-[RUNNING] Date
--->
-
-<--
-	[OUTPUT OK]
-
-[COMPILING] Time.java
-	[SUCCESSFUL COMPILE] Time.java
-[RUNNING] Time
--->
-
-<--
-	[OUTPUT OK]
-
-[SUMMARY] ['Date: PASSED, EXCELLENT!', 'Time: PASSED, EXCELLENT!']
+[COMPILING] D.java
+	[ERROR] Missing Compile Target:D.java
+[COMPILING] T.java
+	[ERROR] Missing Compile Target:T.java
+[SUMMARY] ['D: MISSING', 'T: MISSING']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-[COMPILING] Exercise3.java
-	[SUCCESSFUL COMPILE] Exercise3.java
-[RUNNING] Exercise3
--->
-
-<--
-	[OUTPUT OK]
-
-[COMPILING] Exercise4.java
-	[SUCCESSFUL COMPILE] Exercise4.java
-[RUNNING] Exercise4
--->
-
-<--
-	[OUTPUT OK]
-
-[SUMMARY] ['Exercise3: PASSED, EXCELLENT!', 'Exercise4: PASSED, EXCELLENT!']
+[COMPILING] E.java
+	[ERROR] Missing Compile Target:E.java
+[COMPILING] E.java
+	[ERROR] Missing Compile Target:E.java
+[SUMMARY] ['E: MISSING']
 [DONE chapter3]
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
-[COMPILING] Multadd.java
-	[SUCCESSFUL COMPILE] Multadd.java
-[RUNNING] Multadd
--->
-
-<--
-	[OUTPUT OK]
-
-[SUMMARY] ['Multadd: PASSED, EXCELLENT!']
+[COMPILING] M.java
+	[ERROR] Missing Compile Target:M.java
+[SUMMARY] ['M: MISSING']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
-<b>          [SCORE] <font color="green">1.00</font></b>
+<b>          [SCORE] 0.20</b>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
+  [EXPECTING TARGETS] [('Exercise4', 'Ch6Ex4'), ('Exercise5', 'Ch6Ex5')]]
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
 [TESTING WITH] copied Ch6Ex4
@@ -95,42 +65,8 @@ Ch6Ex4.java:56: error: cannot find symbol
 	1 error
 	
 -----------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[RUNNING] Ch6Ex5
--->
-
-	<br>Results for Exercise5().isDoubloon()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.0]
-	
-	
-<--
-	[OUTPUT OK]
-
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:56: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                                    ^
-	  symbol:   method isAbecedarian(String)
-	  location: class Exercise4
-	1 error
-	
------------END COMPILE-------
 [TESTING WITH] copied Ch6Ex5
 [COMPILED TEST] copied Ch6Ex5
 [RUNNING] Ch6Ex5
@@ -152,16 +88,16 @@ Ch6Ex4.java:56: error: cannot find symbol
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Exercise4: PASSED, EXCELLENT!', 'Exercise5: PASSED, EXCELLENT!']
+[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: RAN, BUT TOO MANY ERRORS']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] <font color="green">1.00</font></b>
+<b>          [SCORE] 0.60</b>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
+  [EXPECTING TARGETS] [('Swettercise', 'SwetterciseTest')]]
 [COMPILING] Swettercise.java
 	[SUCCESSFUL COMPILE] Swettercise.java
 [TESTING WITH] copied SwetterciseTest

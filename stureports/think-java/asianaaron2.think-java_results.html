@@ -7,64 +7,44 @@ Run date: 2018-09-29
 
 ----------------------------------------------------------
 [STUDENT INIT] asianaaron2
-[PRE-WARN]: Expected non-empty: ./stuwork/asianaaron2/think-java-asianaaron2
-[GITWORK]
-[Attempting DL:https://github.com/SwettSoquelHS/think-java-asianaaron2.git]
-Cloning into 'think-java-asianaaron2'...
-	
-[GITWORK DONE]
+[REUSING WORK]: ./stuwork/asianaaron2/think-java-asianaaron2
+[GITWORK] Re-using code.
 
 <b>[Assignment]  >Think Java: 1< </b>
   [DESC] First Assignment, Ch2-Ch4
 
 *[BEGIN chapter2]
   [EXPECTING TARGETS] ['Date', 'Time']]
-[COMPILING] Date.java
-	[SUCCESSFUL COMPILE] Date.java
-[RUNNING] Date
--->
-
-<--
-	[OUTPUT OK]
-
-[COMPILING] Time.java
-	[SUCCESSFUL COMPILE] Time.java
-[RUNNING] Time
--->
-
-<--
-	[OUTPUT OK]
-
-[SUMMARY] ['Date: PASSED, EXCELLENT!', 'Time: PASSED, EXCELLENT!']
+[COMPILING] D.java
+	[ERROR] Missing Compile Target:D.java
+[COMPILING] T.java
+	[ERROR] Missing Compile Target:T.java
+[SUMMARY] ['D: MISSING', 'T: MISSING']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-[COMPILING] Exercise3.java
-	[ERROR] Missing Compile Target:Exercise3.java
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
-[SUMMARY] ['Exercise3: MISSING', 'Exercise4: MISSING']
+[COMPILING] E.java
+	[ERROR] Missing Compile Target:E.java
+[COMPILING] E.java
+	[ERROR] Missing Compile Target:E.java
+[SUMMARY] ['E: MISSING']
 [DONE chapter3]
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
-[COMPILING] Multadd.java
-	[SUCCESSFUL COMPILE] Multadd.java
-[RUNNING] Multadd
--->
-	[ERROR] Runtime Error @ java Multadd
-
-[SUMMARY] ['Multadd: RUNTIME ERROR']
+[COMPILING] M.java
+	[ERROR] Missing Compile Target:M.java
+[SUMMARY] ['M: MISSING']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
-<b>          [SCORE] 0.55</b>
+<b>          [SCORE] 0.20</b>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
+  [EXPECTING TARGETS] [('Exercise4', 'Ch6Ex4'), ('Exercise5', 'Ch6Ex5')]]
 [COMPILING] Exercise4.java
 	[ERROR] Missing Compile Target:Exercise4.java
 [TESTING WITH] copied Ch6Ex4
@@ -80,34 +60,8 @@ Ch6Ex4.java:56: error: cannot find symbol
 	1 error
 	
 -----------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
 [COMPILING] Exercise5.java
 	[ERROR] Missing Compile Target:Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:56: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
 [TESTING WITH] copied Ch6Ex5
 [COMPILED TEST] copied Ch6Ex5
 [COMPILING] Ch6Ex5.java
@@ -130,7 +84,7 @@ Ch6Ex5.java:57: error: cannot find symbol
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
+  [EXPECTING TARGETS] [('Swettercise', 'SwetterciseTest')]]
 [COMPILING] Swettercise.java
 	[ERROR] Missing Compile Target:Swettercise.java
 [TESTING WITH] copied SwetterciseTest
