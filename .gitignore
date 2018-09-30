@@ -1,3 +1,4 @@
 students.txt
 __pycache__/
 *.py[cod]
+*.class

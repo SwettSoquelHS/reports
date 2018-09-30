@@ -253,12 +253,16 @@ def tryRun( studentReport, chapterDir, target):
                     stdout=PIPE, stdin=PIPE, stderr=PIPE)                            
         stdout_data = p.communicate(input=b'13\n')
 
+        print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+        print(str(stdout_data))
+        print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+
         if p.returncode != 0: 
             printToReport(studentReport, "\t[ERROR] Runtime Error @ java " + target + "\n" +  
                 stdout_data[0].decode("utf-8").replace("\n", "\n\t") )
             error_code = 3
         else:
-            printToReport(studentReport, stdout_data[1].decode("utf-8").replace("\n", "\n\t"))
+            printToReport(studentReport, stdout_data[0].decode("utf-8").replace("\n", "\n\t"))
             printToReport(studentReport, "<--\n\t[OUTPUT OK]\n" )
     else:
         error_code = 1
@@ -305,7 +309,7 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
 
     swetterCise1 = {
         "assignment_dir": "chapter6",
-        "targets" : [("Swettercise", "SwetterciseTest")], #Files to look for
+        "targets" : [("Swettercise1", "SwetterciseTest")], #Files to look for
         "score" : 0.4 ,              #weight for the assignment
         "checkWith": "TEST",        
     }
@@ -337,10 +341,12 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         if not assignment["enabled"]:
             continue
 
+        printToReport(studentReport, "\n<hr>")
         printToReport(studentReport, "\n<b>[Assignment]  >" + key + "< </b>")
         printToReport(studentReport, "  [DESC] " + think_java_assignments[key]["desc"])
         
         asg_score = 1.0 
+        assignmentWeight = 1.0/len(assignment["work"])
         for chapterWork in assignment["work"]:
             #a chapterWork is a chDescriptor, e.g. ch2ch2Descriptor
             #so chapterWrok is a dictionary
@@ -349,72 +355,94 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
             
             #This directory should exist if code has been submitted to git
             chapterDir = stuProjDir + "/" + chapter
+            if chapterWork["checkWith"] == "COMPILES":
+                printToReport(studentReport,    "  [EXPECTING TARGETS] " + str(chapterWork['targets']) + "]")
+            else:                
+                printToReport(studentReport,    "  [EXPECTING TARGETS] " + str([ t[0] for t in chapterWork['targets'] ]) )
 
-            printToReport(studentReport,    "  [EXPECTING TARGETS] " + str(chapterWork['targets']) + "]")
             if os.path.exists(chapterDir):
                 target_errors = {}
                 for target in chapterWork['targets']:
-                    # chapter/target looks like ./stuwork/studentName/think-java-studentName/chapter2
-                    targetName = target[0]
+                    errorCode = 0
+                    deductions = 0
+                    #If "checkWith" is test, use the tuple value    
+                    targetName = target
+                    if chapterWork["checkWith"] == "TEST":                        
+                        targetName = target[0]
+
                     testTarget = target[1]
                     javaFile = targetName + ".java"
-                    target_errors[target] = tryCompile(studentReport, chapterDir, javaFile)
+                    
+                    #So i goofed, if this is targetName == 'Swettercise'
+                    # then check if Swettercise1 (with the nubmer) exisits
+                    if os.path.isfile(chapterDir+'/'+ javaFile):
+                        errorCode = tryCompile(studentReport, chapterDir, javaFile)
+                    elif targetName == "Swettercise1":
+                        # One off fix for my own mistake in assigning the wrong classname
+                        if os.path.isfile(chapterDir+'/Swettercise.java'):
+                            errorCode = tryCompile(studentReport, chapterDir, 'Swettercise.java')
+                        else:
+                            errorCode = 2
+                    else:
+                        errorCode = 2
 
-                    if chapterWork["checkWith"] == "COMPILES":
-                        if tryRun(studentReport, chapterDir, targetName) == 3:
-                            target_errors[targetName] = 3
-                    elif chapterWork["checkWith"] == "TEST":
+                    if chapterWork["checkWith"] == "COMPILES" and errorCode == 0:
+                        errorCode = tryRun(studentReport, chapterDir, targetName) 
+
+                    elif chapterWork["checkWith"] == "TEST" and errorCode == 0:
                         copyTest(TESTS_DIR, chapterDir, "TUtils")
-
                         copyTest(TESTS_DIR, chapterDir, testTarget)
-                        printToReport(studentReport, "[TESTING WITH] copied " + testTarget)
+                        printToReport(studentReport, "[TESTING WITH] " + testTarget)
                         results = javaRun.tryCompile(chapterDir, testTarget+".java")
-                        printToReport(studentReport, "[COMPILED TEST] copied " + testTarget)
-                        if results[0] == 0:
-                            #compiled successfully, now try running
+                        for s in results[1]:
+                            printToReport(studentReport, s)
+                        
+                        errorCode = results[0]
+                        if results[0] == 0:                        
+                            #otherwise, we compiled successfully, now try running
                             results = javaRun.tryRun(chapterDir, testTarget)
                             if results[0] == 0:
-                                #It ran extract deductions 
-                                for s in results[1]:
-                                    printToReport(studentReport, s)
-                                asg_score = asg_score - results[2]
-
-                            #record runtime exit code
-                            target_errors[target] = results[0]
-                        else:
-                            #issue during compile 
-                            target_errors[target] = results[0]
+                                #It ran extract deductions
+                                deductions = results[2]
+                            #log the work
                             for s in results[1]:
                                 printToReport(studentReport, s)
+                                
+                    target_errors[targetName] = (errorCode, deductions)
 
 
 
                 target_summary = []
                 for target in target_errors.keys():
-                    if target_errors[target] == 0:
-                        if asg_score > 0.999:
+
+                    tgErrorCode = target_errors[target][0]
+                    if tgErrorCode == 0:
+                        #Apply deductions to score
+                        tgDeduction = target_errors[target][1]
+                        asg_score = asg_score - tgDeduction
+                        if tgDeduction < 0.01:
                             target_summary.append( target +  ": PASSED, EXCELLENT!" )
-                        elif asg_score > 0.9:
+                        elif tgDeduction < 0.10:
                             target_summary.append( target +  ": PASSED, GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND." )
-                        elif asg_score > 0.8:
+                        elif tgDeduction < 0.3:
                             target_summary.append( target +  ": PASSED, BUT TEST CASES FOUND SOME ERRORS" )
                         else:
-                            target_summary.append( target +  ": RAN, BUT TOO MANY ERRORS" )
-                    elif  target_errors[target] == 1:
+                            target_summary.append( target +  ": RAN, BUT ERRORS NEED TO BE FIXED" )
+                    elif  tgErrorCode == 1:
                          target_summary.append( target + ": COMPILE ERROR" )
-                         asg_score = asg_score - 0.4
-                    elif  target_errors[target] == 2:
+                         asg_score = asg_score - 0.3 * assignmentWeight
+                    elif  tgErrorCode == 2:
                          target_summary.append( target + ": MISSING" )
-                         asg_score = asg_score - 0.2
-                    elif  target_errors[target] == 3:
+                         asg_score = asg_score - 0.4 * assignmentWeight
+                    elif  tgErrorCode == 3:
                          target_summary.append( target + ": RUNTIME ERROR" )
-                         asg_score = asg_score - 0.05
+                         asg_score = asg_score - 0.25 * assignmentWeight
 
                 printToReport(studentReport, "[SUMMARY] " + str(target_summary))    
             else:
                 #mark this missing, and deduct
                 printToReport(studentReport, "\t[ERROR] No chapter work for:" + chapter)
-                asg_score = asg_score - chapterWork['score']
+                asg_score = 0.25
 
             printToReport(studentReport, "[DONE "+chapter+"]")
         passing = asg_score > .8
@@ -486,6 +514,7 @@ for student in STUDENTS:
         
 #end of work, save results to the internet
 
+# Delete all the temp work (probably shoudl parameterize this)
 Popen( ['rm','-rf', OUTPUT_DIR] )
 
 if projName in ['think-java']:

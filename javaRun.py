@@ -63,8 +63,12 @@ def tryRun( workingDir, target):
             return (error_code, reportLog, deduction)
 
         else:
+            print('>>>>>>>>>>>>>>>>>>>>>>>>>')
+            print(str(stdout_data))
+            print('>>>>>>>>>>>>>>>>>>>>>>>>>')
             reportLog.append( "\t[ERROR] Runtime Error @ java " + target + "\n" +  
-            stdout_data[0].decode("utf-8").replace("\n", "\n\t") )
+            stdout_data[1].decode("utf-8").replace("\n", "\n\t<br>") )
+
             error_code = 3
 
 

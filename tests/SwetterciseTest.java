@@ -1,5 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.lang.reflect.Method;
+import java.lang.ClassNotFoundException;
 
 
 public class SwetterciseTest extends TUtils {
@@ -10,6 +12,24 @@ public class SwetterciseTest extends TUtils {
         doTestPrime();
 
         dumpReport();
+    }
+
+    /*
+    * I Borked this assignment, some students have Swettercise1, some Swettercise
+    */
+    public static   Class getRightSwettercise() {
+        Class c = null;
+        try  {
+            c = Class.forName("Swettercise1");
+            return c;
+        }  catch (ClassNotFoundException e) {
+            try {
+                c = Class.forName("Swettercise");
+            } catch (ClassNotFoundException e2) {
+                c = null;
+            }        
+        }
+        return c;
     }
 
 
@@ -74,13 +94,18 @@ public class SwetterciseTest extends TUtils {
     public static boolean testIsPrime(int num, boolean expected){
         boolean gotBack;
         try {
-            gotBack = Swettercise1.isPrime(num);
+            Class clazz = getRightSwettercise();
+            Method method = clazz.getMethod("isPrime", int.class);
+            Object obj = method.invoke(null, num);
+            gotBack = (Boolean)obj;
             boolean result = expected == gotBack;
-            addResult("isPrime", String.valueOf(num), String.valueOf(gotBack), String.valueOf(expected), result );
+            addResult("isPrime", String.valueOf(num), String.valueOf(gotBack), 
+                String.valueOf(expected), result );
             return result;
         } catch (Exception e) {
             deduct(0.05);
-            addResult("isPrime", String.valueOf(num), String.valueOf(null), String.valueOf(expected), false);
+            addResult("isPrime", String.valueOf(num), String.valueOf(null), 
+                String.valueOf(expected), false);
             return false;
         }           
     }
@@ -106,7 +131,12 @@ public class SwetterciseTest extends TUtils {
     public static boolean testColatz(int num, String expected){
         String gotBack = "";
         try {
-            gotBack = Swettercise1.collatzThis(num);
+
+            Class clazz = getRightSwettercise();
+            Method method = clazz.getMethod("collatzThis", int.class);
+            Object obj = method.invoke(null, num);
+            gotBack = (String)obj;
+            
             String[] botBackSplit = gotBack.split(",");
             String[] expectedSplit = expected.split(",");
             boolean matched = true;
@@ -154,7 +184,11 @@ public class SwetterciseTest extends TUtils {
     public static boolean testReverse(String input, String expected){
         String gotBack = "";
         try {
-            gotBack = Swettercise1.reverseStr(input);
+            Class clazz = getRightSwettercise();
+            Method method = clazz.getMethod("reverseStr", String.class);
+            Object obj = method.invoke(null, input);
+            gotBack = (String)obj;
+            
             boolean result = expected.equals(gotBack);
             addResult("reverseStr", input, gotBack, expected, result );
             return result;
