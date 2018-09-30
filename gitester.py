@@ -27,7 +27,7 @@ HTTPS_STR = "https://"
 GITHUB_PROJ_BASE_URL= "github.com/SwettSoquelHS/"
 
 #gitHubDempURL
-GITHUB_DEMO_BASE_URL = "https://swettsoquelhs.github.io/"
+GITHUB_DEMO_BASE_URL = "swettsoquelhs.github.io/"
 
 OUTPUT_DIR = './stuwork'
 REPORT_DIR = './stureports'
@@ -253,10 +253,6 @@ def tryRun( studentReport, chapterDir, target):
                     stdout=PIPE, stdin=PIPE, stderr=PIPE)                            
         stdout_data = p.communicate(input=b'13\n')
 
-        print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-        print(str(stdout_data))
-        print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-
         if p.returncode != 0: 
             printToReport(studentReport, "\t[ERROR] Runtime Error @ java " + target + "\n" +  
                 stdout_data[0].decode("utf-8").replace("\n", "\n\t") )
@@ -421,24 +417,24 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
                         tgDeduction = target_errors[target][1]
                         asg_score = asg_score - tgDeduction
                         if tgDeduction < 0.01:
-                            target_summary.append( target +  ": PASSED, EXCELLENT!" )
+                            target_summary.append( target +  ": PASSED - EXCELLENT!" )
                         elif tgDeduction < 0.10:
-                            target_summary.append( target +  ": PASSED, GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND." )
+                            target_summary.append( target +  ": PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND." )
                         elif tgDeduction < 0.3:
-                            target_summary.append( target +  ": PASSED, BUT TEST CASES FOUND SOME ERRORS" )
+                            target_summary.append( target +  ": PASSED - BUT TEST CASES FOUND SOME ERRORS" )
                         else:
-                            target_summary.append( target +  ": RAN, BUT ERRORS NEED TO BE FIXED" )
+                            target_summary.append( target +  ": RAN - ERRORS NEED TO BE FIXED. You can to do better! :)" )
                     elif  tgErrorCode == 1:
-                         target_summary.append( target + ": COMPILE ERROR" )
+                         target_summary.append( target + ": COMPILE ERROR (- {0:1.2f})".format(0.3 * assignmentWeight))
                          asg_score = asg_score - 0.3 * assignmentWeight
-                    elif  tgErrorCode == 2:
-                         target_summary.append( target + ": MISSING" )
-                         asg_score = asg_score - 0.4 * assignmentWeight
+                    elif  tgErrorCode == 2:                        
+                         target_summary.append( target + ": MISSING (- {0:1.2f})".format(0.5 * assignmentWeight))
+                         asg_score = asg_score - 0.5 * assignmentWeight
                     elif  tgErrorCode == 3:
-                         target_summary.append( target + ": RUNTIME ERROR" )
+                         target_summary.append( target + ": RUNTIME ERROR (- {0:1.2f})".format(0.25 * assignmentWeight))
                          asg_score = asg_score - 0.25 * assignmentWeight
 
-                printToReport(studentReport, "[SUMMARY] " + str(target_summary))    
+                printToReport(studentReport, "[SUMMARY] \n\t" + str(target_summary).replace(",", "\n\t"))    
             else:
                 #mark this missing, and deduct
                 printToReport(studentReport, "\t[ERROR] No chapter work for:" + chapter)
@@ -517,7 +513,8 @@ for student in STUDENTS:
 # Delete all the temp work (probably shoudl parameterize this)
 Popen( ['rm','-rf', OUTPUT_DIR] )
 
-if projName in ['think-java']:
+if projName == 'think-java':
+    print("Report created for " + 'think-java' )
     reportFile = createClassReport(projName, stu_to_report, None, None) 
     
     #so scores should look like {'stu name': {'assignment name': score}}
@@ -525,13 +522,19 @@ if projName in ['think-java']:
     scorehistory.save(scoreHistory)
     saveReportToGit(stu_to_report, reportFile)
     
+elif projName == 'cs-portfolio':
+    print("Report created for " + 'cs-portfolio' )
+    createClassReport(projName, stu_to_report, GITHUB_DEMO_BASE_URL, None) 
     
+    sys.exit(0)
+
 else:
+    print("TODO: Should implement other project: " + projName)
     #todo: need to update
-    reportFile = createClassReport(projName, stu_to_report, None, None)
+#    reportFile = createClassReport(projName, stu_to_report, None, None)
 
     #so scores should look like {'stu name': {'assignment name': score}}
-    createClassReport(projName, stu_to_report, None, scores) 
-    scorehistory.save(scoreHistory)
-    saveReportToGit(stu_to_report, reportFile)
+    # createClassReport(projName, stu_to_report, None, scores) 
+    # scorehistory.save(scoreHistory)
+    # saveReportToGit(stu_to_report, reportFile)
 
