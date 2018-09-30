@@ -15,6 +15,8 @@ Cloning into 'think-java-Crevin921'...
 	
 [GITWORK DONE]
 
+<hr>
+
 <b>[Assignment]  >Think Java: 1< </b>
   [DESC] First Assignment, Ch2-Ch4
 
@@ -32,126 +34,81 @@ Cloning into 'think-java-Crevin921'...
 -->
 	[ERROR] Runtime Error @ java Time
 
-[SUMMARY] ['Date: RUNTIME ERROR', 'Time: RUNTIME ERROR']
+[SUMMARY] 
+	['Date: RUNTIME ERROR (- 0.08)'
+	 'Time: RUNTIME ERROR (- 0.08)']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-[COMPILING] Exercise3.java
-	[ERROR] Missing Compile Target:Exercise3.java
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
-[SUMMARY] ['Exercise3: MISSING', 'Exercise4: MISSING']
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.17)'
+	 'Exercise4: MISSING (- 0.17)']
 [DONE chapter3]
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
 [COMPILING] Multadd.java
 	[SUCCESSFUL COMPILE] Multadd.java
-[SUMMARY] ['Multadd: RAN, BUT TOO MANY ERRORS']
+[SUMMARY] 
+	['Multadd: COMPILE ERROR (- 0.10)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
-<b>          [SCORE] 0.50</b>
+<b>          [SCORE] 0.40</b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:58: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
-[COMPILING] Exercise5.java
-	[ERROR] Missing Compile Target:Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:58: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
-[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: COMPILE ERROR']
+  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
+[SUMMARY] 
+	['Exercise4: MISSING (- 0.50)'
+	 'Exercise5: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.00</b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
+  [EXPECTING TARGETS] ['Swettercise1']
 [COMPILING] Swettercise.java
 	[SUCCESSFUL COMPILE] Swettercise.java
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
+[TESTING WITH] SwetterciseTest
 [COMPILING] SwetterciseTest.java
-	[ERROR] javac failed SwetterciseTest.java
- ----begin compile output------- 
-SwetterciseTest.java:77: error: cannot find symbol
-	            gotBack = Swettercise1.isPrime(num);
-	                      ^
-	  symbol:   variable Swettercise1
-	  location: class SwetterciseTest
-	SwetterciseTest.java:109: error: cannot find symbol
-	            gotBack = Swettercise1.collatzThis(num);
-	                      ^
-	  symbol:   variable Swettercise1
-	  location: class SwetterciseTest
-	SwetterciseTest.java:157: error: cannot find symbol
-	            gotBack = Swettercise1.reverseStr(input);
-	                      ^
-	  symbol:   variable Swettercise1
-	  location: class SwetterciseTest
-	3 errors
-	
------------END COMPILE-------
-[SUMMARY] ['Swettercise: COMPILE ERROR']
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
+[RUNNING] SwetterciseTest
+-->
+	[ERROR] Runtime Error @ java SwetterciseTest
+Exception in thread "main" java.lang.NoClassDefFoundError: Swettercise (wrong name: swettercise)
+	<br>	at java.lang.ClassLoader.defineClass1(Native Method)
+	<br>	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	<br>	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	<br>	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	<br>	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	<br>	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	<br>	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	<br>	at java.security.AccessController.doPrivileged(Native Method)
+	<br>	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	<br>	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	<br>	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	<br>	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	<br>	at java.lang.Class.forName0(Native Method)
+	<br>	at java.lang.Class.forName(Class.java:264)
+	<br>	at SwetterciseTest.getRightSwettercise(SwetterciseTest.java:27)
+	<br>	at SwetterciseTest.testReverse(SwetterciseTest.java:187)
+	<br>	at SwetterciseTest.doTestReverse(SwetterciseTest.java:165)
+	<br>	at SwetterciseTest.main(SwetterciseTest.java:10)
+	<br>
+[SUMMARY] 
+	['Swettercise1: PASSED - EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
-<b>          [SCORE] 0.60</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>

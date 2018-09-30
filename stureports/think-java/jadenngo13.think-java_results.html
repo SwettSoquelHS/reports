@@ -15,6 +15,8 @@ Cloning into 'think-java-jadenngo13'...
 	
 [GITWORK DONE]
 
+<hr>
+
 <b>[Assignment]  >Think Java: 1< </b>
   [DESC] First Assignment, Ch2-Ch4
 
@@ -24,7 +26,11 @@ Cloning into 'think-java-jadenngo13'...
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
 -->
-
+American Format: 
+	Tuesday, August 28, 2018
+	European Format: 
+	Tuesday 28 August 2018
+	
 <--
 	[OUTPUT OK]
 
@@ -32,11 +38,16 @@ Cloning into 'think-java-jadenngo13'...
 	[SUCCESSFUL COMPILE] Time.java
 [RUNNING] Time
 -->
-
+Time(in seconds) elasped since midnight: 66001
+	Time(in seconds) left in day: 20399
+	Percent of day passed: 76.3900462962963%
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Date: PASSED, EXCELLENT!', 'Time: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -45,7 +56,8 @@ Cloning into 'think-java-jadenngo13'...
 	[SUCCESSFUL COMPILE] Exercise3.java
 [RUNNING] Exercise3
 -->
-
+Enter seconds: 13 seconds = 0 hours, 0.0 minutes, and 13 seconds
+	
 <--
 	[OUTPUT OK]
 
@@ -53,11 +65,16 @@ Cloning into 'think-java-jadenngo13'...
 	[SUCCESSFUL COMPILE] Exercise4.java
 [RUNNING] Exercise4
 -->
-
+Enter a number: Your guess is: 13
+	The number I was thinking of was: 52
+	You were off by: 39
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Exercise3: PASSED, EXCELLENT!', 'Exercise4: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -66,78 +83,35 @@ Cloning into 'think-java-jadenngo13'...
 	[SUCCESSFUL COMPILE] Multadd.java
 [RUNNING] Multadd
 -->
-
+13.049999999999999
+	1.0606601717798212
+	1.2160974411794894
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Multadd: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
 <b>          [SCORE] <font color="green">1.00</font></b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
+  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
 [COMPILING] Exercise4.java
 	[ERROR] javac failed Exercise4.java Exercise4.java:2: error: class Exercise6 is public, should be declared in a file named Exercise6.java
 	public class Exercise6 {
 	       ^
 	1 error
 	
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-./Exercise4.java:2: error: class Exercise6 is public, should be declared in a file named Exercise6.java
-	public class Exercise6 {
-	       ^
-	Ch6Ex4.java:58: error: cannot access Exercise4
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  bad source file: ./Exercise4.java
-	    file does not contain class Exercise4
-	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
-	2 errors
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot access Exercise5
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  bad source file: ./Exercise5.java
-	    file does not contain class Exercise5
-	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
-	1 error
-	
------------END COMPILE-------
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-./Exercise4.java:2: error: class Exercise6 is public, should be declared in a file named Exercise6.java
-	public class Exercise6 {
-	       ^
-	Ch6Ex4.java:58: error: cannot access Exercise4
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  bad source file: ./Exercise4.java
-	    file does not contain class Exercise4
-	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
-	2 errors
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
+[TESTING WITH] Ch6Ex5
 [COMPILING] Ch6Ex5.java
 	[ERROR] javac failed Ch6Ex5.java
  ----begin compile output------- 
@@ -150,20 +124,25 @@ Ch6Ex5.java:57: error: cannot access Exercise5
 	1 error
 	
 -----------END COMPILE-------
-[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: COMPILE ERROR']
+[SUMMARY] 
+	['Exercise4: COMPILE ERROR (- 0.30)'
+	 'Exercise5: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.40</b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
-[COMPILING] Swettercise.java
-	[SUCCESSFUL COMPILE] Swettercise.java
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
+  [EXPECTING TARGETS] ['Swettercise1']
+[COMPILING] Swettercise1.java
+	[SUCCESSFUL COMPILE] Swettercise1.java
+[TESTING WITH] SwetterciseTest
+[COMPILING] SwetterciseTest.java
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
 
@@ -195,7 +174,8 @@ Ch6Ex5.java:57: error: cannot access Exercise5
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Swettercise: PASSED, GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
+[SUMMARY] 
+	['Swettercise1: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
 <b>          [SCORE] <font color="green">0.91</font></b>

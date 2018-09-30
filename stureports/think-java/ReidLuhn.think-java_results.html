@@ -15,6 +15,8 @@ Cloning into 'think-java-ReidLuhn'...
 	
 [GITWORK DONE]
 
+<hr>
+
 <b>[Assignment]  >Think Java: 1< </b>
   [DESC] First Assignment, Ch2-Ch4
 
@@ -24,7 +26,10 @@ Cloning into 'think-java-ReidLuhn'...
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
 -->
-
+Hello world!
+	American format: Tuesday, August 28, 2018
+	European format: Tuesday 28 August 2018
+	
 <--
 	[OUTPUT OK]
 
@@ -32,11 +37,17 @@ Cloning into 'think-java-ReidLuhn'...
 	[SUCCESSFUL COMPILE] Time.java
 [RUNNING] Time
 -->
-
+Hello world!
+	Seconds since midnight: 42949
+	Seconds left in the day: 43451
+	Percent of the day: 49.709489941596985 %
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Date: PASSED, EXCELLENT!', 'Time: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -45,7 +56,7 @@ Cloning into 'think-java-ReidLuhn'...
 	[SUCCESSFUL COMPILE] Exercise3.java
 [RUNNING] Exercise3
 -->
-
+Enter seconds: That is 0 hours, 0 minutes, and 13 seconds.
 <--
 	[OUTPUT OK]
 
@@ -53,11 +64,16 @@ Cloning into 'think-java-ReidLuhn'...
 	[SUCCESSFUL COMPILE] Exercise4.java
 [RUNNING] Exercise4
 -->
-
+I'm thinking of a number between 1 and 100, can you guess it?
+	Your guess is: 13
+	My number was: 1
+	You were off by: 12
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Exercise3: PASSED, EXCELLENT!', 'Exercise4: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -66,90 +82,46 @@ Cloning into 'think-java-ReidLuhn'...
 	[SUCCESSFUL COMPILE] Multadd.java
 [RUNNING] Multadd
 -->
-
+Up and running!
+	The answer is: 5.0
+	The answer is: 1.0606601717798212
+	The answer is: 1.096640888228596
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Multadd: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
 <b>          [SCORE] <font color="green">1.00</font></b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:58: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
-[COMPILING] Exercise5.java
-	[ERROR] Missing Compile Target:Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:58: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
-[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: COMPILE ERROR']
+  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
+[SUMMARY] 
+	['Exercise4: MISSING (- 0.50)'
+	 'Exercise5: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.00</b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
-[COMPILING] Swettercise.java
-	[ERROR] Missing Compile Target:Swettercise.java
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
+  [EXPECTING TARGETS] ['Swettercise1']
+[COMPILING] Swettercise1.java
+	[SUCCESSFUL COMPILE] Swettercise1.java
+[TESTING WITH] SwetterciseTest
+[COMPILING] SwetterciseTest.java
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
 
@@ -181,7 +153,8 @@ Ch6Ex5.java:57: error: cannot find symbol
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Swettercise: PASSED, GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
+[SUMMARY] 
+	['Swettercise1: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
 <b>          [SCORE] <font color="green">0.91</font></b>

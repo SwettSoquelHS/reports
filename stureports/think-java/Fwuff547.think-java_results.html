@@ -15,6 +15,8 @@ Cloning into 'think-java-Fwuff547'...
 	
 [GITWORK DONE]
 
+<hr>
+
 <b>[Assignment]  >Think Java: 1< </b>
   [DESC] First Assignment, Ch2-Ch4
 
@@ -24,7 +26,11 @@ Cloning into 'think-java-Fwuff547'...
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
 -->
-
+American Format: 
+	Wednesday, September 22, 2001
+	European Format: 
+	Wednesday 22 September 2001
+	
 <--
 	[OUTPUT OK]
 
@@ -32,11 +38,15 @@ Cloning into 'think-java-Fwuff547'...
 	[SUCCESSFUL COMPILE] Time.java
 [RUNNING] Time
 -->
-
+Seconds since midnight: 42630
+	Seconds left until midnight: 43770
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Date: PASSED, EXCELLENT!', 'Time: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -45,7 +55,8 @@ Cloning into 'think-java-Fwuff547'...
 	[SUCCESSFUL COMPILE] Exercise3.java
 [RUNNING] Exercise3
 -->
-
+How many seconds?
+	13 seconds is 0 hours, 0 minutes, 0 seconds
 <--
 	[OUTPUT OK]
 
@@ -53,11 +64,14 @@ Cloning into 'think-java-Fwuff547'...
 	[SUCCESSFUL COMPILE] Exercise4.java
 [RUNNING] Exercise4
 -->
-
+I have a number between 1 and 100, guess what it is?
+	You guessed 13, I was thinking of 24, you were 11 off.
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Exercise3: PASSED, EXCELLENT!', 'Exercise4: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -66,24 +80,31 @@ Cloning into 'think-java-Fwuff547'...
 	[SUCCESSFUL COMPILE] Multadd.java
 [RUNNING] Multadd
 -->
-
+The result is 5.0
+	The result is: 1.0606601717798212
+	The result is: 1.0303150673048738
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Multadd: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
 <b>          [SCORE] <font color="green">1.00</font></b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
+  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
+[TESTING WITH] Ch6Ex4
+[COMPILING] Ch6Ex4.java
+	[SUCCESSFUL COMPILE] Ch6Ex4.java
 [RUNNING] Ch6Ex4
 -->
 abcdef
@@ -104,27 +125,6 @@ abcdef
 	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
 	[deductions=0.0]
-	
-	
-<--
-	[OUTPUT OK]
-
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[RUNNING] Ch6Ex5
--->
-
-	<br>Results for Exercise5().isDoubloon()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	</table><br>
-	[deductions=0.05]
 	
 	
 <--
@@ -132,35 +132,9 @@ abcdef
 
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[RUNNING] Ch6Ex4
--->
-abcdef
-	aaaaaa
-	abcdefg
-	z
-	beknow
-	no
-	eh
-	
-	<br>Results for Exercise4.isAbecedarian()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.isAbecedarian("abcdef")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.isAbecedarian("aaaaaa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.isAbecedarian("gfedcba")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.isAbecedarian("z")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.isAbecedarian("beknow")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.isAbecedarian("no")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.0]
-	
-	
-<--
-	[OUTPUT OK]
-
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
 [RUNNING] Ch6Ex5
 -->
 
@@ -180,20 +154,25 @@ abcdef
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Exercise4: PASSED, BUT TEST CASES FOUND SOME ERRORS', 'Exercise5: PASSED, BUT TEST CASES FOUND SOME ERRORS']
+[SUMMARY] 
+	['Exercise4: PASSED - EXCELLENT!'
+	 'Exercise5: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] <font color="green">0.90</font></b>
+<b>          [SCORE] <font color="green">0.95</font></b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
-[COMPILING] Swettercise.java
-	[ERROR] Missing Compile Target:Swettercise.java
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
+  [EXPECTING TARGETS] ['Swettercise1']
+[COMPILING] Swettercise1.java
+	[SUCCESSFUL COMPILE] Swettercise1.java
+[TESTING WITH] SwetterciseTest
+[COMPILING] SwetterciseTest.java
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
 
@@ -225,7 +204,8 @@ abcdef
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Swettercise: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Swettercise1: PASSED - EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
 <b>          [SCORE] <font color="green">1.00</font></b>

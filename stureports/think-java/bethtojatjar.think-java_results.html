@@ -15,6 +15,8 @@ Cloning into 'think-java-bethtojatjar'...
 	
 [GITWORK DONE]
 
+<hr>
+
 <b>[Assignment]  >Think Java: 1< </b>
   [DESC] First Assignment, Ch2-Ch4
 
@@ -24,7 +26,11 @@ Cloning into 'think-java-bethtojatjar'...
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
 -->
-
+American Format:
+	Thursday, July 16, 2015
+	European Format: 
+	Thursday 16 July 2015
+	
 <--
 	[OUTPUT OK]
 
@@ -32,20 +38,23 @@ Cloning into 'think-java-bethtojatjar'...
 	[SUCCESSFUL COMPILE] Time.java
 [RUNNING] Time
 -->
-
+The amount of seconds since midnight is: 39780 seconds
+	The amount of seconds left in the day is: 50280 seconds
+	The percentage of the day gone: 46.041668%
+	
 <--
 	[OUTPUT OK]
 
-[SUMMARY] ['Date: PASSED, EXCELLENT!', 'Time: PASSED, EXCELLENT!']
+[SUMMARY] 
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-[COMPILING] Exercise3.java
-	[ERROR] Missing Compile Target:Exercise3.java
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
-[SUMMARY] ['Exercise3: MISSING', 'Exercise4: MISSING']
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.17)'
+	 'Exercise4: MISSING (- 0.17)']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -56,100 +65,43 @@ Cloning into 'think-java-bethtojatjar'...
 -->
 	[ERROR] Runtime Error @ java Multadd
 
-[SUMMARY] ['Multadd: RUNTIME ERROR']
+[SUMMARY] 
+	['Multadd: RUNTIME ERROR (- 0.08)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
-<b>          [SCORE] 0.55</b>
+<b>          [SCORE] 0.58</b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 2< </b>
   [DESC] Second Assignment, Ch 6
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:58: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
-[COMPILING] Exercise5.java
-	[ERROR] Missing Compile Target:Exercise5.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
-[COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:58: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                           ^
-	  symbol:   variable Exercise4
-	  location: class Ch6Ex4
-	1 error
-	
------------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot find symbol
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  symbol:   variable Exercise5
-	  location: class Ch6Ex5
-	1 error
-	
------------END COMPILE-------
-[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: COMPILE ERROR']
+  [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
+[SUMMARY] 
+	['Exercise4: MISSING (- 0.50)'
+	 'Exercise5: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.00</b>
+
+<hr>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
 
 *[BEGIN chapter6]
-  [EXPECTING TARGETS] ['Swettercise']]
-[COMPILING] Swettercise.java
-	[ERROR] Missing Compile Target:Swettercise.java
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
-[COMPILING] SwetterciseTest.java
-	[ERROR] javac failed SwetterciseTest.java
- ----begin compile output------- 
-SwetterciseTest.java:157: error: cannot find symbol
-	            gotBack = Swettercise1.reverseStr(input);
-	                                  ^
-	  symbol:   method reverseStr(String)
-	  location: class Swettercise1
+  [EXPECTING TARGETS] ['Swettercise1']
+[COMPILING] Swettercise1.java
+	[ERROR] javac failed Swettercise1.java Swettercise1.java:56: error: missing return statement
+		}
+		^
 	1 error
 	
------------END COMPILE-------
-[SUMMARY] ['Swettercise: COMPILE ERROR']
+[SUMMARY] 
+	['Swettercise1: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
-<b>          [SCORE] 0.60</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>
