@@ -75,8 +75,7 @@ The number of seconds since midnight: 83505seconds
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
+[TESTING WITH] Ch6Ex4
 [COMPILING] Ch6Ex4.java
 	[ERROR] javac failed Ch6Ex4.java
  ----begin compile output------- 
@@ -88,8 +87,7 @@ Ch6Ex4.java:56: error: cannot find symbol
 	1 error
 	
 -----------END COMPILE-------
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
+[TESTING WITH] Ch6Ex5
 [COMPILING] Ch6Ex5.java
 	[ERROR] javac failed Ch6Ex5.java
  ----begin compile output------- 
@@ -113,12 +111,19 @@ Ch6Ex5.java:57: error: cannot find symbol
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise']
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
+[TESTING WITH] SwetterciseTest
+[COMPILING] SwetterciseTest.java
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
 	[ERROR] Runtime Error @ java SwetterciseTest
-
+Exception in thread "main" java.lang.NullPointerException
+	<br>	at java.lang.String.<init>(String.java:166)
+	<br>	at java.lang.String.valueOf(String.java:3008)
+	<br>	at SwetterciseTest.testIsPrime(SwetterciseTest.java:106)
+	<br>	at SwetterciseTest.doTestPrime(SwetterciseTest.java:42)
+	<br>	at SwetterciseTest.main(SwetterciseTest.java:12)
+	<br>
 [SUMMARY] ['Swettercise: PASSED, EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3

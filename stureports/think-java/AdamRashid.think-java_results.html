@@ -71,8 +71,8 @@ How many seconds? 13.00 sec = 0 hour, 0 min
 I'm thinking of a number between 1 and 100(Including Both)
 	Can you guess what it is? 
 	Type a number: You guessed: 13
-	The number I was thinking of is: 30
-	You were off by: 17
+	The number I was thinking of is: 48
+	You were off by: 35
 	
 <--
 	[OUTPUT OK]
@@ -108,8 +108,7 @@ I'm thinking of a number between 1 and 100(Including Both)
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
-[TESTING WITH] copied Ch6Ex4
-[COMPILED TEST] copied Ch6Ex4
+[TESTING WITH] Ch6Ex4
 [COMPILING] Ch6Ex4.java
 	[ERROR] javac failed Ch6Ex4.java
  ----begin compile output------- 
@@ -123,8 +122,9 @@ Ch6Ex4.java:56: error: cannot find symbol
 -----------END COMPILE-------
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
-[TESTING WITH] copied Ch6Ex5
-[COMPILED TEST] copied Ch6Ex5
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
 [RUNNING] Ch6Ex5
 -->
 
@@ -158,12 +158,19 @@ Ch6Ex4.java:56: error: cannot find symbol
   [EXPECTING TARGETS] ['Swettercise']
 [COMPILING] Swettercise.java
 	[SUCCESSFUL COMPILE] Swettercise.java
-[TESTING WITH] copied SwetterciseTest
-[COMPILED TEST] copied SwetterciseTest
+[TESTING WITH] SwetterciseTest
+[COMPILING] SwetterciseTest.java
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
 	[ERROR] Runtime Error @ java SwetterciseTest
-
+Exception in thread "main" java.lang.NullPointerException
+	<br>	at java.lang.String.<init>(String.java:166)
+	<br>	at java.lang.String.valueOf(String.java:3008)
+	<br>	at SwetterciseTest.testIsPrime(SwetterciseTest.java:106)
+	<br>	at SwetterciseTest.doTestPrime(SwetterciseTest.java:42)
+	<br>	at SwetterciseTest.main(SwetterciseTest.java:12)
+	<br>
 [SUMMARY] ['Swettercise: PASSED, EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
