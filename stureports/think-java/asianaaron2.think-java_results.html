@@ -52,10 +52,6 @@ The number of seconds since midnight: 83505seconds
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-[COMPILING] Exercise3.java
-	[ERROR] Missing Compile Target:Exercise3.java
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
 [SUMMARY] ['Exercise3: COMPILE ERROR', 'Exercise4: COMPILE ERROR']
 [DONE chapter3]
 
@@ -79,8 +75,6 @@ The number of seconds since midnight: 83505seconds
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-[COMPILING] Exercise4.java
-	[ERROR] Missing Compile Target:Exercise4.java
 [TESTING WITH] copied Ch6Ex4
 [COMPILED TEST] copied Ch6Ex4
 [COMPILING] Ch6Ex4.java
@@ -94,8 +88,6 @@ Ch6Ex4.java:56: error: cannot find symbol
 	1 error
 	
 -----------END COMPILE-------
-[COMPILING] Exercise5.java
-	[ERROR] Missing Compile Target:Exercise5.java
 [TESTING WITH] copied Ch6Ex5
 [COMPILED TEST] copied Ch6Ex5
 [COMPILING] Ch6Ex5.java
@@ -121,34 +113,15 @@ Ch6Ex5.java:57: error: cannot find symbol
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise']
-[COMPILING] Swettercise.java
-	[ERROR] Missing Compile Target:Swettercise.java
 [TESTING WITH] copied SwetterciseTest
 [COMPILED TEST] copied SwetterciseTest
-[COMPILING] SwetterciseTest.java
-	[ERROR] javac failed SwetterciseTest.java
- ----begin compile output------- 
-SwetterciseTest.java:77: error: cannot find symbol
-	            gotBack = Swettercise1.isPrime(num);
-	                      ^
-	  symbol:   variable Swettercise1
-	  location: class SwetterciseTest
-	SwetterciseTest.java:109: error: cannot find symbol
-	            gotBack = Swettercise1.collatzThis(num);
-	                      ^
-	  symbol:   variable Swettercise1
-	  location: class SwetterciseTest
-	SwetterciseTest.java:157: error: cannot find symbol
-	            gotBack = Swettercise1.reverseStr(input);
-	                      ^
-	  symbol:   variable Swettercise1
-	  location: class SwetterciseTest
-	3 errors
-	
------------END COMPILE-------
-[SUMMARY] ['Swettercise: COMPILE ERROR']
+[RUNNING] SwetterciseTest
+-->
+	[ERROR] Runtime Error @ java SwetterciseTest
+
+[SUMMARY] ['Swettercise: PASSED, EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>
