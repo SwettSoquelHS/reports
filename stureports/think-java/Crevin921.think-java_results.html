@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-09-29
+Run date: 2018-09-30
 <br>Student User: Crevin921
 <br>Project: think-java
 <br>
@@ -77,33 +77,20 @@ Cloning into 'think-java-Crevin921'...
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
-[COMPILING] Swettercise.java
-	[SUCCESSFUL COMPILE] Swettercise.java
+[COMPILING] Swettercise1.java
+	[SUCCESSFUL COMPILE] Swettercise1.java
 [TESTING WITH] SwetterciseTest
 [COMPILING] SwetterciseTest.java
 	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
 	[ERROR] Runtime Error @ java SwetterciseTest
-Exception in thread "main" java.lang.NoClassDefFoundError: Swettercise (wrong name: swettercise)
-	<br>	at java.lang.ClassLoader.defineClass1(Native Method)
-	<br>	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
-	<br>	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
-	<br>	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
-	<br>	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
-	<br>	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
-	<br>	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
-	<br>	at java.security.AccessController.doPrivileged(Native Method)
-	<br>	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
-	<br>	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	<br>	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	<br>	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	<br>	at java.lang.Class.forName0(Native Method)
-	<br>	at java.lang.Class.forName(Class.java:264)
-	<br>	at SwetterciseTest.getRightSwettercise(SwetterciseTest.java:27)
-	<br>	at SwetterciseTest.testReverse(SwetterciseTest.java:187)
-	<br>	at SwetterciseTest.doTestReverse(SwetterciseTest.java:165)
-	<br>	at SwetterciseTest.main(SwetterciseTest.java:10)
+Exception in thread "main" java.lang.NullPointerException
+	<br>	at java.lang.String.<init>(String.java:166)
+	<br>	at java.lang.String.valueOf(String.java:3008)
+	<br>	at SwetterciseTest.testIsPrime(SwetterciseTest.java:107)
+	<br>	at SwetterciseTest.doTestPrime(SwetterciseTest.java:42)
+	<br>	at SwetterciseTest.main(SwetterciseTest.java:12)
 	<br>
 [SUMMARY] 
 	['Swettercise1: PASSED - EXCELLENT!']
