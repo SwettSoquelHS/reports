@@ -44,12 +44,74 @@ Cloning into 'think-java-notswett'...
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
+[COMPILING] Ch6Ex4.java
+	[SUCCESSFUL COMPILE] Ch6Ex4.java
+[RUNNING] Ch6Ex4
+-->
+
+	<br>Results for Exercise4() //isAbecedarian
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.isAbecedarian("abcdef")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("aaaaaa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("gfedcba")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("z")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("beknow")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("no")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Ch6Ex5.java
+	[ERROR] javac failed Ch6Ex5.java
+ ----begin compile output------- 
+Ch6Ex5.java:57: error: cannot find symbol
+	            boolean isIt = Exercise5.isDoubloon(testStr);
+	                           ^
+	  symbol:   variable Exercise5
+	  location: class Ch6Ex5
+	1 error
+	
+-----------END COMPILE-------
 [COMPILING] Exercise5.java
 	[ERROR] Missing Compile Target:Exercise5.java
-[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: COMPILE ERROR']
+[COMPILING] Ch6Ex4.java
+	[SUCCESSFUL COMPILE] Ch6Ex4.java
+[RUNNING] Ch6Ex4
+-->
+
+	<br>Results for Exercise4() //isAbecedarian
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.isAbecedarian("abcdef")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("aaaaaa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("gfedcba")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("z")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("beknow")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("no")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Ch6Ex5.java
+	[ERROR] javac failed Ch6Ex5.java
+ ----begin compile output------- 
+Ch6Ex5.java:57: error: cannot find symbol
+	            boolean isIt = Exercise5.isDoubloon(testStr);
+	                           ^
+	  symbol:   variable Exercise5
+	  location: class Ch6Ex5
+	1 error
+	
+-----------END COMPILE-------
+[SUMMARY] ['Exercise4: PASSED, EXCELLENT!', 'Exercise4.Ch6Ex4: PASSED, EXCELLENT!', 'Exercise4.Ch6Ex5: COMPILE ERROR', 'Exercise5: MISSING', 'Exercise5.Ch6Ex4: RAN, BUT TOO MANY ERRORS', 'Exercise5.Ch6Ex5: COMPILE ERROR']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.00</b>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
@@ -58,9 +120,30 @@ Cloning into 'think-java-notswett'...
   [EXPECTING TARGETS] ['Swettercise']]
 [COMPILING] Swettercise.java
 	[ERROR] Missing Compile Target:Swettercise.java
-[SUMMARY] ['Swettercise: COMPILE ERROR']
+[COMPILING] SwetterciseTest.java
+	[ERROR] javac failed SwetterciseTest.java
+ ----begin compile output------- 
+SwetterciseTest.java:77: error: cannot find symbol
+	            gotBack = Swettercise1.isPrime(num);
+	                      ^
+	  symbol:   variable Swettercise1
+	  location: class SwetterciseTest
+	SwetterciseTest.java:109: error: cannot find symbol
+	            gotBack = Swettercise1.collatzThis(num);
+	                      ^
+	  symbol:   variable Swettercise1
+	  location: class SwetterciseTest
+	SwetterciseTest.java:157: error: cannot find symbol
+	            gotBack = Swettercise1.reverseStr(input);
+	                      ^
+	  symbol:   variable Swettercise1
+	  location: class SwetterciseTest
+	3 errors
+	
+-----------END COMPILE-------
+[SUMMARY] ['Swettercise: MISSING', 'Swettercise.SwetterciseTest: COMPILE ERROR']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
-<b>          [SCORE] 0.60</b>
+<b>          [SCORE] 0.40</b>
 
 </pre></body></html>

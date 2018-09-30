@@ -80,12 +80,92 @@ Cloning into 'think-java-DrKiefer'...
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']]
 [COMPILING] Exercise4.java
 	[ERROR] Missing Compile Target:Exercise4.java
+[COMPILING] Ch6Ex4.java
+	[ERROR] javac failed Ch6Ex4.java
+ ----begin compile output------- 
+Ch6Ex4.java:58: error: cannot find symbol
+	            boolean isIt = Exercise4.isAbecedarian(testStr);
+	                           ^
+	  symbol:   variable Exercise4
+	  location: class Ch6Ex4
+	1 error
+	
+-----------END COMPILE-------
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
+[RUNNING] Ch6Ex5
+-->
+Doesnt Work
+	works
+	works
+	works
+	works
+	works
+	Doesnt Work
+	Doesnt Work
+	
+	<br>Results for Exercise5().isDoubloon()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.05]
+	
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
-[SUMMARY] ['Exercise4: COMPILE ERROR', 'Exercise5: COMPILE ERROR']
+[COMPILING] Ch6Ex4.java
+	[ERROR] javac failed Ch6Ex4.java
+ ----begin compile output------- 
+Ch6Ex4.java:58: error: cannot find symbol
+	            boolean isIt = Exercise4.isAbecedarian(testStr);
+	                           ^
+	  symbol:   variable Exercise4
+	  location: class Ch6Ex4
+	1 error
+	
+-----------END COMPILE-------
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
+[RUNNING] Ch6Ex5
+-->
+Doesnt Work
+	works
+	works
+	works
+	works
+	works
+	Doesnt Work
+	Doesnt Work
+	
+	<br>Results for Exercise5().isDoubloon()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.05]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] ['Exercise4: MISSING', 'Exercise4.Ch6Ex4: COMPILE ERROR', 'Exercise4.Ch6Ex5: RAN, BUT TOO MANY ERRORS', 'Exercise5: RAN, BUT TOO MANY ERRORS', 'Exercise5.Ch6Ex4: COMPILE ERROR', 'Exercise5.Ch6Ex5: RAN, BUT TOO MANY ERRORS']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.00</b>
 
 <b>[Assignment]  >Think Java: 3< </b>
   [DESC] Third Assignment, Swettercise
@@ -94,7 +174,34 @@ Cloning into 'think-java-DrKiefer'...
   [EXPECTING TARGETS] ['Swettercise']]
 [COMPILING] Swettercise.java
 	[SUCCESSFUL COMPILE] Swettercise.java
-[SUMMARY] ['Swettercise: COMPILE ERROR']
+[COMPILING] SwetterciseTest.java
+	[ERROR] javac failed SwetterciseTest.java
+ ----begin compile output------- 
+./Swettercise1.java:43: error: class, interface, or enum expected
+	} 
+	^
+	SwetterciseTest.java:109: error: cannot find symbol
+	            gotBack = Swettercise1.collatzThis(num);
+	                                  ^
+	  symbol:   method collatzThis(int)
+	  location: class Swettercise1
+	./Swettercise1.java:33: error: incompatible types: missing return value
+				  return;
+				  ^
+	./Swettercise1.java:36: error: cannot find symbol
+			 collatzThis(n / 2);
+			 ^
+	  symbol:   method collatzThis(int)
+	  location: class Swettercise1
+	./Swettercise1.java:39: error: cannot find symbol
+			collatzThis(3*n + 1);
+			^
+	  symbol:   method collatzThis(int)
+	  location: class Swettercise1
+	5 errors
+	
+-----------END COMPILE-------
+[SUMMARY] ['Swettercise: PASSED, EXCELLENT!', 'Swettercise.SwetterciseTest: COMPILE ERROR']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 3
 <b>          [SCORE] 0.60</b>
