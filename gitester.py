@@ -4,6 +4,8 @@ from subprocess import Popen, PIPE, STDOUT
 import loadStudents
 import argparse
 import scorehistory
+import javaRun
+from shutil import copyfile
 
 
 # Stuff we need, joy.
@@ -29,6 +31,7 @@ GITHUB_DEMO_BASE_URL = "https://swettsoquelhs.github.io/"
 
 OUTPUT_DIR = './stuwork'
 REPORT_DIR = './stureports'
+TESTS_DIR = './tests'
  
 
 REPORTS = "github.com/SwettSoquelHS/reports.git"
@@ -126,7 +129,7 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
             stuScores = scores[student]
             for asignmentKey in stuScores.keys(): 
                 scoreHeaderStr = scoreHeaderStr + '<td>' + asignmentKey + '</td>'
-        break
+            break
         scoreHeaderStr = scoreHeaderStr + "\n"    
 
     with open(reportFile , "w") as file:
@@ -151,16 +154,23 @@ def createClassReport(projName, stu_report_map, liveDemo, scores  ):
                 stuReport = stu_report_map[studentGit]
 
             theScore = None
-            if not (scores is None):
+            tdData = ""
+            if not (scores is None):                                
+                cnt = 0;
                 for asg in scores[studentGit].keys():
                     theScore = scores[studentGit][asg] 
                     oldScore = scorehistory.getPrevScore(asg, studentGit)
                     if theScore != oldScore and not(oldScore is None):
                         theScore = 'WAS: ' + str(oldScore) + ' vs NOW: ' + str(theScore)
+                    if cnt == 0:
+                        tdData = theScore 
+                    else: 
+                        tdData = tdData + "</td><td>" +theScore
+                    cnt = cnt + 1
 
 
             #def     printTR(  display,            codeURL, liveDisplay, liveURL, stuReport):
-            stuRow = printTR(stuName, stuCode, stuSite, stuSite, stuReport, theScore )
+            stuRow = printTR(stuName, stuCode, stuSite, stuSite, stuReport, tdData )
             file.write(stuRow)
             
         file.write("</table></body><html>")
@@ -256,6 +266,12 @@ def tryRun( studentReport, chapterDir, target):
     return error_code
 
 
+def copyTest(TESTS_DIR, chapterDir, testTarget):
+    javaFile = testTarget + ".java"
+    if os.path.isfile(TESTS_DIR+'/'+ javaFile):
+        copyfile(TESTS_DIR+'/'+javaFile, chapterDir + "/" + javaFile )
+
+
 def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
     #Chapter assignments
     ch2Descriptor = {
@@ -282,16 +298,16 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
 
     ch6Descriptor = {
         "assignment_dir": "chapter6",
-        "targets" : ["Exercise4", "Exercise5"], #Files to look for
+        "targets" : [("Exercise4","Ch6Ex4"), ("Exercise5","Ch6Ex5")], #Files to look for
         "score" : 0.4 ,              #weight for the assignment
-        "checkWith": "COMPILES"      #How to verify assignment
+        "checkWith": "TEST",      #How to verify assignment     
     }
 
     swetterCise1 = {
         "assignment_dir": "chapter6",
-        "targets" : ["Swettercise"], #Files to look for
+        "targets" : [("Swettercise", "SwetterciseTest")], #Files to look for
         "score" : 0.4 ,              #weight for the assignment
-        "checkWith": "COMPILES"      #How to verify assignment
+        "checkWith": "TEST",        
     }
 
 
@@ -305,12 +321,12 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
 
         "Think Java: 2" : {   #<-- key, value is map 
             "work": [ch6Descriptor],
-            "enabled": False,
+            "enabled": True,
             "desc": "Second Assignment, Ch 6" },
 
         "Think Java: 3" : {   #<-- key, value is map 
             "work": [swetterCise1],
-            "enabled": False,
+            "enabled": True,
             "desc": "Third Assignment, Swettercise" },
 
     }
@@ -321,7 +337,7 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         if not assignment["enabled"]:
             continue
 
-        printToReport(studentReport, "[Assignment]  >" + key + "<")
+        printToReport(studentReport, "\n<b>[Assignment]  >" + key + "< </b>")
         printToReport(studentReport, "  [DESC] " + think_java_assignments[key]["desc"])
         
         asg_score = 1.0 
@@ -339,22 +355,54 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
                 target_errors = {}
                 for target in chapterWork['targets']:
                     # chapter/target looks like ./stuwork/studentName/think-java-studentName/chapter2
-                    javaFile = target + ".java"
+                    targetName = target[0]
+                    testTarget = target[1]
+                    javaFile = targetName + ".java"
                     target_errors[target] = tryCompile(studentReport, chapterDir, javaFile)
 
                     if chapterWork["checkWith"] == "COMPILES":
-                        if 3 == tryRun(studentReport, chapterDir, target):
-                            target_errors[target] = 3
+                        if tryRun(studentReport, chapterDir, targetName) == 3:
+                            target_errors[targetName] = 3
                     elif chapterWork["checkWith"] == "TEST":
-                        tests = chapterWork["checkWith"]
+                        copyTest(TESTS_DIR, chapterDir, "TUtils")
+
+                        copyTest(TESTS_DIR, chapterDir, testTarget)
+                        printToReport(studentReport, "[TESTING WITH] copied " + testTarget)
+                        results = javaRun.tryCompile(chapterDir, testTarget+".java")
+                        printToReport(studentReport, "[COMPILED TEST] copied " + testTarget)
+                        if results[0] == 0:
+                            #compiled successfully, now try running
+                            results = javaRun.tryRun(chapterDir, testTarget)
+                            if results[0] == 0:
+                                #It ran extract deductions 
+                                for s in results[1]:
+                                    printToReport(studentReport, s)
+                                asg_score = asg_score - results[2]
+
+                            #record runtime exit code
+                            target_errors[target] = results[0]
+                        else:
+                            #issue during compile 
+                            target_errors[target] = results[0]
+                            for s in results[1]:
+                                printToReport(studentReport, s)
+
+
 
                 target_summary = []
                 for target in target_errors.keys():
                     if target_errors[target] == 0:
-                        target_summary.append( target +  ": PASS" )
+                        if asg_score > 0.999:
+                            target_summary.append( target +  ": PASSED, EXCELLENT!" )
+                        elif asg_score > 0.9:
+                            target_summary.append( target +  ": PASSED, GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND." )
+                        elif asg_score > 0.8:
+                            target_summary.append( target +  ": PASSED, BUT TEST CASES FOUND SOME ERRORS" )
+                        else:
+                            target_summary.append( target +  ": RAN, BUT TOO MANY ERRORS" )
                     elif  target_errors[target] == 1:
                          target_summary.append( target + ": COMPILE ERROR" )
-                         asg_score = asg_score - 0.1
+                         asg_score = asg_score - 0.4
                     elif  target_errors[target] == 2:
                          target_summary.append( target + ": MISSING" )
                          asg_score = asg_score - 0.2
@@ -380,9 +428,9 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         
         
         if passing:
-            asg_score = '<font face="verdana" color="green">'+asg_score+'</font>'
+            asg_score = '<font color="green">'+asg_score+'</font>'
 
-        printToReport(studentReport, "          [SCORE] " + asg_score)
+        printToReport(studentReport, "<b>          [SCORE] " + asg_score +"</b>")
     return assign_to_score
 
 
@@ -446,7 +494,7 @@ if projName in ['think-java']:
     #so scores should look like {'stu name': {'assignment name': score}}
     createClassReport(projName, stu_to_report, None, scores) 
     scorehistory.save(scoreHistory)
-    #saveReportToGit(stu_to_report, reportFile)
+    saveReportToGit(stu_to_report, reportFile)
     
     
 else:
@@ -456,5 +504,5 @@ else:
     #so scores should look like {'stu name': {'assignment name': score}}
     createClassReport(projName, stu_to_report, None, scores) 
     scorehistory.save(scoreHistory)
-    #saveReportToGit(stu_to_report, reportFile)
+    saveReportToGit(stu_to_report, reportFile)
 

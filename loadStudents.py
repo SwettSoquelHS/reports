@@ -15,6 +15,8 @@ def getStudents( loadOnlyStudent = None ):
         result = []
         with open("students.txt" , "r") as file:
             for stuLine in file:
+                if stuLine.strip() == '#':
+                    break
                 stuff = stuLine.split(',')
                 if loadOnlyStudent is None:
                     result.append( (stuff[0].strip(), stuff[1].strip(), stuff[2].strip() ) )
