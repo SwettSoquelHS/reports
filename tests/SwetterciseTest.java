@@ -104,8 +104,9 @@ public class SwetterciseTest extends TUtils {
             return result;
         } catch (Exception e) {
             deduct(0.05);
-            addResult("isPrime", String.valueOf(num), String.valueOf(null), 
-                String.valueOf(expected), false);
+            String s = String.valueOf(num);
+            String b = String.valueOf(expected);
+            addResult("isPrime", s, "raised Exception", b , false);
             return false;
         }           
     }
@@ -152,7 +153,8 @@ public class SwetterciseTest extends TUtils {
             return matched;
         } catch (Exception e) {
             deduct(0.05);
-            addResult("collatzThis", String.valueOf(num), gotBack, expected, false);
+            String s = String.valueOf(num);        
+            addResult("collatzThis", s, "Raised Exception", expected, false);
             return false;
         }        
     }
@@ -192,8 +194,8 @@ public class SwetterciseTest extends TUtils {
             boolean result = expected.equals(gotBack);
             addResult("reverseStr", input, gotBack, expected, result );
             return result;
-        } catch (Exception e) {
-            addResult("reverseStr", input, gotBack, expected, false);
+        } catch (Exception e) {            
+            addResult("reverseStr", input, "raised exception", expected, false);
             return false;
         }
     }

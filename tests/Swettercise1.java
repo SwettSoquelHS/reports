@@ -1,13 +1,13 @@
 public class Swettercise1{
     public static void main(String[] args){
-        System.out.println("Swettercise 1");
-        System.out.println(reverseStr("This is not reversed!"));
+        // System.out.println("Swettercise 1");
+        // System.out.println(reverseStr("This is not reversed!"));
 
-        System.out.println( isPrime(14) );
-        System.out.println( isPrime(13) );
-        System.out.println( isPrime(19) );
+        // System.out.println( isPrime(14) );
+        // System.out.println( isPrime(13) );
+        // System.out.println( isPrime(19) );
 
-        System.out.println( collatzThis(12) );        
+        // System.out.println( collatzThis(12) );        
 
     }
 
@@ -19,7 +19,7 @@ public class Swettercise1{
         return result;
     }   
 
-    public static boolean isPrime(int number){
+    public static boolean IsPrime(int number){
         for(int i = 2; i <= Math.sqrt(number); i++){
             if (number % i == 0)
                 return false;
