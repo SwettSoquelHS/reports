@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-09-30
+Run date: 2018-10-01
 <br>Student User: jadenngo13
 <br>Project: think-java
 <br>
@@ -66,8 +66,8 @@ Enter seconds: 13 seconds = 0 hours, 0.0 minutes, and 13 seconds
 [RUNNING] Exercise4
 -->
 Enter a number: Your guess is: 13
-	The number I was thinking of was: 1
-	You were off by: 12
+	The number I was thinking of was: 85
+	You were off by: 72
 	
 <--
 	[OUTPUT OK]
@@ -104,32 +104,99 @@ Enter a number: Your guess is: 13
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
 [COMPILING] Exercise4.java
-	[ERROR] javac failed Exercise4.java Exercise4.java:2: error: class Exercise6 is public, should be declared in a file named Exercise6.java
-	public class Exercise6 {
-	       ^
-	1 error
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] Ch6Ex4
+[COMPILING] Ch6Ex4.java
+	[SUCCESSFUL COMPILE] Ch6Ex4.java
+[RUNNING] Ch6Ex4
+-->
+
+	<br>Results for Exercise4.isAbecedarian()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.isAbecedarian("abcdef")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("aaaaaa")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("gfedcba")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("z")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("beknow")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("no")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.05]
 	
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
 [TESTING WITH] Ch6Ex5
 [COMPILING] Ch6Ex5.java
-	[ERROR] javac failed Ch6Ex5.java
- ----begin compile output------- 
-Ch6Ex5.java:57: error: cannot access Exercise5
-	            boolean isIt = Exercise5.isDoubloon(testStr);
-	                           ^
-	  bad source file: ./Exercise5.java
-	    file does not contain class Exercise5
-	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
-	1 error
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
+[RUNNING] Ch6Ex5
+-->
+index of letter a :0
+	index of letter b :1
+	index of letter c :2
+	index of letter d :3
+	index of letter e :4
+	index of letter f :5
+	index of letter a :0
+	index of letter a :0
+	index of letter a :0
+	index of letter n :13
+	index of letter n :13
+	index of letter a :0
+	index of letter a :0
+	index of letter b :1
+	index of letter c :2
+	index of letter d :3
+	index of letter a :0
+	index of letter b :1
+	index of letter c :2
+	index of letter d :3
+	index of letter a :0
+	index of letter a :0
+	index of letter a :0
+	index of letter i :8
+	index of letter n :13
+	index of letter t :19
+	index of letter e :4
+	index of letter s :18
+	index of letter t :19
+	index of letter i :8
+	index of letter n :13
+	index of letter e :4
+	index of letter s :18
+	index of letter i :8
+	index of letter   :-65
+	index of letter b :1
+	index of letter a :0
+	index of letter n :13
+	index of letter n :13
+	index of letter a :0
+	index of letter b :1
 	
------------END COMPILE-------
+	<br>Results for Exercise5().isDoubloon()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.1]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise4: COMPILE ERROR (- 0.30)'
-	 'Exercise5: COMPILE ERROR (- 0.30)']
+	['Exercise4: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
+	 'Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.40</b>
+<b>          [SCORE] <font color="green">0.85</font></b>
 
 <hr>
 

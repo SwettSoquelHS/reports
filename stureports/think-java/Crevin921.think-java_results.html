@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-09-30
+Run date: 2018-10-01
 <br>Student User: Crevin921
 <br>Project: think-java
 <br>
@@ -41,9 +41,33 @@ Cloning into 'think-java-Crevin921'...
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[RUNNING] Exercise3
+-->
+Seconds to minutes to hours
+	Enter a number of seconds
+	0hours 0 minutes: 13 seconds
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[RUNNING] Exercise4
+-->
+Im thinking of a number between 1 and 100
+	Can you guess what it is? 
+	your guess was: 13
+	The number i was thinking of was: 71
+	you were off by -58
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise3: MISSING (- 0.17)'
-	 'Exercise4: MISSING (- 0.17)']
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -54,7 +78,7 @@ Cloning into 'think-java-Crevin921'...
 	['Multadd: COMPILE ERROR (- 0.10)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
-<b>          [SCORE] 0.40</b>
+<b>          [SCORE] 0.73</b>
 
 <hr>
 
@@ -63,12 +87,42 @@ Cloning into 'think-java-Crevin921'...
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] Ch6Ex4
+[COMPILING] Ch6Ex4.java
+	[ERROR] javac failed Ch6Ex4.java
+ ----begin compile output------- 
+Ch6Ex4.java:56: error: cannot access Exercise4
+	            boolean isIt = Exercise4.isAbecedarian(testStr);
+	                           ^
+	  bad source file: ./Exercise4.java
+	    file does not contain class Exercise4
+	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+	1 error
+	
+-----------END COMPILE-------
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[ERROR] javac failed Ch6Ex5.java
+ ----begin compile output------- 
+Ch6Ex5.java:57: error: cannot access Exercise5
+	            boolean isIt = Exercise5.isDoubloon(testStr);
+	                           ^
+	  bad source file: ./Exercise5.java
+	    file does not contain class Exercise5
+	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+	1 error
+	
+-----------END COMPILE-------
 [SUMMARY] 
-	['Exercise4: MISSING (- 0.50)'
-	 'Exercise5: MISSING (- 0.50)']
+	['Exercise4: COMPILE ERROR (- 0.30)'
+	 'Exercise5: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: 2
-<b>          [SCORE] 0.00</b>
+<b>          [SCORE] 0.40</b>
 
 <hr>
 
