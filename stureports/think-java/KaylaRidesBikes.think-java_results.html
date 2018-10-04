@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-01
+Run date: 2018-10-04
 <br>Student User: KaylaRidesBikes
 <br>Project: think-java
 <br>
@@ -52,7 +52,9 @@ Number of seconds since midnight:
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-	[ERROR] No chapter work for:chapter3
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.17)'
+	 'Exercise4: MISSING (- 0.17)']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -71,7 +73,7 @@ Exercise 6:
 	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: 1
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.67</b>
 
 <hr>
 
@@ -95,10 +97,15 @@ Exercise 6:
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
 [COMPILING] Swettercise1.java
-	[ERROR] javac failed Swettercise1.java Swettercise1.java:23: error: ';' expected
-			System.out.println("aString")
-			                             ^
-	1 error
+	[ERROR] javac failed Swettercise1.java Swettercise1.java:23: error: cannot find symbol
+			System.out.println(aString);
+			                   ^
+	  symbol:   variable aString
+	  location: class Swettercise1
+	Swettercise1.java:43: error: incompatible types: unexpected return value
+				return i;
+				       ^
+	2 errors
 	
 [SUMMARY] 
 	['Swettercise1: COMPILE ERROR (- 0.30)']
