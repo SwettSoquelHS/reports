@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-07
+Run date: 2018-10-08
 <br>Student User: Crevin921
 <br>Project: think-java
 <br>
@@ -26,17 +26,30 @@ Cloning into 'think-java-Crevin921'...
 	[SUCCESSFUL COMPILE] Date.java
 [RUNNING] Date
 -->
-	[ERROR] Runtime Error @ java Date
+American format: 
+	Thursday, July  16, 2015
+	European format: 
+	Thursday 16 July  2015
+	The current date is: 
+	Thursday 16,July of 2015
+	
+<--
+	[OUTPUT OK]
 
 [COMPILING] Time.java
 	[SUCCESSFUL COMPILE] Time.java
 [RUNNING] Time
 -->
-	[ERROR] Runtime Error @ java Time
+Time clock
+	hours: 12 minutes: 13 seconds: 13
+	seconds left before midnight is: 42407
+	
+<--
+	[OUTPUT OK]
 
 [SUMMARY] 
-	['Date: RUNTIME ERROR (- 0.08)'
-	 'Time: RUNTIME ERROR (- 0.08)']
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -59,8 +72,8 @@ Seconds to minutes to hours
 Im thinking of a number between 1 and 100
 	Can you guess what it is? 
 	your guess was: 13
-	The number i was thinking of was: 39
-	you were off by -26
+	The number i was thinking of was: 35
+	you were off by -22
 	
 <--
 	[OUTPUT OK]
@@ -74,15 +87,15 @@ Im thinking of a number between 1 and 100
   [EXPECTING TARGETS] ['Multadd']]
 [COMPILING] Multadd.java
 	[ERROR] javac failed Multadd.java Multadd.java:1: error: class multAdd is public, should be declared in a file named multAdd.java
-		public class multAdd {
-		       ^
+	public class multAdd{
+	       ^
 	1 error
 	
 [SUMMARY] 
 	['Multadd: COMPILE ERROR (- 0.10)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] 0.73</b>
+<b>          [SCORE] <font color="green">0.90</font></b>
 
 <hr>
 
@@ -115,17 +128,35 @@ Im thinking of a number between 1 and 100
 	[OUTPUT OK]
 
 [COMPILING] Exercise5.java
-	[ERROR] javac failed Exercise5.java Exercise5.java:11: error: incomparable types: char and String
-			if (letter == theWord.substring(0))
-			           ^
-	1 error
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
+[RUNNING] Ch6Ex5
+-->
+
+	<br>Results for Exercise5().isDoubloon()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
 	['Exercise4: PASSED - EXCELLENT!'
-	 'Exercise5: COMPILE ERROR (- 0.30)']
+	 'Exercise5: PASSED - EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 <hr>
 
