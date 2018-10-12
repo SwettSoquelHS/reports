@@ -2,11 +2,19 @@ import java.util.Arrays;
 
 public class TestCh7Ex4 extends TUtils {
     public static void main(String[] args){
+        if(args.length > 2){
+            if (args[2].equalsIgnoreCase("pub")){
+                WEB_RUN = true;
+            }            
+        } else {
+            WEB_RUN = false;
+        }
+
         runTests();
         dumpReport();
     }
 
-    public static void runTests(){
+    public static void runTests(){    
         startTest("Chapter7, Exercise4.indexOfMax()");
         int testVal = 2;
         tryTest(testVal, new boolean[]{false, false});
@@ -37,8 +45,11 @@ public class TestCh7Ex4 extends TUtils {
         try {
             boolean[] gotBack = Exercise4.sieve(n);
             //public static void addResult(String methodTested, String argument, String received, String expected, boolean passed){
+            String s1  = Arrays.toString(gotBack);
+            String s2 = Arrays.toString(expectedResult);
+
             addResult("Exercise4.sieve", String.valueOf(n) , Arrays.toString(gotBack), 
-                Arrays.toString(expectedResult), gotBack == expectedResult);
+                Arrays.toString(expectedResult), s2.equalsIgnoreCase(s1));
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);

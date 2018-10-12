@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class TUtils {
     static List<String> results = new ArrayList<String>();
     static double deduction = 0.0;
-    static boolean WEB_RUN = false;
+    static boolean WEB_RUN = true;
     static int PASS_COUNT = 0;
     static int NUM_TESTS = 0;
 

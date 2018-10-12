@@ -314,20 +314,20 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
 
     #Assignments are collection of chapter assignments
     think_java_assignments = {
-        "Think Java: 1" : {   #<-- key, value is map 
+        "Think Java: Ch2-ch4" : {   #<-- key, value is map 
             "work": [ch2Descriptor, ch3Descriptor, ch4Descriptor],
             "enabled": True,
-            "desc": "First Assignment, Ch2-Ch4" },
+            "desc": "HW1, Ch2-Ch4" },
 
-        "Think Java: 2" : {   #<-- key, value is map 
+        "Think Java: Ch6" : {   #<-- key, value is map 
             "work": [ch6Descriptor],
             "enabled": True,
-            "desc": "Second Assignment, Ch 6" },
+            "desc": "HW2, Ch 6" },
 
-        "Think Java: 3" : {   #<-- key, value is map 
+        "Swettercise1" : {   #<-- key, value is map 
             "work": [swetterCise1],
             "enabled": True,
-            "desc": "Third Assignment, Swettercise" },
+            "desc": "HW3: Third HW Assignment, Swettercise. Assigned with Chapter6 work" },
 
     }
 

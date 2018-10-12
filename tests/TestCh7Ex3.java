@@ -5,7 +5,7 @@ public class TestCh7Ex3 extends TUtils {
     }
 
     public static void runTests(){
-        startTest("Chapter7, Exercise4.indexOfMax()");
+        startTest("Chapter7, Exercise3.indexOfMax()");
         int[] testVal = new int[] { 33, 12, 1 };
         tryTest(testVal, 0);
 
