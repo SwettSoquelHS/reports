@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-11
+Run date: 2018-10-12
 <br>Student User: gaberoessler
 <br>Project: think-java
 <br>
@@ -71,8 +71,8 @@ How many seconds? 13 seconds = 0 hours, 0 minutes, and 0 seconds
 I'm thinking of a number between 1 and 100, inclusive.
 	Can you guess what it is?
 	Type your guess: Your guess is: 13
-	The number I was thinking of was: 43
-	You were off by: 30
+	The number I was thinking of was: 59
+	You were off by: 46
 	
 <--
 	[OUTPUT OK]
@@ -107,10 +107,18 @@ The result is 5.0
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Exercise4.java
+	[ERROR] javac failed Exercise4.java Exercise4.java:3: error: non-static method isAbecedarian(String) cannot be referenced from a static context
+			isAbecedarian("java"); 
+			^
+	1 error
+	
+[SUMMARY] 
+	['Exercise4: COMPILE ERROR (- 0.30)'
+	 'Exercise5: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.20</b>
 
 <hr>
 
@@ -119,9 +127,30 @@ The result is 5.0
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Swettercise.java
+	[ERROR] javac failed Swettercise.java Swettercise.java:19: error: ';' expected
+			System.out.println(str)
+			                       ^
+	1 error
+	
+[SUMMARY] 
+	['Swettercise1: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
+
+<hr>
+
+<b>[Assignment]  >Think Java: Ch6 - pt1< </b>
+  [DESC] HW3: Third HW Assignment, Swettercise. Assigned with Chapter6 work
+
+*[BEGIN chapter7]
+  [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.50)'
+	 'Exercise4: MISSING (- 0.50)']
+[DONE chapter7]
+[ASSIGNMENT DONE] Think Java: Ch6 - pt1
+<b>          [SCORE] 0.00</b>
 
 </pre></body></html>
