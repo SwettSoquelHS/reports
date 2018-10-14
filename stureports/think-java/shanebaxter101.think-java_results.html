@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-12
+Run date: 2018-10-14
 <br>Student User: shanebaxter101
 <br>Project: think-java
 <br>
@@ -71,8 +71,8 @@ Im thinking of a number between 1 and 100,(including both)
 	Can you guess what it is?
 	Type a number: 
 	Your guess is: 13
-	The number I was thinking of was: 37
-	You were off by: -24
+	The number I was thinking of was: 38
+	You were off by: -25
 	
 <--
 	[OUTPUT OK]
@@ -218,9 +218,58 @@ Im thinking of a number between 1 and 100,(including both)
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise4.java
+	[ERROR] javac failed Exercise4.java Exercise4.java:4: error: cannot find symbol
+			for(i=0; i < x.length; i++){
+			    ^
+	  symbol:   variable i
+	  location: class Exercise4
+	Exercise4.java:4: error: cannot find symbol
+			for(i=0; i < x.length; i++){
+			         ^
+	  symbol:   variable i
+	  location: class Exercise4
+	Exercise4.java:4: error: cannot find symbol
+			for(i=0; i < x.length; i++){
+			                       ^
+	  symbol:   variable i
+	  location: class Exercise4
+	Exercise4.java:5: error: cannot find symbol
+				System.out.println(x[i]);
+				                     ^
+	  symbol:   variable i
+	  location: class Exercise4
+	4 errors
+	
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>
