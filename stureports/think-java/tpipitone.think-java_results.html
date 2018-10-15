@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-14
+Run date: 2018-10-15
 <br>Student User: tpipitone
 <br>Project: think-java
 <br>
@@ -69,7 +69,7 @@ How many seconds? 13 seconds is equal to 0 hours, 0 minutes, 13 seconds.
 -->
 Guess my number between 1 and 100!
 	Type a number: Your guess is: 13
-	My number was 88. You were off by 75.
+	My number was 21. You were off by 8.
 	
 <--
 	[OUTPUT OK]
@@ -111,16 +111,25 @@ Ch 4 Multadd
 	[SUCCESSFUL COMPILE] Exercise4.java
 [TESTING WITH] Ch6Ex4
 [COMPILING] Ch6Ex4.java
-	[ERROR] javac failed Ch6Ex4.java
- ----begin compile output------- 
-Ch6Ex4.java:56: error: cannot find symbol
-	            boolean isIt = Exercise4.isAbecedarian(testStr);
-	                                    ^
-	  symbol:   method isAbecedarian(String)
-	  location: class Exercise4
-	1 error
+	[SUCCESSFUL COMPILE] Ch6Ex4.java
+[RUNNING] Ch6Ex4
+-->
+
+	<br>Results for Exercise4.isAbecedarian()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.isAbecedarian("abcdef")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("aaaaaa")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("gfedcba")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("z")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("beknow")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("no")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.15000000000000002]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
 [TESTING WITH] Ch6Ex5
@@ -146,11 +155,11 @@ Ch6Ex4.java:56: error: cannot find symbol
 	[OUTPUT OK]
 
 [SUMMARY] 
-	['Exercise4: COMPILE ERROR (- 0.30)'
+	['Exercise4: PASSED - BUT TEST CASES FOUND SOME ERRORS'
 	 'Exercise5: PASSED - EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] <font color="green">0.85</font></b>
 
 <hr>
 
@@ -208,9 +217,58 @@ Ch6Ex4.java:56: error: cannot find symbol
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[SUCCESSFUL COMPILE] TestCh7Ex4.java
+[RUNNING] TestCh7Ex4
+-->
+
+	<br>Chapter7, Exercise4.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.sieve("2")  </td><td align="left">[false, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("3")  </td><td align="left">[false, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("4")  </td><td align="left">[false, false, true, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("5")  </td><td align="left">[false, false, true, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("6")  </td><td align="left">[false, false, true, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("7")  </td><td align="left">[false, false, true, true, false, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("8")  </td><td align="left">[false, false, true, true, false, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>

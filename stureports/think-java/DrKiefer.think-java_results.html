@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-14
+Run date: 2018-10-15
 <br>Student User: DrKiefer
 <br>Project: think-java
 <br>
@@ -68,8 +68,8 @@ Enter number of seconds:
 Im thinking of a number between 1 and 100. Can you guess it?
 	What's your guess? 
 	Your guess is: 13
-	The number I was think of is 7
-	You were off by 6
+	The number I was think of is 88
+	You were off by 75
 	
 <--
 	[OUTPUT OK]
@@ -195,9 +195,43 @@ Doesnt Work
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[ERROR] javac failed TestCh7Ex3.java
+ ----begin compile output------- 
+TestCh7Ex3.java:40: error: cannot find symbol
+	            int gotBack = Exercise3.indexOfMax(someInts);
+	                                   ^
+	  symbol:   method indexOfMax(int[])
+	  location: class Exercise3
+	1 error
+	
+-----------END COMPILE-------
+[COMPILING] Exercise4.java
+	[ERROR] javac failed Exercise4.java Exercise4.java:8: error: cannot find symbol
+	        array[i] = in.nextInt();
+	        ^
+	  symbol:   variable array
+	  location: class Exercise4
+	Exercise4.java:8: error: cannot find symbol
+	        array[i] = in.nextInt();
+	                   ^
+	  symbol:   variable in
+	  location: class Exercise4
+	Exercise4.java:10: error: cannot find symbol
+	    for(int i = 0; i<array.length; i++){
+	                     ^
+	  symbol:   variable array
+	  location: class Exercise4
+	3 errors
+	
+[SUMMARY] 
+	['Exercise3: COMPILE ERROR (- 0.30)'
+	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.40</b>
 
 </pre></body></html>
