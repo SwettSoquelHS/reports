@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-15
+Run date: 2018-10-16
 <br>Student User: DrKiefer
 <br>Project: think-java
 <br>
@@ -68,8 +68,8 @@ Enter number of seconds:
 Im thinking of a number between 1 and 100. Can you guess it?
 	What's your guess? 
 	Your guess is: 13
-	The number I was think of is 42
-	You were off by 29
+	The number I was think of is 13
+	You were off by 0
 	
 <--
 	[OUTPUT OK]
@@ -199,39 +199,54 @@ Doesnt Work
 	[SUCCESSFUL COMPILE] Exercise3.java
 [TESTING WITH] TestCh7Ex3
 [COMPILING] TestCh7Ex3.java
-	[ERROR] javac failed TestCh7Ex3.java
- ----begin compile output------- 
-TestCh7Ex3.java:40: error: cannot find symbol
-	            int gotBack = Exercise3.indexOfMax(someInts);
-	                                   ^
-	  symbol:   method indexOfMax(int[])
-	  location: class Exercise3
-	1 error
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">33</td><td bgcolor="red"><b>0 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">99</td><td bgcolor="red"><b>2 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">100</td><td bgcolor="red"><b>1 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">100000</td><td bgcolor="red"><b>0 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">7</td><td bgcolor="red"><b>5 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">0</td><td bgcolor="red"><b>1 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise4.java
-	[ERROR] javac failed Exercise4.java Exercise4.java:8: error: cannot find symbol
-	        array[i] = in.nextInt();
-	        ^
-	  symbol:   variable array
-	  location: class Exercise4
-	Exercise4.java:8: error: cannot find symbol
-	        array[i] = in.nextInt();
-	                   ^
-	  symbol:   variable in
-	  location: class Exercise4
-	Exercise4.java:10: error: cannot find symbol
-	    for(int i = 0; i<array.length; i++){
-	                     ^
-	  symbol:   variable array
-	  location: class Exercise4
-	3 errors
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[SUCCESSFUL COMPILE] TestCh7Ex4.java
+[RUNNING] TestCh7Ex4
+-->
+
+	<br>Chapter7, Exercise4.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.sieve("2")  </td><td align="left">[false, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("3")  </td><td align="left">[false, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("4")  </td><td align="left">[false, false, true, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("5")  </td><td align="left">[false, false, true, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("6")  </td><td align="left">[false, false, true, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("7")  </td><td align="left">[false, false, true, true, false, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("8")  </td><td align="left">[false, false, true, true, false, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise3: COMPILE ERROR (- 0.30)'
-	 'Exercise4: COMPILE ERROR (- 0.30)']
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.40</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>

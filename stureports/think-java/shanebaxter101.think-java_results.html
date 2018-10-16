@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-15
+Run date: 2018-10-16
 <br>Student User: shanebaxter101
 <br>Project: think-java
 <br>
@@ -71,8 +71,8 @@ Im thinking of a number between 1 and 100,(including both)
 	Can you guess what it is?
 	Type a number: 
 	Your guess is: 13
-	The number I was thinking of was: 12
-	You were off by: 1
+	The number I was thinking of was: 35
+	You were off by: -22
 	
 <--
 	[OUTPUT OK]
@@ -244,26 +244,69 @@ Im thinking of a number between 1 and 100,(including both)
 
 [COMPILING] Exercise4.java
 	[ERROR] javac failed Exercise4.java Exercise4.java:4: error: cannot find symbol
-			for(i=0; i < x.length; i++){
+			for(i = 0; i<a.length;i++){
 			    ^
 	  symbol:   variable i
 	  location: class Exercise4
 	Exercise4.java:4: error: cannot find symbol
-			for(i=0; i < x.length; i++){
-			         ^
+			for(i = 0; i<a.length;i++){
+			           ^
 	  symbol:   variable i
 	  location: class Exercise4
 	Exercise4.java:4: error: cannot find symbol
-			for(i=0; i < x.length; i++){
-			                       ^
+			for(i = 0; i<a.length;i++){
+			                      ^
 	  symbol:   variable i
 	  location: class Exercise4
 	Exercise4.java:5: error: cannot find symbol
-				System.out.println(x[i]);
+				System.out.println(a[i]);
 				                     ^
 	  symbol:   variable i
 	  location: class Exercise4
-	4 errors
+	Exercise4.java:11: error: cannot find symbol
+			a = new boolean[n + 1];
+			^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:11: error: incompatible types: possible lossy conversion from double to int
+			a = new boolean[n + 1];
+			                  ^
+	Exercise4.java:12: error: cannot find symbol
+			for(int i = 0; i < a.length; i++){
+			                   ^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:13: error: cannot find symbol
+				a[i] = true;
+				^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:16: error: cannot find symbol
+				if(a[i]){
+				   ^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:19: error: cannot find symbol
+						a[j] = false;
+						^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:24: error: cannot find symbol
+			a[0] = false;
+			^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:25: error: cannot find symbol
+			a[1] = false;
+			^
+	  symbol:   variable a
+	  location: class Exercise4
+	Exercise4.java:26: error: cannot find symbol
+			return a;
+			       ^
+	  symbol:   variable a
+	  location: class Exercise4
+	13 errors
 	
 [SUMMARY] 
 	['Exercise3: PASSED - EXCELLENT!'
