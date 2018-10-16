@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 33
-	You were off by: 20
+	THe number I was thinkin of is: 95
+	You were off by: 82
 	
 <--
 	[OUTPUT OK]
@@ -170,40 +170,12 @@ Im thinking of a number between 1-100, can you guess it?
 	[SUCCESSFUL COMPILE] SwetterciseTest.java
 [RUNNING] SwetterciseTest
 -->
-?niw zah isemaj dnob 700sannanabtacocat12
-	6
-	3
-	10
-	5
-	16
-	8
-	4
-	2
-	1
-	4
-	2
-	1
-	11
-	34
-	17
-	52
-	26
-	13
-	40
-	20
-	10
-	5
-	16
-	8
-	4
-	2
-	1
-	
+?niw zah isemaj dnob 700sannanabtacocat12 6 3 4 2 11 5 2 
 	<br>Results for reverseStr()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">reverseStr("I haz win?")  </td><td align="left">raised exception</td><td bgcolor="red"><b>?niw zah I </b></td></tr>
-	<tr><td align="right" width="200">reverseStr("007 bond james")  </td><td align="left">raised exception</td><td bgcolor="red"><b>semaj dnob 700 </b></td></tr>
-	<tr><td align="right" width="200">reverseStr("banannas")  </td><td align="left">raised exception</td><td bgcolor="red"><b>sannanab </b></td></tr>
-	<tr><td align="right" width="200">reverseStr("tacocat")  </td><td align="left">raised exception</td><td bgcolor="red"><b>tacocat </b></td></tr>
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">reverseStr("I haz win?")  </td><td align="left">i haz win?</td><td bgcolor="red"><b>?niw zah I </b></td></tr>
+	<tr><td align="right" width="200">reverseStr("007 bond james")  </td><td align="left">007 bond james</td><td bgcolor="red"><b>semaj dnob 700 </b></td></tr>
+	<tr><td align="right" width="200">reverseStr("banannas")  </td><td align="left">banannas</td><td bgcolor="red"><b>sannanab </b></td></tr>
+	<tr><td align="right" width="200">reverseStr("tacocat")  </td><td align="left">tacocat</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
 	
 	<br>Results for collatzThis()
@@ -213,25 +185,25 @@ Im thinking of a number between 1-100, can you guess it?
 	</table><br>
 	
 	<br>Results for isPrime()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isPrime("12")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
-	<tr><td align="right" width="200">isPrime("4")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isPrime("12")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isPrime("4")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">isPrime("7")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">isPrime("13")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">isPrime("15")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
-	<tr><td align="right" width="200">isPrime("2048")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">isPrime("15")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isPrime("2048")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">isPrime("1031")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
-	[deductions=0.36]
+	[deductions=0.26999999999999996]
 	
 	
 <--
 	[OUTPUT OK]
 
 [SUMMARY] 
-	['Swettercise1: RAN - ERRORS NEED TO BE FIXED. You can to do better! :)']
+	['Swettercise1: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.64</b>
+<b>          [SCORE] 0.73</b>
 
 <hr>
 
@@ -248,17 +220,31 @@ Im thinking of a number between 1-100, can you guess it?
  ----begin compile output------- 
 TestCh7Ex3.java:40: error: cannot find symbol
 	            int gotBack = Exercise3.indexOfMax(someInts);
-	                          ^
-	  symbol:   variable Exercise3
-	  location: class TestCh7Ex3
+	                                   ^
+	  symbol:   method indexOfMax(int[])
+	  location: class Exercise3
+	1 error
+	
+-----------END COMPILE-------
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[ERROR] javac failed TestCh7Ex4.java
+ ----begin compile output------- 
+TestCh7Ex4.java:47: error: cannot find symbol
+	            boolean[] gotBack = Exercise4.sieve(n);
+	                                         ^
+	  symbol:   method sieve(int)
+	  location: class Exercise4
 	1 error
 	
 -----------END COMPILE-------
 [SUMMARY] 
 	['Exercise3: COMPILE ERROR (- 0.30)'
-	 'Exercise4: MISSING (- 0.50)']
+	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.20</b>
+<b>          [SCORE] 0.40</b>
 
 </pre></body></html>
