@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class TestCh7Ex5 extends TUtils {
+public class TestCh7Ex8 extends TUtils {
     public static void main(String[] args){
         WEB_RUN = false;
         /*
@@ -20,46 +20,62 @@ public class TestCh7Ex5 extends TUtils {
    from 0 to n - 1, whether the number is prime
 */
     public static void runTests(){
-        startTest("Chapter7, Exercise5.areFactors()");
-        int[] testVal = new int[] { 4, 2, 1 };
-        int n = 8;
-        tryTest(n, testVal, true);
+        startTest("Chapter7, Exercise8.isAnagram()");
+        String s1, s2;
 
-        testVal = new int[] { 1, 12, 99 };
-        n = 13;
-        tryTest(n, testVal, false);
+        s1 = "stop";
+        s2 = "mots";
+        tryTest(s1, s2, false);
 
-        testVal = new int[] { 13, 26, 1 };
-        n = 26;
-        tryTest(n, testVal, true);
+        s1 = "stop";
+        s2 = "pots";
+        tryTest(s1, s2, true);
 
-        testVal = new int[] { 5, 7 };
-        n = 35;
-        tryTest(n, testVal, true);
+        // of “pots” and “allen downey” is an anagram of “well annoyed”. 
 
-        testVal = new int[] { 5, 7, 34 };
-        n = 35;
-        tryTest(n, testVal, false);
+        s1 = "allen downey";
+        s2 = "well annoyed";
+        tryTest(s1, s2, true);
 
-        testVal = new int[] { 1, 12, 4, 6, 2, 3 };
-        n = 12;
-        tryTest(n, testVal, true);
+
+        s1 = "flip";
+        s2 = "flop";
+        tryTest(s1, s2, false);
+
+
+        s1 = "ooooooh boy";
+        s2 = "oooooo hboy";
+        tryTest(s1, s2, true);
+
+        s1 = "ooooooh boy";
+        s2 = "oooooo hboy";
+        tryTest(s2, s1, true);
+
+
+        s1 = "now";
+        s2 = "won";
+        tryTest(s1, s2, true);
+
+
+        s1 = "larp test";
+        s2 = "lightning bolt";
+        tryTest(s1, s2, false);
 
         
         endTest();
     }
 
-    public static boolean tryTest(int n, int[] someInts, boolean expectedResult){
+    public static boolean tryTest(String s1, String s2, boolean expectedResult){
         try {
-            boolean gotBack = Exercise5.areFactors(n, someInts);
+            boolean gotBack = Exercise8.isAnagram(s1, s2);
             //public static void addResult(String methodTested, String argument, String received, String expected, boolean passed){
-            addResult("Exercise5.areFactors", n + ", " + Arrays.toString(someInts) , String.valueOf(gotBack), 
+            addResult("Exercise8.isAnagram", s1 + ", " + s2 , String.valueOf(gotBack), 
                 String.valueOf(expectedResult), gotBack == expectedResult);
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);
             //addResult(String methodTested, String argument, String received, String expected, boolean passed){
-            addResult("Exercise5.areFactors", n + ", " + Arrays.toString(someInts) , 
+            addResult("Exercise8.isAnagram", s1 + ", " + s2 , 
                 "Exception Thrown", String.valueOf(expectedResult), false);
             return false;            
         }

@@ -13,7 +13,18 @@ PARSER = argparse.ArgumentParser()
 PARSER.add_argument("project", help="Github project to pull.")
 PARSER.add_argument("-a", "--assignment", help="Assignment within the project.")
 PARSER.add_argument("-s", "--student", help="Only on the student specified.")
+PARSER.add_argument("-dl", "--dl", help="Skip source DL, use -dl off, defaults to on")
 args = PARSER.parse_args()
+
+
+SHOULD_DL = True
+if not(args.dl == None):
+    SHOULD_DL = args.dl.lower() == "off"
+
+if SHOULD_DL:
+    print("Mode: Download source ON")
+else:
+    print("Mode: Download source OFF")
 
 
 #If a specific student was specified then only that student will be run
@@ -214,14 +225,17 @@ def checkClean(studentProjectDirectory, studentReport, studentWorkingDirectory):
 
 
 def syncGitBase(projName, studentGithubUser, studentReport, studentWorkingDirectory):
-    stuCode = makeProjURL(HTTPS_STR+GITHUB_PROJ_BASE_URL, projName, studentGithubUser)
-    printToReport(studentReport, "[Attempting DL:" + stuCode + ".git]")        
-    gitURL = HTTPS_STR + sysUser + ":" + sysPwd + "@" + makeProjURL(GITHUB_PROJ_BASE_URL, projName, studentGithubUser)+".git"
+    try:
+        stuCode = makeProjURL(HTTPS_STR+GITHUB_PROJ_BASE_URL, projName, studentGithubUser)
+        printToReport(studentReport, "[Attempting DL:" + stuCode + ".git]")        
+        gitURL = HTTPS_STR + sysUser + ":" + sysPwd + "@" + makeProjURL(GITHUB_PROJ_BASE_URL, projName, studentGithubUser)+".git"
 
-    output = subprocess.check_output( ['git','clone', gitURL] , cwd=studentWorkingDirectory, 
-                stderr=subprocess.STDOUT)        
-    printToReport(studentReport, output.decode("utf-8").replace("\n", "\n\t"))
-    printToReport(studentReport, "[GITWORK DONE]")
+        output = subprocess.check_output( ['git','clone', gitURL] , cwd=studentWorkingDirectory, 
+                    stderr=subprocess.STDOUT)        
+        printToReport(studentReport, output.decode("utf-8").replace("\n", "\n\t"))
+        printToReport(studentReport, "[GITWORK DONE]")
+    except:
+        print("Unable to sync for student: " + studentGithubUser + " for project: " + projName)
 
 def tryCompile( studentReport, chapterDir, javaFile):
     error_code = 0
@@ -310,6 +324,12 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         "checkWith": "TEST",        
     }
 
+    ch7DescriptorA = {
+        "assignment_dir": "chapter7",
+        "targets" : [("Exercise3","TestCh7Ex3"), ("Exercise4","TestCh7Ex4")], #Files to look for
+        "score" : 0.4 ,              #weight for the assignment
+        "checkWith": "TEST",      #How to verify assignment         
+    }
 
 
     #Assignments are collection of chapter assignments
@@ -328,6 +348,12 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
             "work": [swetterCise1],
             "enabled": True,
             "desc": "HW3: Third HW Assignment, Swettercise. Assigned with Chapter6 work" },
+
+        " Think Java: Ch7 - pt1 " : {   #<-- key, value is map 
+            "work": [ch7DescriptorA],
+            "enabled": True,
+            "desc": "HW4: Fourth HW Assignment, Ch7 Ex3 & 4" },
+
 
     }
 
@@ -486,19 +512,20 @@ for student in STUDENTS:
     checkClean(stuProjDir, studentReport, stuDir) 
 
     #pull git if necissary
-    if os.path.exists(stuDir):
-        if not os.path.exists(stuProjDir):
-            printToReport(studentReport, "[GITWORK]") 
-            syncGitBase(projName, studentGithubUser, studentReport, stuDir)
-            
-        elif OK_TO_REUSE:
-            printToReport(studentReport, "[GITWORK] Re-using code.")
+    if SHOULD_DL:
+        if os.path.exists(stuDir):
+            if not os.path.exists(stuProjDir):
+                printToReport(studentReport, "[GITWORK]") 
+                syncGitBase(projName, studentGithubUser, studentReport, stuDir)
+                
+            elif OK_TO_REUSE:
+                printToReport(studentReport, "[GITWORK] Re-using code.")
+            else:
+                printToReport(studentReport, "[BANNANAS] Re-using code.")
+            time.sleep(.5)
         else:
-            printToReport(studentReport, "[BANNANAS] Re-using code.")
-        time.sleep(.5)
-    else:
-        printToReport(studentReport, "\t[ERROR] Unable able to proceed, no student directory: " + stuDir)
-        sys.exit(0)
+            printToReport(studentReport, "\t[ERROR] Unable able to proceed, no student directory: " + stuDir)
+            sys.exit(0)
 
 
     if projName == 'think-java':
@@ -522,7 +549,7 @@ if projName == 'think-java':
     scorehistory.save(scoreHistory)
     saveReportToGit(stu_to_report, reportFile)
     
-elif projName == 'cs-portfolio':
+elif projName in ['cs-portfolio', 'coat-of-arms', 'lightning']:
     print("Report created for " + 'cs-portfolio' )
     createClassReport(projName, stu_to_report, GITHUB_DEMO_BASE_URL, None) 
     

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class TestCh7Ex5 extends TUtils {
+public class TestCh7Ex6 extends TUtils {
     public static void main(String[] args){
         WEB_RUN = false;
         /*
@@ -20,46 +20,50 @@ public class TestCh7Ex5 extends TUtils {
    from 0 to n - 1, whether the number is prime
 */
     public static void runTests(){
-        startTest("Chapter7, Exercise5.areFactors()");
+        startTest("Chapter7, Exercise6.arePrimeFactors()");
         int[] testVal = new int[] { 4, 2, 1 };
         int n = 8;
-        tryTest(n, testVal, true);
-
-        testVal = new int[] { 1, 12, 99 };
-        n = 13;
         tryTest(n, testVal, false);
 
-        testVal = new int[] { 13, 26, 1 };
-        n = 26;
+        testVal = new int[] { 2, 2, 2 };
+        n = 8;
         tryTest(n, testVal, true);
 
-        testVal = new int[] { 5, 7 };
-        n = 35;
+        testVal = new int[] { 3, 5 };
+        n = 15;
         tryTest(n, testVal, true);
 
-        testVal = new int[] { 5, 7, 34 };
+        testVal = new int[] { 5, 7, 1 };
         n = 35;
         tryTest(n, testVal, false);
 
-        testVal = new int[] { 1, 12, 4, 6, 2, 3 };
-        n = 12;
+        testVal = new int[] { 2, 3, 5 };
+        n = 30;
         tryTest(n, testVal, true);
 
+        testVal = new int[] { 2, 3, 5 };
+        n = 31;
+        tryTest(n, testVal, false);
+
+
+        testVal = new int[] { 11, 13, 17 };
+        n = 2431;
+        tryTest(n, testVal, true);
         
         endTest();
     }
 
     public static boolean tryTest(int n, int[] someInts, boolean expectedResult){
         try {
-            boolean gotBack = Exercise5.areFactors(n, someInts);
+            boolean gotBack = Exercise6.arePrimeFactors(n, someInts);
             //public static void addResult(String methodTested, String argument, String received, String expected, boolean passed){
-            addResult("Exercise5.areFactors", n + ", " + Arrays.toString(someInts) , String.valueOf(gotBack), 
+            addResult("Exercise6.arePrimeFactors", n + ", " + Arrays.toString(someInts) , String.valueOf(gotBack), 
                 String.valueOf(expectedResult), gotBack == expectedResult);
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);
             //addResult(String methodTested, String argument, String received, String expected, boolean passed){
-            addResult("Exercise5.areFactors", n + ", " + Arrays.toString(someInts) , 
+            addResult("Exercise6.arePrimeFactors", n + ", " + Arrays.toString(someInts) , 
                 "Exception Thrown", String.valueOf(expectedResult), false);
             return false;            
         }
