@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-16
+Run date: 2018-10-18
 <br>Student User: Crevin921
 <br>Project: think-java
 <br>
@@ -72,8 +72,8 @@ Seconds to minutes to hours
 Im thinking of a number between 1 and 100
 	Can you guess what it is? 
 	your guess was: 13
-	The number i was thinking of was: 83
-	you were off by -70
+	The number i was thinking of was: 45
+	you were off by -32
 	
 <--
 	[OUTPUT OK]
@@ -214,11 +214,24 @@ Im thinking of a number between 1 and 100
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[ERROR] javac failed TestCh7Ex3.java
+ ----begin compile output------- 
+TestCh7Ex3.java:40: error: incompatible types: int[] cannot be converted to int
+	            int gotBack = Exercise3.indexOfMax(someInts);
+	                                               ^
+	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+	1 error
+	
+-----------END COMPILE-------
 [SUMMARY] 
-	['Exercise3: MISSING (- 0.50)'
+	['Exercise3: COMPILE ERROR (- 0.30)'
 	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.00</b>
+<b>          [SCORE] 0.20</b>
 
 </pre></body></html>
