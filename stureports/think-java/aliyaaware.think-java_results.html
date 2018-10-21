@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 9
-	You were off by: 4
+	THe number I was thinkin of is: 52
+	You were off by: 39
 	
 <--
 	[OUTPUT OK]
@@ -253,6 +253,77 @@ TestCh7Ex4.java:47: error: incompatible types: boolean cannot be converted to bo
 	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
+<b>          [SCORE] 0.70</b>
+
+<hr>
+
+<b>[Assignment]  > Think Java: Ch7 - pt2 < </b>
+  [DESC] HW4: Fith HW Assignment, Ch7 Ex5, 6, 8
+
+*[BEGIN chapter7]
+  [EXPECTING TARGETS] ['Exercise5', 'Exercise6']
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+Test: Chapter7, Exercise5.areFactors()
+	  [   :( ] Exercise5.areFactors("8, [4, 2, 1]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [PASSED] Exercise5.areFactors("13, [1, 12, 99]") 
+	  [   :( ] Exercise5.areFactors("26, [13, 26, 1]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [   :( ] Exercise5.areFactors("35, [5, 7]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [PASSED] Exercise5.areFactors("35, [5, 7, 34]") 
+	  [   :( ] Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  TEST FINISHED, PASSED: 2/6.
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[ERROR] javac failed Exercise6.java Exercise6.java:5: error: ')' expected
+	        System.out.print(areFactors(n)
+	                                      ^
+	Exercise6.java:8: error: illegal start of expression
+	    public static int arePrimeFactors(int n, int m){
+	    ^
+	Exercise6.java:8: error: ';' expected
+	    public static int arePrimeFactors(int n, int m){
+	          ^
+	Exercise6.java:8: error: ';' expected
+	    public static int arePrimeFactors(int n, int m){
+	                                     ^
+	Exercise6.java:8: error: <identifier> expected
+	    public static int arePrimeFactors(int n, int m){
+	                                            ^
+	Exercise6.java:8: error: not a statement
+	    public static int arePrimeFactors(int n, int m){
+	                                                 ^
+	Exercise6.java:8: error: ';' expected
+	    public static int arePrimeFactors(int n, int m){
+	                                                  ^
+	Exercise6.java:9: error: ';' expected
+	        array = new int[]{1, 2, 3, 44, 34, 23, 26}
+	                                                  ^
+	Exercise6.java:11: error: reached end of file while parsing
+	}
+	 ^
+	9 errors
+	
+[SUMMARY] 
+	['Exercise5: PASSED - EXCELLENT!'
+	 'Exercise6: COMPILE ERROR (- 0.30)']
+[DONE chapter7]
+[ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
 <b>          [SCORE] 0.70</b>
 
 </pre></body></html>

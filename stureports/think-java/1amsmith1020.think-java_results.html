@@ -70,7 +70,7 @@ Enter amount of seconds:
 	[SUCCESSFUL COMPILE] Exercise4.java
 [RUNNING] Exercise4
 -->
-67
+4
 	
 <--
 	[OUTPUT OK]
@@ -408,6 +408,60 @@ Ch6Ex5.java:57: error: cannot find symbol
 	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
+<b>          [SCORE] 0.70</b>
+
+<hr>
+
+<b>[Assignment]  > Think Java: Ch7 - pt2 < </b>
+  [DESC] HW4: Fith HW Assignment, Ch7 Ex5, 6, 8
+
+*[BEGIN chapter7]
+  [EXPECTING TARGETS] ['Exercise5', 'Exercise6']
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+Test: Chapter7, Exercise5.areFactors()
+	  [   :( ] Exercise5.areFactors("8, [4, 2, 1]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [PASSED] Exercise5.areFactors("13, [1, 12, 99]") 
+	  [   :( ] Exercise5.areFactors("26, [13, 26, 1]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [   :( ] Exercise5.areFactors("35, [5, 7]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [PASSED] Exercise5.areFactors("35, [5, 7, 34]") 
+	  [   :( ] Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  TEST FINISHED, PASSED: 2/6.
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[SUCCESSFUL COMPILE] Exercise6.java
+[TESTING WITH] TestCh7Ex6
+[COMPILING] TestCh7Ex6.java
+	[ERROR] javac failed TestCh7Ex6.java
+ ----begin compile output------- 
+TestCh7Ex6.java:58: error: incompatible types: int cannot be converted to int[]
+	            boolean gotBack = Exercise6.arePrimeFactors(n, someInts);
+	                                                        ^
+	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+	1 error
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Exercise5: PASSED - EXCELLENT!'
+	 'Exercise6: COMPILE ERROR (- 0.30)']
+[DONE chapter7]
+[ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
 <b>          [SCORE] 0.70</b>
 
 </pre></body></html>
