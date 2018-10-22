@@ -66,8 +66,8 @@ Enter seconds: 13 seconds = 0 hours, 0.0 minutes, and 13 seconds
 [RUNNING] Exercise4
 -->
 Enter a number: Your guess is: 13
-	The number I was thinking of was: 93
-	You were off by: 80
+	The number I was thinking of was: 81
+	You were off by: 68
 	
 <--
 	[OUTPUT OK]
@@ -247,26 +247,16 @@ index of letter a :0
 	[SUCCESSFUL COMPILE] Exercise3.java
 [TESTING WITH] TestCh7Ex3
 [COMPILING] TestCh7Ex3.java
-	[SUCCESSFUL COMPILE] TestCh7Ex3.java
-[RUNNING] TestCh7Ex3
--->
-
-	<br>Chapter7, Exercise3.indexOfMax()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">33</td><td bgcolor="red"><b>0 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">99</td><td bgcolor="red"><b>2 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">100</td><td bgcolor="red"><b>1 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">100000</td><td bgcolor="red"><b>0 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">7</td><td bgcolor="red"><b>5 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">0</td><td bgcolor="red"><b>1 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.0]
+	[ERROR] javac failed TestCh7Ex3.java
+ ----begin compile output------- 
+TestCh7Ex3.java:45: error: cannot find symbol
+	                dedcut(0.02);
+	                ^
+	  symbol:   method dedcut(double)
+	  location: class TestCh7Ex3
+	1 error
 	
-	
-<--
-	[OUTPUT OK]
-
+-----------END COMPILE-------
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
 [TESTING WITH] TestCh7Ex4
@@ -278,15 +268,20 @@ TestCh7Ex4.java:47: error: cannot find symbol
 	                                         ^
 	  symbol:   method sieve(int)
 	  location: class Exercise4
-	1 error
+	TestCh7Ex4.java:55: error: cannot find symbol
+	                dedcut(0.03);
+	                ^
+	  symbol:   method dedcut(double)
+	  location: class TestCh7Ex4
+	2 errors
 	
 -----------END COMPILE-------
 [SUMMARY] 
-	['Exercise3: PASSED - EXCELLENT!'
+	['Exercise3: COMPILE ERROR (- 0.30)'
 	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] 0.40</b>
 
 <hr>
 
@@ -294,7 +289,7 @@ TestCh7Ex4.java:47: error: cannot find symbol
   [DESC] HW4: Fith HW Assignment, Ch7 Ex5, 6, 8
 
 *[BEGIN chapter7]
-  [EXPECTING TARGETS] ['Exercise5', 'Exercise6']
+  [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
 [TESTING WITH] TestCh7Ex5
@@ -311,7 +306,7 @@ TestCh7Ex4.java:47: error: cannot find symbol
 	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
 	</table><br>
-	[deductions=0.0]
+	[deductions=0.12]
 	
 	
 <--
@@ -386,11 +381,108 @@ TestCh7Ex4.java:47: error: cannot find symbol
 	                                                ^
 	22 errors
 	
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[SUCCESSFUL COMPILE] TestCh7Ex8.java
+[RUNNING] TestCh7Ex8
+-->
+letter: s
+	index of letter: 18
+	letter: t
+	index of letter: 19
+	letter: o
+	index of letter: 14
+	letter: p
+	index of letter: 15
+	letter: s
+	index of letter: 18
+	letter: t
+	index of letter: 19
+	letter: o
+	index of letter: 14
+	letter: p
+	index of letter: 15
+	letter: a
+	index of letter: 0
+	letter: l
+	index of letter: 11
+	letter: l
+	index of letter: 11
+	letter: e
+	index of letter: 4
+	letter: n
+	index of letter: 13
+	letter:  
+	index of letter: -65
+	letter: f
+	index of letter: 5
+	letter: l
+	index of letter: 11
+	letter: i
+	index of letter: 8
+	letter: p
+	index of letter: 15
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: h
+	index of letter: 7
+	letter:  
+	index of letter: -65
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter: o
+	index of letter: 14
+	letter:  
+	index of letter: -65
+	letter: n
+	index of letter: 13
+	letter: o
+	index of letter: 14
+	letter: w
+	index of letter: 22
+	
+	<br>Chapter7, Exercise8.isAnagram()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise8.isAnagram("stop, mots")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("stop, pots")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("allen downey, well annoyed")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("flip, flop")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("ooooooh boy, oooooo hboy")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("oooooo hboy, ooooooh boy")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("now, won")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("larp test, lightning bolt")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.36]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise5: PASSED - EXCELLENT!'
-	 'Exercise6: COMPILE ERROR (- 0.30)']
+	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise6: COMPILE ERROR (- 0.30)'
+	 'Exercise8: RAN - ERRORS NEED TO BE FIXED. You can to do better! :)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] 0.22</b>
 
 </pre></body></html>

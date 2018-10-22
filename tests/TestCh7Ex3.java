@@ -41,6 +41,10 @@ public class TestCh7Ex3 extends TUtils {
             //public static void addResult(String methodTested, String argument, String received, String expected, boolean passed){
             addResult("Exercise4.indexOfMax", someInts , String.valueOf(gotBack), 
                 String.valueOf(expectedResult), gotBack == expectedResult);
+            if (gotBack != expectedResult){
+                dedcut(0.02);
+            }
+
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);

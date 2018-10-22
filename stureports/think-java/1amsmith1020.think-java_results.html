@@ -70,7 +70,7 @@ Enter amount of seconds:
 	[SUCCESSFUL COMPILE] Exercise4.java
 [RUNNING] Exercise4
 -->
-77
+37
 	
 <--
 	[OUTPUT OK]
@@ -384,31 +384,22 @@ Ch6Ex5.java:57: error: cannot find symbol
 	[SUCCESSFUL COMPILE] Exercise4.java
 [TESTING WITH] TestCh7Ex4
 [COMPILING] TestCh7Ex4.java
-	[SUCCESSFUL COMPILE] TestCh7Ex4.java
-[RUNNING] TestCh7Ex4
--->
-
-	<br>Chapter7, Exercise4.indexOfMax()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.sieve("2")  </td><td align="left">[false, false]</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.sieve("3")  </td><td align="left">[false, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.sieve("4")  </td><td align="left">[false, false, true, true]</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.sieve("5")  </td><td align="left">[false, false, true, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.sieve("6")  </td><td align="left">[false, false, true, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.sieve("7")  </td><td align="left">[false, false, true, true, false, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.sieve("8")  </td><td align="left">[false, false, true, true, false, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.0]
+	[ERROR] javac failed TestCh7Ex4.java
+ ----begin compile output------- 
+TestCh7Ex4.java:55: error: cannot find symbol
+	                dedcut(0.03);
+	                ^
+	  symbol:   method dedcut(double)
+	  location: class TestCh7Ex4
+	1 error
 	
-	
-<--
-	[OUTPUT OK]
-
+-----------END COMPILE-------
 [SUMMARY] 
 	['Exercise3: COMPILE ERROR (- 0.30)'
-	 'Exercise4: PASSED - EXCELLENT!']
+	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] 0.40</b>
 
 <hr>
 
@@ -416,7 +407,7 @@ Ch6Ex5.java:57: error: cannot find symbol
   [DESC] HW4: Fith HW Assignment, Ch7 Ex5, 6, 8
 
 *[BEGIN chapter7]
-  [EXPECTING TARGETS] ['Exercise5', 'Exercise6']
+  [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
 [COMPILING] Exercise5.java
 	[SUCCESSFUL COMPILE] Exercise5.java
 [TESTING WITH] TestCh7Ex5
@@ -433,7 +424,7 @@ Ch6Ex5.java:57: error: cannot find symbol
 	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
 	</table><br>
-	[deductions=0.0]
+	[deductions=0.12]
 	
 	
 <--
@@ -453,10 +444,11 @@ TestCh7Ex6.java:58: error: incompatible types: int cannot be converted to int[]
 	
 -----------END COMPILE-------
 [SUMMARY] 
-	['Exercise5: PASSED - EXCELLENT!'
-	 'Exercise6: COMPILE ERROR (- 0.30)']
+	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise6: COMPILE ERROR (- 0.30)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] 0.08</b>
 
 </pre></body></html>

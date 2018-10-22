@@ -51,6 +51,10 @@ public class TestCh7Ex4 extends TUtils {
 
             addResult("Exercise4.sieve", String.valueOf(n) , Arrays.toString(gotBack), 
                 Arrays.toString(expectedResult), s2.equalsIgnoreCase(s1));
+            if (!s2.equalsIgnoreCase(s1)){
+                dedcut(0.03);
+            }
+
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);

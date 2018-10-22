@@ -69,6 +69,11 @@ public class TestCh7Ex8 extends TUtils {
             //public static void addResult(String methodTested, String argument, String received, String expected, boolean passed){
             addResult("Exercise8.isAnagram", s1 + ", " + s2 , String.valueOf(gotBack), 
                 String.valueOf(expectedResult), gotBack == expectedResult);
+
+            if (gotBack != expectedResult){
+                dedcut(0.03);
+            }
+
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);

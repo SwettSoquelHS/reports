@@ -334,7 +334,7 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
 
     ch7DescriptorB = {
         "assignment_dir": "chapter7",
-        "targets" : [("Exercise5","TestCh7Ex5"), ("Exercise6","TestCh7Ex6")], #Files to look for
+        "targets" : [("Exercise5","TestCh7Ex5"), ("Exercise6","TestCh7Ex6"), ("Exercise8", "TestCh7Ex8")], #Files to look for
         "score" : 0.4 ,              #weight for the assignment
         "checkWith": "TEST",      #How to verify assignment         
     }

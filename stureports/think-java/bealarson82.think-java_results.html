@@ -172,7 +172,12 @@ TestCh7Ex3.java:40: error: cannot find symbol
 	                                   ^
 	  symbol:   method indexOfMax(int[])
 	  location: class Exercise3
-	1 error
+	TestCh7Ex3.java:45: error: cannot find symbol
+	                dedcut(0.02);
+	                ^
+	  symbol:   method dedcut(double)
+	  location: class TestCh7Ex3
+	2 errors
 	
 -----------END COMPILE-------
 [COMPILING] Exercise4.java
@@ -184,8 +189,13 @@ TestCh7Ex3.java:40: error: cannot find symbol
 TestCh7Ex4.java:47: error: incompatible types: int cannot be converted to String[]
 	            boolean[] gotBack = Exercise4.sieve(n);
 	                                                ^
+	TestCh7Ex4.java:55: error: cannot find symbol
+	                dedcut(0.03);
+	                ^
+	  symbol:   method dedcut(double)
+	  location: class TestCh7Ex4
 	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-	1 error
+	2 errors
 	
 -----------END COMPILE-------
 [SUMMARY] 
@@ -201,10 +211,11 @@ TestCh7Ex4.java:47: error: incompatible types: int cannot be converted to String
   [DESC] HW4: Fith HW Assignment, Ch7 Ex5, 6, 8
 
 *[BEGIN chapter7]
-  [EXPECTING TARGETS] ['Exercise5', 'Exercise6']
+  [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
 [SUMMARY] 
 	['Exercise5: MISSING (- 0.50)'
-	 'Exercise6: MISSING (- 0.50)']
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
 <b>          [SCORE] 0.00</b>

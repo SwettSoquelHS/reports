@@ -55,6 +55,10 @@ public class TestCh7Ex5 extends TUtils {
             //public static void addResult(String methodTested, String argument, String received, String expected, boolean passed){
             addResult("Exercise5.areFactors", n + ", " + Arrays.toString(someInts) , String.valueOf(gotBack), 
                 String.valueOf(expectedResult), gotBack == expectedResult);
+            if (gotBack != expectedResult){
+                dedcut(0.03);
+            }
+
             return gotBack == expectedResult;
         } catch (Exception e) {
             deduct(0.1);
