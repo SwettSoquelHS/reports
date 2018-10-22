@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class TestCh7Ex8 extends TUtils {
     public static void main(String[] args){
-        WEB_RUN = false;
+        //WEB_RUN = false;
         /*
         Write a method named areFactors that takes an integer 
         n and an array of integers, and that returns true if 
@@ -30,9 +30,7 @@ public class TestCh7Ex8 extends TUtils {
         s1 = "stop";
         s2 = "pots";
         tryTest(s1, s2, true);
-
-        // of “pots” and “allen downey” is an anagram of “well annoyed”. 
-
+        
         s1 = "allen downey";
         s2 = "well annoyed";
         tryTest(s1, s2, true);

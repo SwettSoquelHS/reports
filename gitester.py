@@ -18,8 +18,9 @@ args = PARSER.parse_args()
 
 
 SHOULD_DL = True
-if not(args.dl == None):
-    SHOULD_DL = args.dl.lower() == "off"
+if not args.dl == None:
+    if args.dl.lower() == "off":
+        SHOULD_DL = False
 
 if SHOULD_DL:
     print("Mode: Download source ON")
@@ -331,6 +332,13 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         "checkWith": "TEST",      #How to verify assignment         
     }
 
+    ch7DescriptorB = {
+        "assignment_dir": "chapter7",
+        "targets" : [("Exercise5","TestCh7Ex5"), ("Exercise6","TestCh7Ex6")], #Files to look for
+        "score" : 0.4 ,              #weight for the assignment
+        "checkWith": "TEST",      #How to verify assignment         
+    }
+
 
     #Assignments are collection of chapter assignments
     think_java_assignments = {
@@ -354,6 +362,10 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
             "enabled": True,
             "desc": "HW4: Fourth HW Assignment, Ch7 Ex3 & 4" },
 
+        " Think Java: Ch7 - pt2 " : {   #<-- key, value is map 
+            "work": [ch7DescriptorB],
+            "enabled": True,
+            "desc": "HW4: Fith HW Assignment, Ch7 Ex5, 6, 8" },
 
     }
 
