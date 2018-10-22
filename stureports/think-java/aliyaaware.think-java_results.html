@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 55
-	You were off by: 42
+	THe number I was thinkin of is: 1
+	You were off by: 12
 	
 <--
 	[OUTPUT OK]
@@ -216,16 +216,26 @@ Im thinking of a number between 1-100, can you guess it?
 	[SUCCESSFUL COMPILE] Exercise3.java
 [TESTING WITH] TestCh7Ex3
 [COMPILING] TestCh7Ex3.java
-	[ERROR] javac failed TestCh7Ex3.java
- ----begin compile output------- 
-TestCh7Ex3.java:45: error: cannot find symbol
-	                dedcut(0.02);
-	                ^
-	  symbol:   method dedcut(double)
-	  location: class TestCh7Ex3
-	1 error
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
 [TESTING WITH] TestCh7Ex4
@@ -235,20 +245,15 @@ TestCh7Ex3.java:45: error: cannot find symbol
 TestCh7Ex4.java:47: error: incompatible types: boolean cannot be converted to boolean[]
 	            boolean[] gotBack = Exercise4.sieve(n);
 	                                               ^
-	TestCh7Ex4.java:55: error: cannot find symbol
-	                dedcut(0.03);
-	                ^
-	  symbol:   method dedcut(double)
-	  location: class TestCh7Ex4
-	2 errors
+	1 error
 	
 -----------END COMPILE-------
 [SUMMARY] 
-	['Exercise3: COMPILE ERROR (- 0.30)'
+	['Exercise3: PASSED - EXCELLENT!'
 	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.40</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
