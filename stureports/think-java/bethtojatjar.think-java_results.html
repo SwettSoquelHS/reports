@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-21
+Run date: 2018-10-22
 <br>Student User: bethtojatjar
 <br>Project: think-java
 <br>
@@ -188,12 +188,31 @@ The amount of seconds since midnight is: 39780 seconds
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
+[COMPILING] Exercise3.java
+	[ERROR] javac failed Exercise3.java Exercise3.java:8: error: cannot find symbol
+				if(nums[i] > nums[i+1]){
+				   ^
+	  symbol:   variable nums
+	  location: class Exercise3
+	Exercise3.java:8: error: cannot find symbol
+				if(nums[i] > nums[i+1]){
+				             ^
+	  symbol:   variable nums
+	  location: class Exercise3
+	Exercise3.java:9: error: incompatible types: boolean cannot be converted to int
+					return false;
+					       ^
+	Exercise3.java:11: error: incompatible types: boolean cannot be converted to int
+				return true;
+				       ^
+	4 errors
+	
 [SUMMARY] 
-	['Exercise3: MISSING (- 0.50)'
+	['Exercise3: COMPILE ERROR (- 0.30)'
 	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.00</b>
+<b>          [SCORE] 0.20</b>
 
 <hr>
 
@@ -202,8 +221,30 @@ The amount of seconds since midnight is: 39780 seconds
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+
+	<br>Chapter7, Exercise5.areFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise5: MISSING (- 0.50)'
+	['Exercise5: PASSED - EXCELLENT!'
 	 'Exercise6: MISSING (- 0.50)'
 	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]

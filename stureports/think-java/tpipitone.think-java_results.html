@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-21
+Run date: 2018-10-22
 <br>Student User: tpipitone
 <br>Project: think-java
 <br>
@@ -69,7 +69,7 @@ How many seconds? 13 seconds is equal to 0 hours, 0 minutes, 13 seconds.
 -->
 Guess my number between 1 and 100!
 	Type a number: Your guess is: 13
-	My number was 30. You were off by 17.
+	My number was 65. You were off by 52.
 	
 <--
 	[OUTPUT OK]
@@ -287,14 +287,14 @@ Ch 4 Multadd
 -->
 
 	<br>Chapter7, Exercise5.areFactors()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
-	[deductions=0.12]
+	[deductions=0.0]
 	
 	
 <--
@@ -304,22 +304,55 @@ Ch 4 Multadd
 	[SUCCESSFUL COMPILE] Exercise6.java
 [TESTING WITH] TestCh7Ex6
 [COMPILING] TestCh7Ex6.java
-	[ERROR] javac failed TestCh7Ex6.java
- ----begin compile output------- 
-TestCh7Ex6.java:58: error: cannot find symbol
-	            boolean gotBack = Exercise6.arePrimeFactors(n, someInts);
-	                                       ^
-	  symbol:   method arePrimeFactors(int,int[])
-	  location: class Exercise6
-	1 error
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[SUCCESSFUL COMPILE] TestCh7Ex8.java
+[RUNNING] TestCh7Ex8
+-->
+
+	<br>Chapter7, Exercise8.isAnagram()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise8.isAnagram("stop, mots")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("stop, pots")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("allen downey, well annoyed")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("flip, flop")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("ooooooh boy, oooooo hboy")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("oooooo hboy, ooooooh boy")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("now, won")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("larp test, lightning bolt")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
-	 'Exercise6: COMPILE ERROR (- 0.30)'
-	 'Exercise8: MISSING (- 0.50)']
+	['Exercise5: PASSED - EXCELLENT!'
+	 'Exercise6: PASSED - EXCELLENT!'
+	 'Exercise8: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.08</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>
