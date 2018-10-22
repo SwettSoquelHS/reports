@@ -68,8 +68,8 @@ Enter number of seconds:
 Im thinking of a number between 1 and 100. Can you guess it?
 	What's your guess? 
 	Your guess is: 13
-	The number I was think of is 51
-	You were off by 38
+	The number I was think of is 4
+	You were off by 9
 	
 <--
 	[OUTPUT OK]
@@ -256,11 +256,69 @@ Doesnt Work
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6']
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+true1
+	true1
+	true1
+	true1
+	true1
+	true1
+	
+	<br>Chapter7, Exercise5.areFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[SUCCESSFUL COMPILE] Exercise6.java
+[TESTING WITH] TestCh7Ex6
+[COMPILING] TestCh7Ex6.java
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+true
+	true
+	true
+	true
+	true
+	false
+	true
+	
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Exercise5: MISSING (- 0.50)'
-	 'Exercise6: MISSING (- 0.50)']
+	['Exercise5: PASSED - EXCELLENT!'
+	 'Exercise6: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.00</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>
