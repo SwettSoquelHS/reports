@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-22
+Run date: 2018-10-23
 <br>Student User: 1amsmith1020
 <br>Project: think-java
 <br>
@@ -70,7 +70,7 @@ Enter amount of seconds:
 	[SUCCESSFUL COMPILE] Exercise4.java
 [RUNNING] Exercise4
 -->
-6
+9
 	
 <--
 	[OUTPUT OK]
@@ -452,12 +452,26 @@ TestCh7Ex6.java:58: error: incompatible types: int cannot be converted to int[]
 	1 error
 	
 -----------END COMPILE-------
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[ERROR] javac failed TestCh7Ex8.java
+ ----begin compile output------- 
+TestCh7Ex8.java:68: error: cannot find symbol
+	            boolean gotBack = Exercise8.isAnagram(s1, s2);
+	                                       ^
+	  symbol:   method isAnagram(String,String)
+	  location: class Exercise8
+	1 error
+	
+-----------END COMPILE-------
 [SUMMARY] 
 	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
 	 'Exercise6: COMPILE ERROR (- 0.30)'
-	 'Exercise8: MISSING (- 0.50)']
+	 'Exercise8: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.08</b>
+<b>          [SCORE] 0.28</b>
 
 </pre></body></html>

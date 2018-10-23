@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-22
+Run date: 2018-10-23
 <br>Student User: aliyaaware
 <br>Project: think-java
 <br>
@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 82
-	You were off by: 69
+	THe number I was thinkin of is: 52
+	You were off by: 39
 	
 <--
 	[OUTPUT OK]
@@ -237,16 +237,23 @@ Im thinking of a number between 1-100, can you guess it?
 	[OUTPUT OK]
 
 [COMPILING] Exercise4.java
-	[ERROR] javac failed Exercise4.java Exercise4.java:13: error: incompatible types: boolean cannot be converted to boolean[]
-	                    return false;
-	                           ^
-	Exercise4.java:15: error: incompatible types: boolean cannot be converted to boolean[]
-	            return true;
+	[ERROR] javac failed Exercise4.java Exercise4.java:7: error: cannot find symbol
+	        bool[] arr = new bool[x];
+	        ^
+	  symbol:   class bool
+	  location: class Exercise4
+	Exercise4.java:7: error: cannot find symbol
+	        bool[] arr = new bool[x];
+	                         ^
+	  symbol:   class bool
+	  location: class Exercise4
+	Exercise4.java:11: error: incompatible types: boolean cannot be converted to boolean[]
+	                return true;
+	                       ^
+	Exercise4.java:13: error: incompatible types: boolean cannot be converted to boolean[]
+	            return false;
 	                   ^
-	Exercise4.java:17: error: incompatible types: boolean cannot be converted to boolean[]
-	        return true;
-	               ^
-	3 errors
+	4 errors
 	
 [SUMMARY] 
 	['Exercise3: PASSED - EXCELLENT!'
@@ -271,14 +278,14 @@ Im thinking of a number between 1-100, can you guess it?
 -->
 
 	<br>Chapter7, Exercise5.areFactors()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
-	[deductions=0.12]
+	[deductions=0.06]
 	
 	
 <--
@@ -294,14 +301,14 @@ Im thinking of a number between 1-100, can you guess it?
 
 	<br>Chapter7, Exercise6.arePrimeFactors()
 	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
 	</table><br>
-	[deductions=0.39]
+	[deductions=0.09]
 	
 	
 <--
@@ -332,11 +339,11 @@ Im thinking of a number between 1-100, can you guess it?
 	[OUTPUT OK]
 
 [SUMMARY] 
-	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
-	 'Exercise6: RAN - ERRORS NEED TO BE FIXED. You can to do better! :)'
+	['Exercise5: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
+	 'Exercise6: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
 	 'Exercise8: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.49</b>
+<b>          [SCORE] <font color="green">0.85</font></b>
 
 </pre></body></html>
