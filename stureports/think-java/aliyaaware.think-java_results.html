@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-23
+Run date: 2018-10-24
 <br>Student User: aliyaaware
 <br>Project: think-java
 <br>
@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 52
-	You were off by: 39
+	THe number I was thinkin of is: 69
+	You were off by: 56
 	
 <--
 	[OUTPUT OK]
@@ -237,30 +237,53 @@ Im thinking of a number between 1-100, can you guess it?
 	[OUTPUT OK]
 
 [COMPILING] Exercise4.java
-	[ERROR] javac failed Exercise4.java Exercise4.java:7: error: cannot find symbol
-	        bool[] arr = new bool[x];
-	        ^
-	  symbol:   class bool
-	  location: class Exercise4
-	Exercise4.java:7: error: cannot find symbol
-	        bool[] arr = new bool[x];
-	                         ^
-	  symbol:   class bool
-	  location: class Exercise4
-	Exercise4.java:11: error: incompatible types: boolean cannot be converted to boolean[]
-	                return true;
-	                       ^
-	Exercise4.java:13: error: incompatible types: boolean cannot be converted to boolean[]
-	            return false;
-	                   ^
-	4 errors
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[SUCCESSFUL COMPILE] TestCh7Ex4.java
+[RUNNING] TestCh7Ex4
+-->
+2
+	2
+	3
+	2
+	3
+	2
+	3
+	5
+	2
+	3
+	5
+	2
+	3
+	5
+	7
+	2
+	3
+	5
+	7
 	
+	<br>Chapter7, Exercise4.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.sieve("2")  </td><td align="left">[false, false, true]</td><td bgcolor="red"><b>[false, false] </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("3")  </td><td align="left">[false, false, true, true]</td><td bgcolor="red"><b>[false, false, true] </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("4")  </td><td align="left">[false, false, true, true, false]</td><td bgcolor="red"><b>[false, false, true, true] </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("5")  </td><td align="left">[false, false, true, true, false, true]</td><td bgcolor="red"><b>[false, false, true, true, false] </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("6")  </td><td align="left">[false, false, true, true, false, true, false]</td><td bgcolor="red"><b>[false, false, true, true, false, true] </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("7")  </td><td align="left">[false, false, true, true, false, true, false, true]</td><td bgcolor="red"><b>[false, false, true, true, false, true, false] </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("8")  </td><td align="left">[false, false, true, true, false, true, false, true, false]</td><td bgcolor="red"><b>[false, false, true, true, false, true, false, true] </b></td></tr>
+	</table><br>
+	[deductions=0.21]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
 	['Exercise3: PASSED - EXCELLENT!'
-	 'Exercise4: COMPILE ERROR (- 0.30)']
+	 'Exercise4: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] 0.79</b>
 
 <hr>
 
@@ -276,16 +299,15 @@ Im thinking of a number between 1-100, can you guess it?
 	[SUCCESSFUL COMPILE] TestCh7Ex5.java
 [RUNNING] TestCh7Ex5
 -->
-
-	<br>Chapter7, Exercise5.areFactors()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.06]
+Test: Chapter7, Exercise5.areFactors()
+	  [PASSED] Exercise5.areFactors("8, [4, 2, 1]") 
+	  [PASSED] Exercise5.areFactors("13, [1, 12, 99]") 
+	  [PASSED] Exercise5.areFactors("26, [13, 26, 1]") 
+	  [PASSED] Exercise5.areFactors("35, [5, 7]") 
+	  [PASSED] Exercise5.areFactors("35, [5, 7, 34]") 
+	  [PASSED] Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]") 
+	  TEST FINISHED, PASSED: 6/6.
+	[deductions=0.0]
 	
 	
 <--
@@ -300,13 +322,13 @@ Im thinking of a number between 1-100, can you guess it?
 -->
 
 	<br>Chapter7, Exercise6.arePrimeFactors()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
 	[deductions=0.09]
 	
@@ -339,11 +361,11 @@ Im thinking of a number between 1-100, can you guess it?
 	[OUTPUT OK]
 
 [SUMMARY] 
-	['Exercise5: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
+	['Exercise5: PASSED - EXCELLENT!'
 	 'Exercise6: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
 	 'Exercise8: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] <font color="green">0.85</font></b>
+<b>          [SCORE] <font color="green">0.91</font></b>
 
 </pre></body></html>

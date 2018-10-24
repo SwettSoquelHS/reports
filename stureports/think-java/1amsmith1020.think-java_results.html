@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-23
+Run date: 2018-10-24
 <br>Student User: 1amsmith1020
 <br>Project: think-java
 <br>
@@ -67,17 +67,34 @@ Enter amount of seconds:
 	[OUTPUT OK]
 
 [COMPILING] Exercise4.java
-	[SUCCESSFUL COMPILE] Exercise4.java
-[RUNNING] Exercise4
--->
-9
+	[ERROR] javac failed Exercise4.java Exercise4.java:2: error: package javaa.util does not exist
+	 import javaa.util.Scanner;
+	                  ^
+	Exercise4.java:13: error: cannot find symbol
+	        Scanner in = new Scanner(System.in);
+	        ^
+	  symbol:   class Scanner
+	  location: class Exercise4
+	Exercise4.java:13: error: cannot find symbol
+	        Scanner in = new Scanner(System.in);
+	                         ^
+	  symbol:   class Scanner
+	  location: class Exercise4
+	Exercise4.java:15: error: cannot find symbol
+	        line = in.nextLine();
+	        ^
+	  symbol:   variable line
+	  location: class Exercise4
+	Exercise4.java:16: error: cannot find symbol
+	        System.out.println("You said: " + line);
+	                                          ^
+	  symbol:   variable line
+	  location: class Exercise4
+	5 errors
 	
-<--
-	[OUTPUT OK]
-
 [SUMMARY] 
 	['Exercise3: PASSED - EXCELLENT!'
-	 'Exercise4: PASSED - EXCELLENT!']
+	 'Exercise4: COMPILE ERROR (- 0.10)']
 [DONE chapter3]
 
 *[BEGIN chapter4]
@@ -92,7 +109,7 @@ Enter amount of seconds:
 	['Multadd: COMPILE ERROR (- 0.10)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] <font color="green">0.90</font></b>
+<b>          [SCORE] 0.80</b>
 
 <hr>
 
@@ -424,15 +441,22 @@ Ch6Ex5.java:57: error: cannot find symbol
 	[SUCCESSFUL COMPILE] TestCh7Ex5.java
 [RUNNING] TestCh7Ex5
 -->
-
-	<br>Chapter7, Exercise5.areFactors()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	</table><br>
+Test: Chapter7, Exercise5.areFactors()
+	  [   :( ] Exercise5.areFactors("8, [4, 2, 1]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [PASSED] Exercise5.areFactors("13, [1, 12, 99]") 
+	  [   :( ] Exercise5.areFactors("26, [13, 26, 1]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [   :( ] Exercise5.areFactors("35, [5, 7]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  [PASSED] Exercise5.areFactors("35, [5, 7, 34]") 
+	  [   :( ] Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]"): 
+			EXPECTED: true
+			RECEIVED: false
+	  TEST FINISHED, PASSED: 2/6.
 	[deductions=0.12]
 	
 	
@@ -443,35 +467,55 @@ Ch6Ex5.java:57: error: cannot find symbol
 	[SUCCESSFUL COMPILE] Exercise6.java
 [TESTING WITH] TestCh7Ex6
 [COMPILING] TestCh7Ex6.java
-	[ERROR] javac failed TestCh7Ex6.java
- ----begin compile output------- 
-TestCh7Ex6.java:58: error: incompatible types: int cannot be converted to int[]
-	            boolean gotBack = Exercise6.arePrimeFactors(n, someInts);
-	                                                        ^
-	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-	1 error
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.12]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise8.java
 	[SUCCESSFUL COMPILE] Exercise8.java
 [TESTING WITH] TestCh7Ex8
 [COMPILING] TestCh7Ex8.java
-	[ERROR] javac failed TestCh7Ex8.java
- ----begin compile output------- 
-TestCh7Ex8.java:68: error: cannot find symbol
-	            boolean gotBack = Exercise8.isAnagram(s1, s2);
-	                                       ^
-	  symbol:   method isAnagram(String,String)
-	  location: class Exercise8
-	1 error
+	[SUCCESSFUL COMPILE] TestCh7Ex8.java
+[RUNNING] TestCh7Ex8
+-->
+
+	<br>Chapter7, Exercise8.isAnagram()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise8.isAnagram("stop, mots")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("stop, pots")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("allen downey, well annoyed")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("flip, flop")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("ooooooh boy, oooooo hboy")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("oooooo hboy, ooooooh boy")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("now, won")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("larp test, lightning bolt")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
 	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
-	 'Exercise6: COMPILE ERROR (- 0.30)'
-	 'Exercise8: COMPILE ERROR (- 0.30)']
+	 'Exercise6: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise8: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.28</b>
+<b>          [SCORE] 0.76</b>
 
 </pre></body></html>

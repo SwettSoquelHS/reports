@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-23
+Run date: 2018-10-24
 <br>Student User: kaifouts
 <br>Project: think-java
 <br>
@@ -104,11 +104,32 @@ Time:
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
+[COMPILING] Swettercise.java
+	[ERROR] javac failed Swettercise.java Swettercise.java:21: error: cannot find symbol
+				str = str = i = ", ";
+				^
+	  symbol:   variable str
+	  location: class Swettercise
+	Swettercise.java:21: error: cannot find symbol
+				str = str = i = ", ";
+				      ^
+	  symbol:   variable str
+	  location: class Swettercise
+	Swettercise.java:21: error: incompatible types: String cannot be converted to int
+				str = str = i = ", ";
+				                ^
+	Swettercise.java:23: error: cannot find symbol
+			System.out.println(str);
+			                   ^
+	  symbol:   variable str
+	  location: class Swettercise
+	4 errors
+	
 [SUMMARY] 
-	['Swettercise1: MISSING (- 0.50)']
+	['Swettercise1: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.50</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
@@ -117,10 +138,12 @@ Time:
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.50)'
+	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -129,9 +152,12 @@ Time:
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise5: MISSING (- 0.50)'
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 </pre></body></html>

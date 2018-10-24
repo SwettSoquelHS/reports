@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-23
+Run date: 2018-10-24
 <br>Student User: MegaMichael1000
 <br>Project: think-java
 <br>
@@ -67,8 +67,8 @@ Enter the amount of seconds: 13 seconds = 0 hours, 0 minutes, 13 seconds.
 I'm thinking of a number between 1 and 100
 	(including both). Can you guess what it is?
 	Type a number: Your guess is: 13
-	The number I was thinking of is: 9
-	You were off by: 4
+	The number I was thinking of is: 81
+	You were off by: 68
 	
 <--
 	[OUTPUT OK]
@@ -167,10 +167,12 @@ I'm thinking of a number between 1 and 100
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.50)'
+	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -179,9 +181,80 @@ I'm thinking of a number between 1 and 100
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+Test: Chapter7, Exercise5.areFactors()
+	  [PASSED] Exercise5.areFactors("8, [4, 2, 1]") 
+	  [PASSED] Exercise5.areFactors("13, [1, 12, 99]") 
+	  [PASSED] Exercise5.areFactors("26, [13, 26, 1]") 
+	  [PASSED] Exercise5.areFactors("35, [5, 7]") 
+	  [PASSED] Exercise5.areFactors("35, [5, 7, 34]") 
+	  [PASSED] Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]") 
+	  TEST FINISHED, PASSED: 6/6.
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[SUCCESSFUL COMPILE] Exercise6.java
+[TESTING WITH] TestCh7Ex6
+[COMPILING] TestCh7Ex6.java
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.03]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[SUCCESSFUL COMPILE] TestCh7Ex8.java
+[RUNNING] TestCh7Ex8
+-->
+
+	<br>Chapter7, Exercise8.isAnagram()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise8.isAnagram("stop, mots")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("stop, pots")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("allen downey, well annoyed")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("flip, flop")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("ooooooh boy, oooooo hboy")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("oooooo hboy, ooooooh boy")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("now, won")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise8.isAnagram("larp test, lightning bolt")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise5: PASSED - EXCELLENT!'
+	 'Exercise6: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
+	 'Exercise8: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">0.97</font></b>
 
 </pre></body></html>
