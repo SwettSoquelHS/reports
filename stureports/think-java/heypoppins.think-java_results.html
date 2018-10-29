@@ -11,6 +11,9 @@ Run date: 2018-10-28
 [PRE-WARN]: Expected non-empty: ./stuwork/heypoppins/think-java-heypoppins
 [GITWORK]
 [Attempting DL:https://github.com/SwettSoquelHS/think-java-heypoppins.git]
+Cloning into 'think-java-heypoppins'...
+	
+[GITWORK DONE]
 
 <hr>
 
@@ -19,20 +22,56 @@ Run date: 2018-10-28
 
 *[BEGIN chapter2]
   [EXPECTING TARGETS] ['Date', 'Time']]
-	[ERROR] No chapter work for:chapter2
+[SUMMARY] 
+	['Date: MISSING (- 0.17)'
+	 'Time: MISSING (- 0.17)']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-	[ERROR] No chapter work for:chapter3
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[RUNNING] Exercise3
+-->
+How many seconds?: 0 hours, 0 minutes, 13 seconds.
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[RUNNING] Exercise4
+-->
+What do you think my number is?: Your number was: 13
+	My number was: 62
+	You were off by: 49
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter3]
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
-	[ERROR] No chapter work for:chapter4
+[COMPILING] Multadd.java
+	[SUCCESSFUL COMPILE] Multadd.java
+[RUNNING] Multadd
+-->
+multAdd test using 1.0, 2.0, 3.0: 5.0
+	Using multAdd: 1.0606601717798212
+	expSum: 1.2005440615054193
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.67</b>
 
 <hr>
 
@@ -41,10 +80,26 @@ Run date: 2018-10-28
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] Ch6Ex4
+[COMPILING] Ch6Ex4.java
+	[ERROR] javac failed Ch6Ex4.java
+ ----begin compile output------- 
+Ch6Ex4.java:56: error: cannot find symbol
+	            boolean isIt = Exercise4.isAbecedarian(testStr);
+	                                    ^
+	  symbol:   method isAbecedarian(String)
+	  location: class Exercise4
+	1 error
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Exercise4: COMPILE ERROR (- 0.30)'
+	 'Exercise5: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.20</b>
 
 <hr>
 
@@ -53,10 +108,11 @@ Run date: 2018-10-28
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
-	[ERROR] No chapter work for:chapter6
+[SUMMARY] 
+	['Swettercise1: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.50</b>
 
 <hr>
 
