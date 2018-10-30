@@ -53,8 +53,8 @@ Enter seconds:
 I'm thinking of a number between 1 and 100
 	(including both). Can you guess what it is?
 	Type a number: Your guess is: 13
-	The number I was thinking of is: 11
-	You were off by: 2
+	The number I was thinking of is: 52
+	You were off by: 100
 	
 <--
 	[OUTPUT OK]
@@ -119,35 +119,62 @@ Is Abecedarian
 	[OUTPUT OK]
 
 [COMPILING] Exercise5.java
-	[SUCCESSFUL COMPILE] Exercise5.java
-[TESTING WITH] Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[SUCCESSFUL COMPILE] Ch6Ex5.java
-[RUNNING] Ch6Ex5
--->
-Not DoubloonIs DoubloonIs DoubloonIs DoubloonNot DoubloonIs DoubloonNot DoubloonIs Doubloon
-	<br>Results for Exercise5().isDoubloon()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.0]
+	[ERROR] javac failed Exercise5.java Exercise5.java:1: error: class, interface, or enum expected
+	<<<<<<< HEAD
+	^
+	Exercise5.java:1: error: class, interface, or enum expected
+	<<<<<<< HEAD
+	  ^
+	Exercise5.java:1: error: class, interface, or enum expected
+	<<<<<<< HEAD
+	    ^
+	Exercise5.java:1: error: class, interface, or enum expected
+	<<<<<<< HEAD
+	      ^
+	Exercise5.java:1: error: class, interface, or enum expected
+	<<<<<<< HEAD
+	        ^
+	Exercise5.java:37: error: illegal start of type
+	=======
+	^
+	Exercise5.java:37: error: ';' expected
+	=======
+	  ^
+	Exercise5.java:37: error: illegal start of type
+	=======
+	    ^
+	Exercise5.java:37: error: <identifier> expected
+	=======
+	      ^
+	Exercise5.java:37: error: ';' expected
+	=======
+	       ^
+	Exercise5.java:38: error: <identifier> expected
+	import java.util.Scanner;
+	                        ^
+	Exercise5.java:75: error: illegal start of type
+	>>>>>>> f5ec23d54e240f9fa51d6505844ed0963ecf0248
+	^
+	Exercise5.java:75: error: ';' expected
+	>>>>>>> f5ec23d54e240f9fa51d6505844ed0963ecf0248
+	   ^
+	Exercise5.java:75: error: illegal start of type
+	>>>>>>> f5ec23d54e240f9fa51d6505844ed0963ecf0248
+	      ^
+	Exercise5.java:75: error: ';' expected
+	>>>>>>> f5ec23d54e240f9fa51d6505844ed0963ecf0248
+	                                                ^
+	Exercise5.java:76: error: reached end of file while parsing
+	}
+	 ^
+	16 errors
 	
-	
-<--
-	[OUTPUT OK]
-
 [SUMMARY] 
 	['Exercise4: PASSED - EXCELLENT!'
-	 'Exercise5: PASSED - EXCELLENT!']
+	 'Exercise5: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] <font color="green">1.00</font></b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
@@ -205,10 +232,51 @@ Not DoubloonIs DoubloonIs DoubloonIs DoubloonNot DoubloonIs DoubloonNot Doubloon
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[ERROR] javac failed TestCh7Ex4.java
+ ----begin compile output------- 
+TestCh7Ex4.java:47: error: method sieve in class Exercise4 cannot be applied to given types;
+	            boolean[] gotBack = Exercise4.sieve(n);
+	                                         ^
+	  required: int,int[]
+	  found: int
+	  reason: actual and formal argument lists differ in length
+	1 error
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
@@ -217,9 +285,72 @@ Not DoubloonIs DoubloonIs DoubloonIs DoubloonNot DoubloonIs DoubloonNot Doubloon
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise5.java
+	[ERROR] javac failed Exercise5.java Exercise5.java:6: error: array dimension missing
+			int[] nums = new int[];
+			                      ^
+	Exercise5.java:7: error: illegal start of expression
+			nums[10] = {10,20,30,40,50,60,70,80,90,100}
+			           ^
+	Exercise5.java:7: error: not a statement
+			nums[10] = {10,20,30,40,50,60,70,80,90,100}
+			            ^
+	Exercise5.java:7: error: ';' expected
+			nums[10] = {10,20,30,40,50,60,70,80,90,100}
+			              ^
+	Exercise5.java:8: error: <identifier> expected
+			n = 150;
+			 ^
+	Exercise5.java:9: error: invalid method declaration; return type required
+			areFactors(nums, n)
+			^
+	Exercise5.java:9: error: <identifier> expected
+			areFactors(nums, n)
+			               ^
+	Exercise5.java:9: error: <identifier> expected
+			areFactors(nums, n)
+			                  ^
+	Exercise5.java:9: error: ';' expected
+			areFactors(nums, n)
+			                   ^
+	Exercise5.java:12: error: class, interface, or enum expected
+		public static boolean areFactors(int n, int[] nums){
+		              ^
+	Exercise5.java:14: error: class, interface, or enum expected
+			for(int i = 0; i < nums.length; i ++){
+			^
+	Exercise5.java:14: error: class, interface, or enum expected
+			for(int i = 0; i < nums.length; i ++){
+			               ^
+	Exercise5.java:14: error: class, interface, or enum expected
+			for(int i = 0; i < nums.length; i ++){
+			                                ^
+	Exercise5.java:17: error: class, interface, or enum expected
+				}else{
+				^
+	Exercise5.java:19: error: class, interface, or enum expected
+				}
+				^
+	Exercise5.java:21: error: class, interface, or enum expected
+			for(int j = 0; j < factors.length; j++){
+			               ^
+	Exercise5.java:21: error: class, interface, or enum expected
+			for(int j = 0; j < factors.length; j++){
+			                                   ^
+	Exercise5.java:24: error: class, interface, or enum expected
+				}
+				^
+	Exercise5.java:27: error: class, interface, or enum expected
+		}
+		^
+	19 errors
+	
+[SUMMARY] 
+	['Exercise5: COMPILE ERROR (- 0.30)'
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 </pre></body></html>
