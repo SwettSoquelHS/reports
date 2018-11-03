@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-10-30
+Run date: 2018-11-03
 <br>Student User: aliyaaware
 <br>Project: think-java
 <br>
@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 7
-	You were off by: 6
+	THe number I was thinkin of is: 100
+	You were off by: 87
 	
 <--
 	[OUTPUT OK]
@@ -243,28 +243,49 @@ Im thinking of a number between 1-100, can you guess it?
 	[SUCCESSFUL COMPILE] TestCh7Ex4.java
 [RUNNING] TestCh7Ex4
 -->
-Test: Chapter7, Exercise4.indexOfMax()
-	  [PASSED] Exercise4.sieve("2") 
-	  [   :( ] Exercise4.indexOfMax("3"): 
+2
+	2
+	3
+	2
+	3
+	2
+	3
+	5
+	2
+	3
+	5
+	2
+	3
+	5
+	7
+	2
+	3
+	5
+	7
+	Test: Chapter7, Exercise4.indexOfMax()
+	  [   :( ] Exercise4.sieve("2"): 
+			EXPECTED: [false, false]
+			RECEIVED: [false, false, true]
+	  [   :( ] Exercise4.sieve("3"): 
 			EXPECTED: [false, false, true]
-			RECEIVED: Exception Thrown
-	  [   :( ] Exercise4.indexOfMax("4"): 
+			RECEIVED: [false, false, true, true]
+	  [   :( ] Exercise4.sieve("4"): 
 			EXPECTED: [false, false, true, true]
-			RECEIVED: Exception Thrown
-	  [   :( ] Exercise4.indexOfMax("5"): 
+			RECEIVED: [false, false, true, true, false]
+	  [   :( ] Exercise4.sieve("5"): 
 			EXPECTED: [false, false, true, true, false]
-			RECEIVED: Exception Thrown
-	  [   :( ] Exercise4.indexOfMax("6"): 
+			RECEIVED: [false, false, true, true, false, true]
+	  [   :( ] Exercise4.sieve("6"): 
 			EXPECTED: [false, false, true, true, false, true]
-			RECEIVED: Exception Thrown
-	  [   :( ] Exercise4.indexOfMax("7"): 
+			RECEIVED: [false, false, true, true, false, true, false]
+	  [   :( ] Exercise4.sieve("7"): 
 			EXPECTED: [false, false, true, true, false, true, false]
-			RECEIVED: Exception Thrown
-	  [   :( ] Exercise4.indexOfMax("8"): 
+			RECEIVED: [false, false, true, true, false, true, false, true]
+	  [   :( ] Exercise4.sieve("8"): 
 			EXPECTED: [false, false, true, true, false, true, false, true]
-			RECEIVED: Exception Thrown
-	  TEST FINISHED, PASSED: 1/7.
-	[deductions=0.6]
+			RECEIVED: [false, false, true, true, false, true, false, true, false]
+	  TEST FINISHED, PASSED: 0/7.
+	[deductions=0.21]
 	
 	
 <--
@@ -272,10 +293,10 @@ Test: Chapter7, Exercise4.indexOfMax()
 
 [SUMMARY] 
 	['Exercise3: PASSED - EXCELLENT!'
-	 'Exercise4: RAN - ERRORS NEED TO BE FIXED. You can to do better! :)']
+	 'Exercise4: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.40</b>
+<b>          [SCORE] 0.79</b>
 
 <hr>
 
