@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class TestCh7Ex5 extends TUtils {
     public static void main(String[] args){
-        //WEB_RUN = false;
+        WEB_RUN = false;
         /*
         Write a method named areFactors that takes an integer 
         n and an array of integers, and that returns true if 
@@ -56,7 +56,7 @@ public class TestCh7Ex5 extends TUtils {
             addResult("Exercise5.areFactors", n + ", " + Arrays.toString(someInts) , String.valueOf(gotBack), 
                 String.valueOf(expectedResult), gotBack == expectedResult);
             if (gotBack != expectedResult){
-                dedcut(0.03);
+                deduct(0.03);
             }
 
             return gotBack == expectedResult;

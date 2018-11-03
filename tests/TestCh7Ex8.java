@@ -71,7 +71,7 @@ public class TestCh7Ex8 extends TUtils {
                 String.valueOf(expectedResult), gotBack == expectedResult);
 
             if (gotBack != expectedResult){
-                dedcut(0.03);
+                deduct(0.03);
             }
 
             return gotBack == expectedResult;

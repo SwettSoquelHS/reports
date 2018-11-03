@@ -561,7 +561,7 @@ if projName == 'think-java':
     scorehistory.save(scoreHistory)
     saveReportToGit(stu_to_report, reportFile)
     
-elif projName in ['cs-portfolio', 'coat-of-arms', 'lightning']:
+elif projName in ['cs-portfolio', 'coat-of-arms', 'lightning', 'dice', 'chemotaxis']:
     print("Report created for " + 'cs-portfolio' )
     createClassReport(projName, stu_to_report, GITHUB_DEMO_BASE_URL, None) 
     

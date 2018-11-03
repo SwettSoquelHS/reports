@@ -9,7 +9,7 @@ public class TestCh7Ex4 extends TUtils {
         } else {
             WEB_RUN = false;
         }
-        WEB_RUN = true;
+        WEB_RUN = false;
         
         runTests();
         dumpReport();
@@ -52,7 +52,7 @@ public class TestCh7Ex4 extends TUtils {
             addResult("Exercise4.sieve", String.valueOf(n) , Arrays.toString(gotBack), 
                 Arrays.toString(expectedResult), s2.equalsIgnoreCase(s1));
             if (!s2.equalsIgnoreCase(s1)){
-                dedcut(0.03);
+                deduct(0.03);
             }
 
             return gotBack == expectedResult;

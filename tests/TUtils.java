@@ -75,8 +75,6 @@ public class TUtils {
         }
             //dump = dump + s;
         //System.out.print(dump);
-        if(WEB_RUN){
-            System.out.println("[deductions="+deduction+"]\n");
-        }
+        System.out.println("[deductions="+deduction+"]\n");
     }
 }
