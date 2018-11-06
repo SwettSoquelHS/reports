@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-11-03
+Run date: 2018-11-06
 <br>Student User: jadenngo13
 <br>Project: think-java
 <br>
@@ -66,8 +66,8 @@ Enter seconds: 13 seconds = 0 hours, 0.0 minutes, and 13 seconds
 [RUNNING] Exercise4
 -->
 Enter a number: Your guess is: 13
-	The number I was thinking of was: 36
-	You were off by: 23
+	The number I was thinking of was: 40
+	You were off by: 27
 	
 <--
 	[OUTPUT OK]
@@ -79,11 +79,22 @@ Enter a number: Your guess is: 13
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
+[COMPILING] Multadd.java
+	[SUCCESSFUL COMPILE] Multadd.java
+[RUNNING] Multadd
+-->
+13.049999999999999
+	1.0606601717798212
+	1.2160974411794894
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Multadd: MISSING (- 0.17)']
+	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] <font color="green">0.83</font></b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 <hr>
 
@@ -116,76 +127,19 @@ Enter a number: Your guess is: 13
 	[OUTPUT OK]
 
 [COMPILING] Exercise5.java
-	[SUCCESSFUL COMPILE] Exercise5.java
-[TESTING WITH] Ch6Ex5
-[COMPILING] Ch6Ex5.java
-	[SUCCESSFUL COMPILE] Ch6Ex5.java
-[RUNNING] Ch6Ex5
--->
-index of letter a :0
-	index of letter b :1
-	index of letter c :2
-	index of letter d :3
-	index of letter e :4
-	index of letter f :5
-	index of letter a :0
-	index of letter a :0
-	index of letter a :0
-	index of letter n :13
-	index of letter n :13
-	index of letter a :0
-	index of letter a :0
-	index of letter b :1
-	index of letter c :2
-	index of letter d :3
-	index of letter a :0
-	index of letter b :1
-	index of letter c :2
-	index of letter d :3
-	index of letter a :0
-	index of letter a :0
-	index of letter a :0
-	index of letter i :8
-	index of letter n :13
-	index of letter t :19
-	index of letter e :4
-	index of letter s :18
-	index of letter t :19
-	index of letter i :8
-	index of letter n :13
-	index of letter e :4
-	index of letter s :18
-	index of letter i :8
-	index of letter   :-65
-	index of letter b :1
-	index of letter a :0
-	index of letter n :13
-	index of letter n :13
-	index of letter a :0
-	index of letter b :1
+	[ERROR] javac failed Exercise5.java Exercise5.java:11: error: cannot find symbol
+			wordLower = wordLower.reaplaceAll("[^a-zA-Z0-9]", "");
+			                     ^
+	  symbol:   method reaplaceAll(String,String)
+	  location: variable wordLower of type String
+	1 error
 	
-	<br>Results for Exercise5().isDoubloon()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>false </b></td></tr>
-	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.1]
-	
-	
-<--
-	[OUTPUT OK]
-
 [SUMMARY] 
 	['Exercise4: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
-	 'Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS']
+	 'Exercise5: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] <font color="green">0.85</font></b>
+<b>          [SCORE] 0.65</b>
 
 <hr>
 
@@ -252,16 +206,16 @@ index of letter a :0
 -->
 
 	<br>Chapter7, Exercise3.indexOfMax()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">1</td><td bgcolor="red"><b>0 </b></td></tr>
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">4</td><td bgcolor="red"><b>1 </b></td></tr>
-	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">4</td><td bgcolor="red"><b>0 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
 	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">0</td><td bgcolor="red"><b>1 </b></td></tr>
 	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
 	</table><br>
-	[deductions=0.12]
+	[deductions=0.03]
 	
 	
 <--
@@ -282,11 +236,11 @@ TestCh7Ex4.java:47: error: cannot find symbol
 	
 -----------END COMPILE-------
 [SUMMARY] 
-	['Exercise3: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	['Exercise3: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
 	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.58</b>
+<b>          [SCORE] 0.67</b>
 
 <hr>
 
@@ -340,203 +294,110 @@ Test: Chapter7, Exercise5.areFactors()
 	[OUTPUT OK]
 
 [COMPILING] Exercise8.java
-	[SUCCESSFUL COMPILE] Exercise8.java
-[TESTING WITH] TestCh7Ex8
-[COMPILING] TestCh7Ex8.java
-	[SUCCESSFUL COMPILE] TestCh7Ex8.java
-[RUNNING] TestCh7Ex8
--->
-letter: s
-	index of letter: 18
-	letter: t
-	index of letter: 19
-	letter: o
-	index of letter: 14
-	letter: p
-	index of letter: 15
-	letter: m
-	index of letter: 12
-	letter: o
-	index of letter: 14
-	letter: t
-	index of letter: 19
-	letter: s
-	index of letter: 18
-	i0 o0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 1
-	0 vs. 0
-	1 vs. 1
-	1 vs. 0
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	letter: s
-	index of letter: 18
-	letter: t
-	index of letter: 19
-	letter: o
-	index of letter: 14
-	letter: p
-	index of letter: 15
-	letter: p
-	index of letter: 15
-	letter: o
-	index of letter: 14
-	letter: t
-	index of letter: 19
-	letter: s
-	index of letter: 18
-	i0 o0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	letter: f
-	index of letter: 5
-	letter: l
-	index of letter: 11
-	letter: i
-	index of letter: 8
-	letter: p
-	index of letter: 15
-	letter: f
-	index of letter: 5
-	letter: l
-	index of letter: 11
-	letter: o
-	index of letter: 14
-	letter: p
-	index of letter: 15
-	i1 o0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	1 vs. 0
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	0 vs. 1
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	letter: n
-	index of letter: 13
-	letter: o
-	index of letter: 14
-	letter: w
-	index of letter: 22
-	letter: w
-	index of letter: 22
-	letter: o
-	index of letter: 14
-	letter: n
-	index of letter: 13
-	i0 o0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
-	1 vs. 1
-	0 vs. 0
-	0 vs. 0
-	0 vs. 0
+	[ERROR] javac failed Exercise8.java Exercise8.java:3: error: illegal start of expression
+	<<<<<<< HEAD
+	^
+	Exercise8.java:3: error: illegal start of expression
+	<<<<<<< HEAD
+	  ^
+	Exercise8.java:3: error: illegal start of expression
+	<<<<<<< HEAD
+	    ^
+	Exercise8.java:4: error: > expected
+			String word1 = "spo t";
+			^
+	Exercise8.java:4: error: ';' expected
+			String word1 = "spo t";
+			      ^
+	Exercise8.java:4: error: illegal start of expression
+			String word1 = "spo t";
+			             ^
+	Exercise8.java:4: error: ';' expected
+			String word1 = "spo t";
+			              ^
+	Exercise8.java:6: error: illegal start of expression
+	=======
+	^
+	Exercise8.java:6: error: illegal start of expression
+	=======
+	  ^
+	Exercise8.java:6: error: illegal start of expression
+	=======
+	    ^
+	Exercise8.java:6: error: illegal start of expression
+	=======
+	      ^
+	Exercise8.java:7: error: ';' expected
+			String word1 = "flip";
+			      ^
+	Exercise8.java:9: error: illegal start of expression
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	^
+	Exercise8.java:9: error: illegal start of expression
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	   ^
+	Exercise8.java:9: error: illegal start of expression
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	      ^
+	Exercise8.java:9: error: ';' expected
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	                                                ^
+	Exercise8.java:14: error: illegal start of expression
+	<<<<<<< HEAD
+	^
+	Exercise8.java:14: error: illegal start of expression
+	<<<<<<< HEAD
+	  ^
+	Exercise8.java:14: error: illegal start of expression
+	<<<<<<< HEAD
+	    ^
+	Exercise8.java:15: error: > expected
+			str1 = str1.replace(" ", "");
+			^
+	Exercise8.java:27: error: illegal start of expression
+	=======
+	^
+	Exercise8.java:27: error: illegal start of expression
+	=======
+	  ^
+	Exercise8.java:27: error: illegal start of expression
+	=======
+	    ^
+	Exercise8.java:27: error: illegal start of expression
+	=======
+	      ^
+	Exercise8.java:28: error: '.class' expected
+			boolean anagram = true;
+			        ^
+	Exercise8.java:28: error: illegal start of expression
+			boolean anagram = true;
+			                ^
+	Exercise8.java:28: error: ';' expected
+			boolean anagram = true;
+			                 ^
+	Exercise8.java:40: error: illegal start of expression
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	^
+	Exercise8.java:40: error: illegal start of expression
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	   ^
+	Exercise8.java:40: error: illegal start of expression
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	      ^
+	Exercise8.java:40: error: ';' expected
+	>>>>>>> b07621352b0e5b815b3ea0eea09d48bd2b36c77c
+	                                                ^
+	Exercise8.java:64: error: reached end of file while parsing
+	}
+	 ^
+	32 errors
 	
-	<br>Chapter7, Exercise8.isAnagram()
-	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise8.isAnagram("stop, mots")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("stop, pots")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("allen downey, well annoyed")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("flip, flop")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("ooooooh boy, oooooo hboy")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("oooooo hboy, ooooooh boy")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("now, won")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
-	<tr><td align="right" width="200">Exercise8.isAnagram("larp test, lightning bolt")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
-	</table><br>
-	[deductions=0.09]
-	
-	
-<--
-	[OUTPUT OK]
-
 [SUMMARY] 
 	['Exercise5: PASSED - EXCELLENT!'
 	 'Exercise6: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
-	 'Exercise8: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
+	 'Exercise8: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] <font color="green">0.88</font></b>
+<b>          [SCORE] 0.67</b>
 
 </pre></body></html>
