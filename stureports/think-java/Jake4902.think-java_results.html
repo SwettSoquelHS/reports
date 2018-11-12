@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-11-11
+Run date: 2018-11-12
 <br>Student User: Jake4902
 <br>Project: think-java
 <br>
@@ -53,7 +53,7 @@ Enter seconds:
 I'm thinking of a number between 1 and 100
 	(including both). Can you guess what it is?
 	Type a number: Your guess is: 13
-	The number I was thinking of is: 61
+	The number I was thinking of is: 18
 	You were off by: 100
 	
 <--
@@ -286,71 +286,70 @@ TestCh7Ex4.java:47: error: method sieve in class Exercise4 cannot be applied to 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
 [COMPILING] Exercise5.java
-	[ERROR] javac failed Exercise5.java Exercise5.java:6: error: array dimension missing
-			int[] nums = new int[];
-			                      ^
-	Exercise5.java:7: error: illegal start of expression
-			nums[10] = {10,20,30,40,50,60,70,80,90,100}
-			           ^
-	Exercise5.java:7: error: not a statement
-			nums[10] = {10,20,30,40,50,60,70,80,90,100}
-			            ^
-	Exercise5.java:7: error: ';' expected
-			nums[10] = {10,20,30,40,50,60,70,80,90,100}
-			              ^
-	Exercise5.java:8: error: <identifier> expected
-			n = 150;
-			 ^
-	Exercise5.java:9: error: invalid method declaration; return type required
-			areFactors(nums, n)
-			^
-	Exercise5.java:9: error: <identifier> expected
-			areFactors(nums, n)
-			               ^
-	Exercise5.java:9: error: <identifier> expected
-			areFactors(nums, n)
-			                  ^
-	Exercise5.java:9: error: ';' expected
-			areFactors(nums, n)
-			                   ^
-	Exercise5.java:12: error: class, interface, or enum expected
-		public static boolean areFactors(int n, int[] nums){
-		              ^
-	Exercise5.java:14: error: class, interface, or enum expected
-			for(int i = 0; i < nums.length; i ++){
-			^
-	Exercise5.java:14: error: class, interface, or enum expected
-			for(int i = 0; i < nums.length; i ++){
-			               ^
-	Exercise5.java:14: error: class, interface, or enum expected
-			for(int i = 0; i < nums.length; i ++){
-			                                ^
-	Exercise5.java:17: error: class, interface, or enum expected
-				}else{
-				^
-	Exercise5.java:19: error: class, interface, or enum expected
-				}
-				^
-	Exercise5.java:21: error: class, interface, or enum expected
-			for(int j = 0; j < factors.length; j++){
-			               ^
-	Exercise5.java:21: error: class, interface, or enum expected
-			for(int j = 0; j < factors.length; j++){
-			                                   ^
-	Exercise5.java:24: error: class, interface, or enum expected
-				}
-				^
-	Exercise5.java:27: error: class, interface, or enum expected
-		}
-		^
-	19 errors
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+
+	<br>Chapter7, Exercise5.areFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[SUCCESSFUL COMPILE] Exercise6.java
+[TESTING WITH] TestCh7Ex6
+[COMPILING] TestCh7Ex6.java
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.15]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[ERROR] javac failed TestCh7Ex8.java
+ ----begin compile output------- 
+TestCh7Ex8.java:68: error: cannot find symbol
+	            boolean gotBack = Exercise8.isAnagram(s1, s2);
+	                                       ^
+	  symbol:   method isAnagram(String,String)
+	  location: class Exercise8
+	1 error
+	
+-----------END COMPILE-------
 [SUMMARY] 
-	['Exercise5: COMPILE ERROR (- 0.30)'
-	 'Exercise6: MISSING (- 0.50)'
-	 'Exercise8: MISSING (- 0.50)']
+	['Exercise5: PASSED - EXCELLENT!'
+	 'Exercise6: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise8: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.00</b>
+<b>          [SCORE] 0.55</b>
 
 </pre></body></html>
