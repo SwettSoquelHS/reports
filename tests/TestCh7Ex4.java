@@ -9,7 +9,7 @@ public class TestCh7Ex4 extends TUtils {
         } else {
             WEB_RUN = false;
         }
-        WEB_RUN = false;
+        WEB_RUN = true;
         
         runTests();
         dumpReport();

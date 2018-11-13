@@ -1,6 +1,6 @@
 class TestTile extends TUtils {
     public static void main(String[] args){
-        WEB_RUN = false;
+        WEB_RUN = true;
         /*
          Exercise 3  
         // In the board game Scrabble, each tile contains a letter, which is used to spell words in rows and columns, and a score, which is used to determine the value of words.
@@ -29,7 +29,7 @@ class TestTile extends TUtils {
         tryCheckGetterSetters('C', 3);
         tryCheckGetterSetters('Z', 10);
         trytoString('Z', 10);
-        tryEquals('Z', 10);        
+        tryEquals('Z', 3);        
     }
 
 

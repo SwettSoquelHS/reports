@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class TestCh7Ex8 extends TUtils {
     public static void main(String[] args){
-        //WEB_RUN = false;
+        WEB_RUN = true;
         /*
         Write a method named areFactors that takes an integer 
         n and an array of integers, and that returns true if 
