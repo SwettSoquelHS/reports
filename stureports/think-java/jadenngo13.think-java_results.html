@@ -66,8 +66,8 @@ Enter seconds: 13 seconds = 0 hours, 0.0 minutes, and 13 seconds
 [RUNNING] Exercise4
 -->
 Enter a number: Your guess is: 13
-	The number I was thinking of was: 89
-	You were off by: 76
+	The number I was thinking of was: 69
+	You were off by: 56
 	
 <--
 	[OUTPUT OK]
@@ -245,7 +245,7 @@ TestCh7Ex4.java:47: error: cannot find symbol
 <hr>
 
 <b>[Assignment]  > Think Java: Ch7 - pt2 < </b>
-  [DESC] HW4: Fith HW Assignment, Ch7 Ex5, 6, 8
+  [DESC] HW5: Fith HW Assignment, Ch7 Ex5, 6, 8
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
@@ -400,5 +400,102 @@ TestCh7Ex4.java:47: error: cannot find symbol
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
 <b>          [SCORE] 0.67</b>
+
+<hr>
+
+<b>[Assignment]  > Think Java: Ch11< </b>
+  [DESC] HW6: HW Assignment, Ch11 Ex3
+
+*[BEGIN chapter11]
+  [EXPECTING TARGETS] ['Tile']
+[COMPILING] Tile.java
+	[SUCCESSFUL COMPILE] Tile.java
+[TESTING WITH] TestTile
+[COMPILING] TestTile.java
+	[ERROR] javac failed TestTile.java
+ ----begin compile output------- 
+TestTile.java:58: error: cannot find symbol
+	                if( c != t.getLetter()){
+	                          ^
+	  symbol:   method getLetter()
+	  location: variable t of type Tile
+	TestTile.java:60: error: cannot find symbol
+	                    addResult("getLetter", "", ""+t.getLetter(), ""+c, false);
+	                                                   ^
+	  symbol:   method getLetter()
+	  location: variable t of type Tile
+	TestTile.java:62: error: cannot find symbol
+	                    addResult("getLetter", "", ""+t.getLetter(), ""+c, true);
+	                                                   ^
+	  symbol:   method getLetter()
+	  location: variable t of type Tile
+	TestTile.java:65: error: cannot find symbol
+	                if( value != t.getValue()){
+	                              ^
+	  symbol:   method getValue()
+	  location: variable t of type Tile
+	TestTile.java:67: error: cannot find symbol
+	                    addResult("getValue", "", ""+t.getValue(), ""+value, false);
+	                                                  ^
+	  symbol:   method getValue()
+	  location: variable t of type Tile
+	TestTile.java:69: error: cannot find symbol
+	                    addResult("getValue", "", ""+t.getValue(), ""+value, true);
+	                                                  ^
+	  symbol:   method getValue()
+	  location: variable t of type Tile
+	TestTile.java:72: error: cannot find symbol
+	                t.setLetter('A');
+	                 ^
+	  symbol:   method setLetter(char)
+	  location: variable t of type Tile
+	TestTile.java:73: error: cannot find symbol
+	                if( t.getLetter() != 'A'){
+	                     ^
+	  symbol:   method getLetter()
+	  location: variable t of type Tile
+	TestTile.java:75: error: cannot find symbol
+	                    addResult("setLetter", "'A'", ""+t.getLetter(), "'A'", false);
+	                                                      ^
+	  symbol:   method getLetter()
+	  location: variable t of type Tile
+	TestTile.java:77: error: cannot find symbol
+	                    addResult("setLetter", "'A'", ""+t.getLetter(), "'A'", true);
+	                                                      ^
+	  symbol:   method getLetter()
+	  location: variable t of type Tile
+	TestTile.java:80: error: cannot find symbol
+	                t.setValue(8);
+	                 ^
+	  symbol:   method setValue(int)
+	  location: variable t of type Tile
+	TestTile.java:81: error: cannot find symbol
+	                if( t.getValue() != 8){
+	                     ^
+	  symbol:   method getValue()
+	  location: variable t of type Tile
+	TestTile.java:83: error: cannot find symbol
+	                    addResult("getValue", "", ""+t.getValue(), "8", false);
+	                                                  ^
+	  symbol:   method getValue()
+	  location: variable t of type Tile
+	TestTile.java:85: error: cannot find symbol
+	                    addResult("getValue", "", ""+t.getValue(), "8", true);
+	                                                  ^
+	  symbol:   method getValue()
+	  location: variable t of type Tile
+	TestTile.java:133: error: cannot find symbol
+	                t2.setValue(value + 5);
+	                  ^
+	  symbol:   method setValue(int)
+	  location: variable t2 of type Tile
+	15 errors
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Tile: COMPILE ERROR (- 0.30)']
+[DONE chapter11]
+[ASSIGNMENT DONE]  Think Java: Ch11
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>
