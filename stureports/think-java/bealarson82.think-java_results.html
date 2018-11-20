@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-11-12
+Run date: 2018-11-20
 <br>Student User: bealarson82
 <br>Project: think-java
 <br>
@@ -123,12 +123,36 @@ Number of seconds since midnight:
 <--
 	[OUTPUT OK]
 
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
+[RUNNING] Ch6Ex5
+-->
+
+	<br>Results for Exercise5().isDoubloon()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
 	['Exercise4: PASSED - EXCELLENT!'
-	 'Exercise5: MISSING (- 0.50)']
+	 'Exercise5: PASSED - EXCELLENT!']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.50</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 <hr>
 
@@ -157,61 +181,12 @@ Number of seconds since midnight:
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
 [COMPILING] Exercise3.java
-	[ERROR] javac failed Exercise3.java Exercise3.java:5: error: illegal start of expression
-	<<<<<<< HEAD
-	^
-	Exercise3.java:5: error: illegal start of expression
-	<<<<<<< HEAD
-	  ^
-	Exercise3.java:5: error: illegal start of expression
-	<<<<<<< HEAD
-	    ^
-	Exercise3.java:6: error: > expected
-			System.out.println(findLargeIndex(someArray));
-			^
-	Exercise3.java:6: error: ';' expected
-			System.out.println(findLargeIndex(someArray));
-			      ^
-	Exercise3.java:9: error: invalid method declaration; return type required
-		public static indexOfmax(int array[]){
-		              ^
-	Exercise3.java:15: error: ';' expected
-			return max
-			          ^
-	Exercise3.java:18: error: class, interface, or enum expected
-	=======
-	^
-	Exercise3.java:20: error: class, interface, or enum expected
-		}
-		^
-	Exercise3.java:22: error: class, interface, or enum expected
-		public static int indexOfmax(int[] n){
-		              ^
-	Exercise3.java:24: error: class, interface, or enum expected
-			int index = 0;
-			^
-	Exercise3.java:25: error: class, interface, or enum expected
-			for(int i = 0; i < n.length; i++){
-			^
-	Exercise3.java:25: error: class, interface, or enum expected
-			for(int i = 0; i < n.length; i++){
-			               ^
-	Exercise3.java:25: error: class, interface, or enum expected
-			for(int i = 0; i < n.length; i++){
-			                             ^
-	Exercise3.java:28: error: class, interface, or enum expected
-					index = n[0];
-					^
-	Exercise3.java:29: error: class, interface, or enum expected
-					index  = 1;
-					^
-	Exercise3.java:30: error: class, interface, or enum expected
-			}
-			^
-	Exercise3.java:32: error: class, interface, or enum expected
-		}
-		^
-	18 errors
+	[ERROR] javac failed Exercise3.java Exercise3.java:5: error: cannot find symbol
+			System.out.println(indexOfMax(someArray));
+			                   ^
+	  symbol:   method indexOfMax(int[])
+	  location: class Exercise3
+	1 error
 	
 [COMPILING] Exercise4.java
 	[SUCCESSFUL COMPILE] Exercise4.java
@@ -219,10 +194,9 @@ Number of seconds since midnight:
 [COMPILING] TestCh7Ex4.java
 	[ERROR] javac failed TestCh7Ex4.java
  ----begin compile output------- 
-TestCh7Ex4.java:47: error: incompatible types: int cannot be converted to String[]
+TestCh7Ex4.java:47: error: incompatible types: boolean cannot be converted to boolean[]
 	            boolean[] gotBack = Exercise4.sieve(n);
-	                                                ^
-	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+	                                               ^
 	1 error
 	
 -----------END COMPILE-------
@@ -241,19 +215,10 @@ TestCh7Ex4.java:47: error: incompatible types: int cannot be converted to String
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
 [COMPILING] Exercise5.java
-	[ERROR] javac failed Exercise5.java Exercise5.java:4: error: ']' expected
-			int[a] = {2, 5, 10, 20, 25};
-			    ^
-	Exercise5.java:4: error: ';' expected
-			int[a] = {2, 5, 10, 20, 25};
-			     ^
-	Exercise5.java:4: error: not a statement
-			int[a] = {2, 5, 10, 20, 25};
-			          ^
-	Exercise5.java:4: error: ';' expected
-			int[a] = {2, 5, 10, 20, 25};
-			           ^
-	4 errors
+	[ERROR] javac failed Exercise5.java Exercise5.java:5: error: non-static method areFactors(int,int[]) cannot be referenced from a static context
+			System.out.print(areFactors(n,array));
+			                 ^
+	1 error
 	
 [COMPILING] Exercise6.java
 	[ERROR] javac failed Exercise6.java Exercise6.java:7: error: cannot find symbol
@@ -301,10 +266,38 @@ TestCh7Ex4.java:47: error: incompatible types: int cannot be converted to String
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
+[COMPILING] Tile.java
+	[SUCCESSFUL COMPILE] Tile.java
+[TESTING WITH] TestTile
+[COMPILING] TestTile.java
+	[SUCCESSFUL COMPILE] TestTile.java
+[RUNNING] TestTile
+-->
+
+	<br>Chapter11, Exercise3: Tile Class
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">new Tile()("C, 3")  </td><td align="left">Null</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">new Tile()("Z, 10")  </td><td align="left">Null</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">getLetter("")  </td><td align="left">C</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">getValue("")  </td><td align="left">3</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">setLetter("'A'")  </td><td align="left">A</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">getValue("")  </td><td align="left">8</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">getLetter("")  </td><td align="left">Z</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">getValue("")  </td><td align="left">10</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">setLetter("'A'")  </td><td align="left">A</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">getValue("")  </td><td align="left">8</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">toString("")  </td><td align="left">10-Z</td><td bgcolor="red"><b>Z - 10 </b></td></tr>
+	<tr><td align="right" width="200">equals("")  </td><td align="left"></td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">!equals("")  </td><td align="left"></td><td width="50" bgcolor="green"> :) </td></tr>
+	[deductions=0.05]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Tile: MISSING (- 0.50)']
+	['Tile: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.50</b>
+<b>          [SCORE] <font color="green">0.95</font></b>
 
 </pre></body></html>
