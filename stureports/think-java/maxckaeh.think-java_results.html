@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-11-20
+Run date: 2018-11-27
 <br>Student User: maxckaeh
 <br>Project: think-java
 <br>
@@ -66,8 +66,8 @@ Total number of seconds: 13 seconds = 0 hours, 0 minutes, and 13 seconds.
 -->
 I'm thinking of a number between 0 and 100 (including both). Can you guess what it is? 
 	Your guess is: 13
-	The number I was thinking of is: 23
-	You were off by: -10
+	The number I was thinking of is: 8
+	You were off by: 5
 	
 <--
 	[OUTPUT OK]
@@ -212,10 +212,24 @@ I'm thinking of a number between 0 and 100 (including both). Can you guess what 
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[ERROR] javac failed Exercise3.java Exercise3.java:12: error: reached end of file while parsing
+	}
+	 ^
+	1 error
+	
+[COMPILING] Exercise4.java
+	[ERROR] javac failed Exercise4.java Exercise4.java:9: error: missing return statement
+		}
+		^
+	1 error
+	
+[SUMMARY] 
+	['Exercise3: COMPILE ERROR (- 0.30)'
+	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.40</b>
 
 <hr>
 
@@ -224,10 +238,13 @@ I'm thinking of a number between 0 and 100 (including both). Can you guess what 
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise5: MISSING (- 0.50)'
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -236,9 +253,38 @@ I'm thinking of a number between 0 and 100 (including both). Can you guess what 
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
-	[ERROR] No chapter work for:chapter11
+[COMPILING] Tile.java
+	[SUCCESSFUL COMPILE] Tile.java
+[TESTING WITH] TestTile
+[COMPILING] TestTile.java
+	[SUCCESSFUL COMPILE] TestTile.java
+[RUNNING] TestTile
+-->
+
+	<br>Chapter11, Exercise3: Tile Class
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">new Tile()("C, 3")  </td><td align="left">Null</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">new Tile()("Z, 10")  </td><td align="left">Null</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[C - 3 ].getLetter("")  </td><td align="left">C</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[C - 3 ].getValue("")  </td><td align="left">3</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[A - 3 ].setLetter("'A'")  </td><td align="left">A</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[A - 8 ].getValue("")  </td><td align="left">8</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Z - 10 ].getLetter("")  </td><td align="left">Z</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Z - 10 ].getValue("")  </td><td align="left">10</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[A - 10 ].setLetter("'A'")  </td><td align="left">A</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[A - 8 ].getValue("")  </td><td align="left">8</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Z - 10 ].toString("")  </td><td align="left">Z - 10</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Z - 3 ].equals("")  </td><td align="left"></td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Z - 3 ].!equals("")  </td><td align="left"></td><td width="50" bgcolor="green"> :) </td></tr>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Tile: PASSED - EXCELLENT!']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">1.00</font></b>
 
 </pre></body></html>

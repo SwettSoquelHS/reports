@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-11-20
+Run date: 2018-11-27
 <br>Student User: slammensam
 <br>Project: think-java
 <br>
@@ -84,10 +84,59 @@ Number of seconds since midnight:
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] Ch6Ex4
+[COMPILING] Ch6Ex4.java
+	[SUCCESSFUL COMPILE] Ch6Ex4.java
+[RUNNING] Ch6Ex4
+-->
+
+	<br>Results for Exercise4.isAbecedarian()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.isAbecedarian("abcdef")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("aaaaaa")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("gfedcba")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("z")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("beknow")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("no")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.isAbecedarian("he")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[SUCCESSFUL COMPILE] Ch6Ex5.java
+[RUNNING] Ch6Ex5
+-->
+
+	<br>Results for Exercise5().isDoubloon()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.isDoubloon("abcdef")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aa")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("anna")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("abcdabcd")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("aaa")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("intestines")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("i cook crepes on sundays!")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.isDoubloon("Bannab")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.15]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise4: PASSED - EXCELLENT!'
+	 'Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">0.85</font></b>
 
 <hr>
 
@@ -96,10 +145,47 @@ Number of seconds since midnight:
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Swettercise1.java
+	[SUCCESSFUL COMPILE] Swettercise1.java
+[TESTING WITH] SwetterciseTest
+[COMPILING] SwetterciseTest.java
+	[SUCCESSFUL COMPILE] SwetterciseTest.java
+[RUNNING] SwetterciseTest
+-->
+
+	<br>Results for reverseStr()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">reverseStr("I haz win?")  </td><td align="left">?niw zah I</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">reverseStr("007 bond james")  </td><td align="left">semaj dnob 700</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">reverseStr("banannas")  </td><td align="left">sannanab</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">reverseStr("tacocat")  </td><td align="left">tacocat</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Results for collatzThis()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">collatzThis("12")  </td><td align="left">12, 6, 3, 10, 5, 16, 8, 4, 2, 1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">collatzThis("4")  </td><td align="left">4, 2, 1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">collatzThis("11")  </td><td align="left">11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Results for isPrime()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isPrime("12")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">isPrime("4")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">isPrime("7")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isPrime("13")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isPrime("15")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isPrime("2048")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isPrime("1031")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.09]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Swettercise1: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">0.91</font></b>
 
 <hr>
 
@@ -108,10 +194,36 @@ Number of seconds since midnight:
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">33</td><td bgcolor="red"><b>0 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">4</td><td bgcolor="red"><b>1 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">100000</td><td bgcolor="red"><b>0 </b></td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.09]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise3: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.'
+	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.41</b>
 
 <hr>
 
@@ -120,10 +232,35 @@ Number of seconds since midnight:
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+
+	<br>Chapter7, Exercise5.areFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.5]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise5: RAN - ERRORS NEED TO BE FIXED. You can to do better! :)'
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 

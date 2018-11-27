@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-11-20
+Run date: 2018-11-27
 <br>Student User: tpipitone
 <br>Project: think-java
 <br>
@@ -69,7 +69,7 @@ How many seconds? 13 seconds is equal to 0 hours, 0 minutes, 13 seconds.
 -->
 Guess my number between 1 and 100!
 	Type a number: Your guess is: 13
-	My number was 96. You were off by 83.
+	My number was 61. You were off by 48.
 	
 <--
 	[OUTPUT OK]
@@ -366,90 +366,34 @@ Ch 4 Multadd
 	[SUCCESSFUL COMPILE] Tile.java
 [TESTING WITH] TestTile
 [COMPILING] TestTile.java
-	[ERROR] javac failed TestTile.java
- ----begin compile output------- 
-TestTile.java:58: error: cannot find symbol
-	                if( c != t.getLetter()){
-	                          ^
-	  symbol:   method getLetter()
-	  location: variable t of type Tile
-	TestTile.java:60: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].getLetter", "", ""+t.getLetter(), ""+c, false);
-	                                                                              ^
-	  symbol:   method getLetter()
-	  location: variable t of type Tile
-	TestTile.java:62: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].getLetter", "", ""+t.getLetter(), ""+c, true);
-	                                                                              ^
-	  symbol:   method getLetter()
-	  location: variable t of type Tile
-	TestTile.java:65: error: cannot find symbol
-	                if( value != t.getValue()){
-	                              ^
-	  symbol:   method getValue()
-	  location: variable t of type Tile
-	TestTile.java:67: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), ""+value, false);
-	                                                                             ^
-	  symbol:   method getValue()
-	  location: variable t of type Tile
-	TestTile.java:69: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), ""+value, true);
-	                                                                             ^
-	  symbol:   method getValue()
-	  location: variable t of type Tile
-	TestTile.java:72: error: cannot find symbol
-	                t.setLetter('A');
-	                 ^
-	  symbol:   method setLetter(char)
-	  location: variable t of type Tile
-	TestTile.java:73: error: cannot find symbol
-	                if( t.getLetter() != 'A'){
-	                     ^
-	  symbol:   method getLetter()
-	  location: variable t of type Tile
-	TestTile.java:75: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].setLetter", "'A'", ""+t.getLetter(), "'A'", false);
-	                                                                                 ^
-	  symbol:   method getLetter()
-	  location: variable t of type Tile
-	TestTile.java:77: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].setLetter", "'A'", ""+t.getLetter(), "'A'", true);
-	                                                                                 ^
-	  symbol:   method getLetter()
-	  location: variable t of type Tile
-	TestTile.java:80: error: cannot find symbol
-	                t.setValue(8);
-	                 ^
-	  symbol:   method setValue(int)
-	  location: variable t of type Tile
-	TestTile.java:81: error: cannot find symbol
-	                if( t.getValue() != 8){
-	                     ^
-	  symbol:   method getValue()
-	  location: variable t of type Tile
-	TestTile.java:83: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), "8", false);
-	                                                                             ^
-	  symbol:   method getValue()
-	  location: variable t of type Tile
-	TestTile.java:85: error: cannot find symbol
-	                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), "8", true);
-	                                                                             ^
-	  symbol:   method getValue()
-	  location: variable t of type Tile
-	TestTile.java:133: error: cannot find symbol
-	                t2.setValue(value + 5);
-	                  ^
-	  symbol:   method setValue(int)
-	  location: variable t2 of type Tile
-	15 errors
+	[SUCCESSFUL COMPILE] TestTile.java
+[RUNNING] TestTile
+-->
+
+	<br>Chapter11, Exercise3: Tile Class
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">new Tile()("C, 3")  </td><td align="left">Null</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">new Tile()("Z, 10")  </td><td align="left">Null</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@7852e922 ].getLetter("")  </td><td align="left">C</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@7852e922 ].getValue("")  </td><td align="left">3</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@7852e922 ].setLetter("'A'")  </td><td align="left">A</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@7852e922 ].getValue("")  </td><td align="left">8</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@4e25154f ].getLetter("")  </td><td align="left">Z</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@4e25154f ].getValue("")  </td><td align="left">10</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@4e25154f ].setLetter("'A'")  </td><td align="left">A</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@4e25154f ].getValue("")  </td><td align="left">8</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Tile[Tile@70dea4e ].toString("")  </td><td align="left">Tile@70dea4e</td><td bgcolor="red"><b>Z - 10 </b></td></tr>
+	<tr><td align="right" width="200">Tile[Tile@5c647e05 ].equals("")  </td><td align="left">Tile@33909752</td><td bgcolor="red"><b>Expected same tiles to be the same. </b></td></tr>
+	<tr><td align="right" width="200">Tile[Tile@5c647e05 ].!equals("")  </td><td align="left"></td><td width="50" bgcolor="green"> :) </td></tr>
+	[deductions=0.1]
 	
------------END COMPILE-------
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['Tile: COMPILE ERROR (- 0.30)']
+	['Tile: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] <font color="green">0.90</font></b>
 
 </pre></body></html>
