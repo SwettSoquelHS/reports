@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 95
-	You were off by: 82
+	THe number I was thinkin of is: 75
+	You were off by: 62
 	
 <--
 	[OUTPUT OK]
@@ -372,13 +372,51 @@ Im thinking of a number between 1-100, can you guess it?
 <hr>
 
 <b>[Assignment]  > Think Java: Ch11< </b>
+  [DESC] HW11: HW Assignment, Ch11 Ex3
+
+*[BEGIN chapter11]
+  [EXPECTING TARGETS] ['Tile']
+[COMPILING] Tile.java
+	[SUCCESSFUL COMPILE] Tile.java
+[TESTING WITH] TestTile
+[COMPILING] TestTile.java
+	[ERROR] javac failed TestTile.java
+ ----begin compile output------- 
+TestTile.java:38: error: incompatible types: possible lossy conversion from int to char
+	            Tile t = new Tile(c, value);        
+	                                 ^
+	TestTile.java:56: error: incompatible types: possible lossy conversion from int to char
+	            Tile t = new Tile(c, value);        
+	                                 ^
+	TestTile.java:100: error: incompatible types: possible lossy conversion from int to char
+	            Tile t = new Tile(c, value);        
+	                                 ^
+	TestTile.java:122: error: incompatible types: possible lossy conversion from int to char
+	            Tile t = new Tile(c, value);
+	                                 ^
+	TestTile.java:123: error: incompatible types: possible lossy conversion from int to char
+	            Tile t2 = new Tile(c, value);        
+	                                  ^
+	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+	5 errors
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Tile: COMPILE ERROR (- 0.30)']
+[DONE chapter11]
+[ASSIGNMENT DONE]  Think Java: Ch11
+<b>          [SCORE] 0.70</b>
+
+<hr>
+
+<b>[Assignment]  > Think Java: Ch12< </b>
   [DESC] HW11: Poker Hand Test
 
-*[BEGIN ch11b - Poker Hands]
+*[BEGIN ch12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:ch11b - Poker Hands
-[DONE ch11b - Poker Hands]
-[ASSIGNMENT DONE]  Think Java: Ch11
+	[ERROR] No chapter work for:ch12
+[DONE ch12]
+[ASSIGNMENT DONE]  Think Java: Ch12
 <b>          [SCORE] 0.25</b>
 
 </pre></body></html>
