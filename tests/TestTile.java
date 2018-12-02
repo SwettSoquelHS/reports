@@ -57,32 +57,32 @@ class TestTile extends TUtils {
             if (t != null){
                 if( c != t.getLetter()){
                     deduct(0.02);
-                    addResult("getLetter", "", ""+t.getLetter(), ""+c, false);
+                    addResult("Tile[" + t.toString() +" ].getLetter", "", ""+t.getLetter(), ""+c, false);
                 } else {
-                    addResult("getLetter", "", ""+t.getLetter(), ""+c, true);
+                    addResult("Tile[" + t.toString() +" ].getLetter", "", ""+t.getLetter(), ""+c, true);
                 }
                 
                 if( value != t.getValue()){
                     deduct(0.02);
-                    addResult("getValue", "", ""+t.getValue(), ""+value, false);
+                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), ""+value, false);
                 } else {
-                    addResult("getValue", "", ""+t.getValue(), ""+value, true);
+                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), ""+value, true);
                 }
 
                 t.setLetter('A');
                 if( t.getLetter() != 'A'){
                     deduct(0.05);
-                    addResult("setLetter", "'A'", ""+t.getLetter(), "'A'", false);
+                    addResult("Tile[" + t.toString() +" ].setLetter", "'A'", ""+t.getLetter(), "'A'", false);
                 } else {
-                    addResult("setLetter", "'A'", ""+t.getLetter(), "'A'", true);
+                    addResult("Tile[" + t.toString() +" ].setLetter", "'A'", ""+t.getLetter(), "'A'", true);
                 }
 
                 t.setValue(8);
                 if( t.getValue() != 8){
                     deduct(0.05);
-                    addResult("getValue", "", ""+t.getValue(), "8", false);
+                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), "8", false);
                 } else {
-                    addResult("getValue", "", ""+t.getValue(), "8", true);
+                    addResult("Tile[" + t.toString() +" ].getValue", "", ""+t.getValue(), "8", true);
                 }
 
             }            
@@ -102,9 +102,9 @@ class TestTile extends TUtils {
                 String s = t.toString();
                 String expected = c + " - " + value;
                 if (expected.equals(s)){
-                    addResult("toString", "", s, expected, true);
+                    addResult("Tile[" + t.toString() +" ].toString", "", s, expected, true);
                 } else {
-                    addResult("toString", "", s, expected, false);
+                    addResult("Tile[" + t.toString() +" ].toString", "", s, expected, false);
                     deduct(0.05);
                 }
             }
@@ -124,17 +124,17 @@ class TestTile extends TUtils {
             if(t!=null){
                             
                 if (t.equals(t2)){
-                    addResult("equals", "", "", "Same tiles are equal", true);
+                    addResult("Tile[" + t.toString() +" ].equals", "", "", "Same tiles are equal", true);
                 } else {
-                    addResult("equals", "", t2.toString() , "Expected same tiles to be the same.", false);
+                    addResult("Tile[" + t.toString() +" ].equals", "", t2.toString() , "Expected same tiles to be the same.", false);
                     deduct(0.05);
                 }
 
                 t2.setValue(value + 5);
                 if (!t.equals(t2)){
-                    addResult("!equals", "", "", "Different tiles are not equal", true);
+                    addResult("Tile[" + t.toString() +" ].!equals", "", "", "Different tiles are not equal", true);
                 } else {
-                    addResult("!equals", "", t2.toString() , "Different Tiles were same", false);
+                    addResult("Tile[" + t.toString() +" ].!equals", "", t2.toString() , "Different Tiles were same", false);
                     deduct(0.03);
                 }
 

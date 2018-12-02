@@ -26,8 +26,10 @@ public class TUtils {
         if(WEB_RUN){
             results.add("</table><br>\n");
         } else {
-            results.add(String.format("  TEST FINISHED, PASSED: %d/%d.\n", PASS_COUNT, NUM_TESTS ));
+            results.add(String.format("  TEST FINISHED, PASSED: %d/%d.\n\n", PASS_COUNT, NUM_TESTS ));
         }
+        PASS_COUNT = 0;
+        NUM_TESTS = 0;
     }
 
     public static void addResult(String methodTested, int[] argument, String received, String expected, boolean passed){

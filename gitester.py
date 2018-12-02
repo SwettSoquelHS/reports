@@ -340,6 +340,20 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
     }
 
 
+    ch11Descriptor = {
+        "assignment_dir": "chapter11",
+        "targets" : [("Tile","TestTile")], #Files to look for
+        "score" : 0.4 ,              #weight for the assignment
+        "checkWith": "TEST",      #How to verify assignment         
+    }
+
+    ch11_bDescriptor = {
+        "assignment_dir": "ch11b - Poker Hands",
+        "targets" : [("CheckPokerHands","TestCheckPokerHands")], #Files to look for
+        "score" : 0.4 ,              #weight for the assignment
+        "checkWith": "TEST",      #How to verify assignment         
+    }
+
     #Assignments are collection of chapter assignments
     think_java_assignments = {
         "Think Java: Ch2-ch4" : {   #<-- key, value is map 
@@ -360,12 +374,24 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         " Think Java: Ch7 - pt1 " : {   #<-- key, value is map 
             "work": [ch7DescriptorA],
             "enabled": True,
-            "desc": "HW4: Fourth HW Assignment, Ch7 Ex3 & 4" },
+            "desc": "HW7: Fourth HW Assignment, Ch7 Ex3 & 4" },
 
         " Think Java: Ch7 - pt2 " : {   #<-- key, value is map 
             "work": [ch7DescriptorB],
             "enabled": True,
-            "desc": "HW4: Fith HW Assignment, Ch7 Ex5, 6, 8" },
+            "desc": "HW7: Fith HW Assignment, Ch7 Ex5, 6, 8" },
+
+        " Think Java: Ch11" : {   #<-- key, value is map 
+            "work": [ch11Descriptor],
+            "enabled": True,
+            "desc": "HW11: HW Assignment, Ch11 Ex3" },            
+
+        " Think Java: Ch11" : {   #<-- key, value is map 
+            "work": [ch11_bDescriptor],
+            "enabled": True,
+            "desc": "HW11: Poker Hand Test" },            
+
+
 
     }
 
