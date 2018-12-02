@@ -158,13 +158,26 @@ Exercise 6:
 <hr>
 
 <b>[Assignment]  > Think Java: Ch12< </b>
-  [DESC] HW11: Poker Hand Test
+  [DESC] HW12: Poker Hand Test
 
-*[BEGIN ch12]
+*[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:ch12
-[DONE ch12]
+[COMPILING] CheckPokerHands.java
+	[ERROR] javac failed CheckPokerHands.java CheckPokerHands.java:11: error: incompatible types: int[] cannot be converted to int
+	        int suites = Card.CARD_SUITES;
+	                         ^
+	CheckPokerHands.java:12: error: incompatible types: int[] cannot be converted to int
+	        int rank = Card.CARD_RANKS;
+	                       ^
+	CheckPokerHands.java:14: error: incompatible types: Card[] cannot be converted to boolean
+	            if(hand)
+	               ^
+	3 errors
+	
+[SUMMARY] 
+	['CheckPokerHands: COMPILE ERROR (- 0.30)']
+[DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>

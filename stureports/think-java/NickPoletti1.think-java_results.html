@@ -77,8 +77,8 @@ Exercise4!
 	Can you guess what it is
 	Guess a number: 
 	Your guess is 13
-	The number I was thinking of was 57
-	Your guess was off by: 44
+	The number I was thinking of was 69
+	Your guess was off by: 56
 	
 <--
 	[OUTPUT OK]
@@ -407,13 +407,38 @@ MultAdd Exercise
 <hr>
 
 <b>[Assignment]  > Think Java: Ch12< </b>
-  [DESC] HW11: Poker Hand Test
+  [DESC] HW12: Poker Hand Test
 
-*[BEGIN ch12]
+*[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:ch12
-[DONE ch12]
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[ERROR] javac failed TestCheckPokerHands.java
+ ----begin compile output------- 
+TestCheckPokerHands.java:174: error: cannot find symbol
+	                addResult("isHighCard", Arrays.toString(hand), String.valueOf(resultCard.getRank()), 
+	                                                                                        ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:175: error: cannot find symbol
+	                    String.valueOf(expectedRank), resultCard.getRank() == expectedRank);            
+	                                                            ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:176: error: cannot find symbol
+	                if(resultCard.getRank() != expectedRank){
+	                             ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	3 errors
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['CheckPokerHands: COMPILE ERROR (- 0.30)']
+[DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>

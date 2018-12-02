@@ -7,8 +7,13 @@ Run date: 2018-12-02
 
 ----------------------------------------------------------
 [STUDENT INIT] Crevin921
-[REUSING WORK]: ./stuwork/Crevin921/think-java-Crevin921
-[GITWORK] Re-using code.
+[SETUP] Creating student dir:  ./stuwork/Crevin921
+[PRE-WARN]: Expected non-empty: ./stuwork/Crevin921/think-java-Crevin921
+[GITWORK]
+[Attempting DL:https://github.com/SwettSoquelHS/think-java-Crevin921.git]
+Cloning into 'think-java-Crevin921'...
+	
+[GITWORK DONE]
 
 <hr>
 
@@ -67,8 +72,8 @@ Seconds to minutes to hours
 Im thinking of a number between 1 and 100
 	Can you guess what it is? 
 	your guess was: 13
-	The number i was thinking of was: 58
-	you were off by -45
+	The number i was thinking of was: 37
+	you were off by -24
 	
 <--
 	[OUTPUT OK]
@@ -491,13 +496,64 @@ TestCh7Ex8.java:68: error: cannot access Exercise8
 <hr>
 
 <b>[Assignment]  > Think Java: Ch12< </b>
-  [DESC] HW11: Poker Hand Test
+  [DESC] HW12: Poker Hand Test
 
-*[BEGIN ch12]
+*[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:ch12
-[DONE ch12]
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[ERROR] javac failed TestCheckPokerHands.java
+ ----begin compile output------- 
+TestCheckPokerHands.java:107: error: method isRoyalFlush in class CheckPokerHands cannot be applied to given types;
+	            boolean result = CheckPokerHands.isRoyalFlush(hand);
+	                                            ^
+	  required: Card[],Card[],Card[],Card[],Card[]
+	  found: Card[]
+	  reason: actual and formal argument lists differ in length
+	TestCheckPokerHands.java:123: error: cannot find symbol
+	            boolean result = CheckPokerHands.isStraightFlush(hand);
+	                                            ^
+	  symbol:   method isStraightFlush(Card[])
+	  location: class CheckPokerHands
+	TestCheckPokerHands.java:139: error: cannot find symbol
+	            boolean result = CheckPokerHands.isFlush(hand);
+	                                            ^
+	  symbol:   method isFlush(Card[])
+	  location: class CheckPokerHands
+	TestCheckPokerHands.java:154: error: cannot find symbol
+	            boolean result = CheckPokerHands.isFullHouse(hand);
+	                                            ^
+	  symbol:   method isFullHouse(Card[])
+	  location: class CheckPokerHands
+	TestCheckPokerHands.java:172: error: cannot find symbol
+	            Card resultCard = CheckPokerHands.highCard(hand);
+	                                             ^
+	  symbol:   method highCard(Card[])
+	  location: class CheckPokerHands
+	TestCheckPokerHands.java:174: error: cannot find symbol
+	                addResult("isHighCard", Arrays.toString(hand), String.valueOf(resultCard.getRank()), 
+	                                                                                        ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:175: error: cannot find symbol
+	                    String.valueOf(expectedRank), resultCard.getRank() == expectedRank);            
+	                                                            ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:176: error: cannot find symbol
+	                if(resultCard.getRank() != expectedRank){
+	                             ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	8 errors
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['CheckPokerHands: COMPILE ERROR (- 0.30)']
+[DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>

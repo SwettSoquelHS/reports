@@ -71,8 +71,8 @@ Im thinking of a number between 1 and 100,(including both)
 	Can you guess what it is?
 	Type a number: 
 	Your guess is: 13
-	The number I was thinking of was: 88
-	You were off by: -75
+	The number I was thinking of was: 26
+	You were off by: -13
 	
 <--
 	[OUTPUT OK]
@@ -443,13 +443,58 @@ Im thinking of a number between 1 and 100,(including both)
 <hr>
 
 <b>[Assignment]  > Think Java: Ch12< </b>
-  [DESC] HW11: Poker Hand Test
+  [DESC] HW12: Poker Hand Test
 
-*[BEGIN ch12]
+*[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:ch12
-[DONE ch12]
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[SUCCESSFUL COMPILE] TestCheckPokerHands.java
+[RUNNING] TestCheckPokerHands
+-->
+
+	<br>Chapter12, Test Royal Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isRoyalFlush("[Ace of Hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[Queen of Hearts, Jack of Hearts, Ace of Hearts, King of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[Queen of Hearts, Queen of Clubs, Ace of Hearts, King of Hearts, 10 of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Straight Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isStraightFlush("[Ace of Diamonds, King of Diamonds, Queen of Diamonds, Jack of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[Queen of Diamonds, Jack of Diamonds, Ace of Diamonds, King of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 10 of Diamonds]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 7 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFlush("[Ace of Clubs, King of Clubs, Queen of Clubs, Jack of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[Queen of Clubs, Jack of Clubs, Ace of Clubs, King of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 5 of Clubs, 6 of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Hearts, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Full House
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFullHouse("[Ace of Clubs, Ace of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFullHouse("[Ace of Clubs, King of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test High Card
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isHighCard("[Ace of Clubs, Ace of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">12</td><td bgcolor="red"><b>1 </b></td></tr>
+	<tr><td align="right" width="200">isHighCard("[2 of Clubs, 3 of Diamonds, 2 of Hearts, 3 of Hearts, 2 of Diamonds]")  </td><td align="left">3</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.05]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['CheckPokerHands: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
+[DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">0.95</font></b>
 
 </pre></body></html>
