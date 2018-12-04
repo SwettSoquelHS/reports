@@ -11,6 +11,9 @@ Run date: 2018-12-04
 [PRE-WARN]: Expected non-empty: ./stuwork/banjojeebus/think-java-banjojeebus
 [GITWORK]
 [Attempting DL:https://github.com/SwettSoquelHS/think-java-banjojeebus.git]
+Cloning into 'think-java-banjojeebus'...
+	
+[GITWORK DONE]
 
 <hr>
 
@@ -19,7 +22,29 @@ Run date: 2018-12-04
 
 *[BEGIN chapter2]
   [EXPECTING TARGETS] ['Date', 'Time']]
-	[ERROR] No chapter work for:chapter2
+[COMPILING] Date.java
+	[SUCCESSFUL COMPILE] Date.java
+[RUNNING] Date
+-->
+American Format: Tuesday,August 28,2018
+	European format: Tuesday 28 August 2018
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Time.java
+	[SUCCESSFUL COMPILE] Time.java
+[RUNNING] Time
+-->
+Seconds remaining: 39870
+	Percent of day passed: 53.854168
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
@@ -29,10 +54,17 @@ Run date: 2018-12-04
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
-	[ERROR] No chapter work for:chapter4
+[COMPILING] Multadd.java
+	[ERROR] javac failed Multadd.java Multadd.java:10: error: ';' expected
+			double sqrtOfx
+			              ^
+	1 error
+	
+[SUMMARY] 
+	['Multadd: COMPILE ERROR (- 0.10)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.15</b>
 
 <hr>
 
@@ -41,10 +73,12 @@ Run date: 2018-12-04
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-	[ERROR] No chapter work for:chapter6
+[SUMMARY] 
+	['Exercise4: MISSING (- 0.50)'
+	 'Exercise5: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -53,10 +87,11 @@ Run date: 2018-12-04
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
-	[ERROR] No chapter work for:chapter6
+[SUMMARY] 
+	['Swettercise1: MISSING (- 0.50)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.50</b>
 
 <hr>
 
@@ -65,10 +100,33 @@ Run date: 2018-12-04
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[ERROR] javac failed Exercise3.java Exercise3.java:6: error: cannot find symbol
+			for(i = 0; i < array.length(); i ++){
+			    ^
+	  symbol:   variable i
+	  location: class Exercise3
+	Exercise3.java:6: error: cannot find symbol
+			for(i = 0; i < array.length(); i ++){
+			           ^
+	  symbol:   variable i
+	  location: class Exercise3
+	Exercise3.java:6: error: int cannot be dereferenced
+			for(i = 0; i < array.length(); i ++){
+			                    ^
+	Exercise3.java:6: error: cannot find symbol
+			for(i = 0; i < array.length(); i ++){
+			                               ^
+	  symbol:   variable i
+	  location: class Exercise3
+	4 errors
+	
+[SUMMARY] 
+	['Exercise3: COMPILE ERROR (- 0.30)'
+	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.20</b>
 
 <hr>
 
@@ -77,10 +135,13 @@ Run date: 2018-12-04
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise5: MISSING (- 0.50)'
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -89,10 +150,11 @@ Run date: 2018-12-04
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
-	[ERROR] No chapter work for:chapter11
+[SUMMARY] 
+	['Tile: MISSING (- 0.50)']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.50</b>
 
 <hr>
 
@@ -101,9 +163,19 @@ Run date: 2018-12-04
 
 *[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:chapter12
+[COMPILING] CheckPokerHands.java
+	[ERROR] javac failed CheckPokerHands.java CheckPokerHands.java:6: error: <identifier> expected
+	    System.out.print(theDeck);
+	                    ^
+	CheckPokerHands.java:6: error: <identifier> expected
+	    System.out.print(theDeck);
+	                            ^
+	2 errors
+	
+[SUMMARY] 
+	['CheckPokerHands: COMPILE ERROR (- 0.30)']
 [DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>

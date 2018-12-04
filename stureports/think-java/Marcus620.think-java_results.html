@@ -11,6 +11,9 @@ Run date: 2018-12-04
 [PRE-WARN]: Expected non-empty: ./stuwork/Marcus620/think-java-Marcus620
 [GITWORK]
 [Attempting DL:https://github.com/SwettSoquelHS/think-java-Marcus620.git]
+Cloning into 'think-java-Marcus620'...
+	
+[GITWORK DONE]
 
 <hr>
 
@@ -19,20 +22,48 @@ Run date: 2018-12-04
 
 *[BEGIN chapter2]
   [EXPECTING TARGETS] ['Date', 'Time']]
-	[ERROR] No chapter work for:chapter2
+[COMPILING] Date.java
+	[ERROR] javac failed Date.java Date.java:1: error: class date is public, should be declared in a file named date.java
+	public class date {
+	       ^
+	1 error
+	
+[COMPILING] Time.java
+	[ERROR] javac failed Time.java Time.java:1: error: class time is public, should be declared in a file named time.java
+	public class time{
+	       ^
+	1 error
+	
+[SUMMARY] 
+	['Date: COMPILE ERROR (- 0.10)'
+	 'Time: COMPILE ERROR (- 0.10)']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-	[ERROR] No chapter work for:chapter3
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.17)'
+	 'Exercise4: MISSING (- 0.17)']
 [DONE chapter3]
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
-	[ERROR] No chapter work for:chapter4
+[COMPILING] Multadd.java
+	[SUCCESSFUL COMPILE] Multadd.java
+[RUNNING] Multadd
+-->
+10.0
+	1.0606601717798212
+	5.298317366548037
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Multadd: PASSED - EXCELLENT!']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.47</b>
 
 <hr>
 
@@ -65,10 +96,12 @@ Run date: 2018-12-04
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise3: MISSING (- 0.50)'
+	 'Exercise4: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -77,10 +110,13 @@ Run date: 2018-12-04
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[SUMMARY] 
+	['Exercise5: MISSING (- 0.50)'
+	 'Exercise6: MISSING (- 0.50)'
+	 'Exercise8: MISSING (- 0.50)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.00</b>
 
 <hr>
 
@@ -89,10 +125,11 @@ Run date: 2018-12-04
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
-	[ERROR] No chapter work for:chapter11
+[SUMMARY] 
+	['Tile: MISSING (- 0.50)']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.50</b>
 
 <hr>
 
@@ -101,9 +138,34 @@ Run date: 2018-12-04
 
 *[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:chapter12
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[ERROR] javac failed TestCheckPokerHands.java
+ ----begin compile output------- 
+TestCheckPokerHands.java:174: error: cannot find symbol
+	                addResult("isHighCard", Arrays.toString(hand), String.valueOf(resultCard.getRank()), 
+	                                                                                        ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:175: error: cannot find symbol
+	                    String.valueOf(expectedRank), resultCard.getRank() == expectedRank);            
+	                                                            ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:176: error: cannot find symbol
+	                if(resultCard.getRank() != expectedRank){
+	                             ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	3 errors
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['CheckPokerHands: COMPILE ERROR (- 0.30)']
 [DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>

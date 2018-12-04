@@ -11,6 +11,9 @@ Run date: 2018-12-04
 [PRE-WARN]: Expected non-empty: ./stuwork/1amsmith1020/think-java-1amsmith1020
 [GITWORK]
 [Attempting DL:https://github.com/SwettSoquelHS/think-java-1amsmith1020.git]
+Cloning into 'think-java-1amsmith1020'...
+	
+[GITWORK DONE]
 
 <hr>
 
@@ -19,20 +22,94 @@ Run date: 2018-12-04
 
 *[BEGIN chapter2]
   [EXPECTING TARGETS] ['Date', 'Time']]
-	[ERROR] No chapter work for:chapter2
+[COMPILING] Date.java
+	[SUCCESSFUL COMPILE] Date.java
+[RUNNING] Date
+-->
+Friday
+	10
+	May
+	2011
+	European Style:
+	Friday 10 May 2011
+	American Style:
+	Friday, May 10, 2011
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Time.java
+	[SUCCESSFUL COMPILE] Time.java
+[RUNNING] Time
+-->
+Seconds since midnight:39494
+	Seconds remaining today:46906
+	Percentage of day passed:45.710648
+	Minuites passed:23
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Date: PASSED - EXCELLENT!'
+	 'Time: PASSED - EXCELLENT!']
 [DONE chapter2]
 
 *[BEGIN chapter3]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']]
-	[ERROR] No chapter work for:chapter3
+[COMPILING] Exercise3.java
+	[SUCCESSFUL COMPILE] Exercise3.java
+[RUNNING] Exercise3
+-->
+Enter amount of seconds:
+	0 hours 0 minuites 13 seconds 
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise4.java
+	[ERROR] javac failed Exercise4.java Exercise4.java:2: error: package javaa.util does not exist
+	 import javaa.util.Scanner;
+	                  ^
+	Exercise4.java:13: error: cannot find symbol
+	        Scanner in = new Scanner(System.in);
+	        ^
+	  symbol:   class Scanner
+	  location: class Exercise4
+	Exercise4.java:13: error: cannot find symbol
+	        Scanner in = new Scanner(System.in);
+	                         ^
+	  symbol:   class Scanner
+	  location: class Exercise4
+	Exercise4.java:15: error: cannot find symbol
+	        line = in.nextLine();
+	        ^
+	  symbol:   variable line
+	  location: class Exercise4
+	Exercise4.java:16: error: cannot find symbol
+	        System.out.println("You said: " + line);
+	                                          ^
+	  symbol:   variable line
+	  location: class Exercise4
+	5 errors
+	
+[SUMMARY] 
+	['Exercise3: PASSED - EXCELLENT!'
+	 'Exercise4: COMPILE ERROR (- 0.10)']
 [DONE chapter3]
 
 *[BEGIN chapter4]
   [EXPECTING TARGETS] ['Multadd']]
-	[ERROR] No chapter work for:chapter4
+[COMPILING] Multadd.java
+	[ERROR] javac failed Multadd.java Multadd.java:1: error: class, interface, or enum expected
+	public static void Multiadd(String[] args) {
+	              ^
+	1 error
+	
+[SUMMARY] 
+	['Multadd: COMPILE ERROR (- 0.10)']
 [DONE chapter4]
 [ASSIGNMENT DONE] Think Java: Ch2-ch4
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.80</b>
 
 <hr>
 
@@ -41,10 +118,40 @@ Run date: 2018-12-04
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Exercise4', 'Exercise5']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] Ch6Ex4
+[COMPILING] Ch6Ex4.java
+	[ERROR] javac failed Ch6Ex4.java
+ ----begin compile output------- 
+Ch6Ex4.java:56: error: cannot find symbol
+	            boolean isIt = Exercise4.isAbecedarian(testStr);
+	                                    ^
+	  symbol:   method isAbecedarian(String)
+	  location: class Exercise4
+	1 error
+	
+-----------END COMPILE-------
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] Ch6Ex5
+[COMPILING] Ch6Ex5.java
+	[ERROR] javac failed Ch6Ex5.java
+ ----begin compile output------- 
+Ch6Ex5.java:57: error: cannot find symbol
+	            boolean isIt = Exercise5.isDoubloon(testStr);
+	                                    ^
+	  symbol:   method isDoubloon(String)
+	  location: class Exercise5
+	1 error
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Exercise4: COMPILE ERROR (- 0.30)'
+	 'Exercise5: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Think Java: Ch6
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.40</b>
 
 <hr>
 
@@ -53,10 +160,19 @@ Run date: 2018-12-04
 
 *[BEGIN chapter6]
   [EXPECTING TARGETS] ['Swettercise1']
-	[ERROR] No chapter work for:chapter6
+[COMPILING] Swettercise.java
+	[ERROR] javac failed Swettercise.java Swettercise.java:13: error: cannot find symbol
+			System.out.println("Is " + number + " prime? " + isPrime(number));
+			                                                 ^
+	  symbol:   method isPrime(int)
+	  location: class Swettercise
+	1 error
+	
+[SUMMARY] 
+	['Swettercise1: COMPILE ERROR (- 0.30)']
 [DONE chapter6]
 [ASSIGNMENT DONE] Swettercise1
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
@@ -65,10 +181,251 @@ Run date: 2018-12-04
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise3.java
+	[ERROR] javac failed Exercise3.java Exercise3.java:4: error: illegal start of expression
+	<<<<<<< HEAD
+	^
+	Exercise3.java:4: error: illegal start of expression
+	<<<<<<< HEAD
+	  ^
+	Exercise3.java:4: error: illegal start of expression
+	<<<<<<< HEAD
+	    ^
+	Exercise3.java:5: error: > expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			^
+	Exercise3.java:5: error: '.class' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			    ^
+	Exercise3.java:5: error: ';' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			     ^
+	Exercise3.java:5: error: illegal start of expression
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			               ^
+	Exercise3.java:5: error: ';' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			                ^
+	Exercise3.java:5: error: not a statement
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			                  ^
+	Exercise3.java:5: error: ';' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 9700, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,97 }; 
+			                   ^
+	Exercise3.java:6: error: illegal start of type
+	=======
+	^
+	Exercise3.java:6: error: ';' expected
+	=======
+	  ^
+	Exercise3.java:6: error: illegal start of type
+	=======
+	    ^
+	Exercise3.java:6: error: <identifier> expected
+	=======
+	      ^
+	Exercise3.java:6: error: ';' expected
+	=======
+	       ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			   ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			    ^
+	Exercise3.java:7: error: ';' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			     ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			               ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                ^
+	Exercise3.java:7: error: ';' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                  ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                   ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                    ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                       ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                         ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                          ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                             ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                 ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                    ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                      ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                       ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                           ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                             ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                              ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                  ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                    ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                     ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                          ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                             ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                              ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                 ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                   ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                    ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                       ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                         ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                          ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                  ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                   ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                       ^
+	Exercise3.java:7: error: illegal start of type
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                          ^
+	Exercise3.java:7: error: <identifier> expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                           ^
+	Exercise3.java:7: error: ';' expected
+			int[] intArray = {1, 3, 2, 9, 17, 5, 4, 89, 7, 97, 8, 105, 18, 2, 3, 4, 5, 1003, 3, 18, 9 ,98 }; 
+			                                                                                             ^
+	Exercise3.java:8: error: illegal start of type
+	>>>>>>> ae81815f49d400f251fcf909e05d487371d3ea4e
+	^
+	Exercise3.java:8: error: ';' expected
+	>>>>>>> ae81815f49d400f251fcf909e05d487371d3ea4e
+	   ^
+	Exercise3.java:8: error: illegal start of type
+	>>>>>>> ae81815f49d400f251fcf909e05d487371d3ea4e
+	      ^
+	Exercise3.java:8: error: ';' expected
+	>>>>>>> ae81815f49d400f251fcf909e05d487371d3ea4e
+	                                                ^
+	Exercise3.java:9: error: <identifier> expected
+			System.out.println(indexOfMax(intArray));
+			                  ^
+	Exercise3.java:9: error: <identifier> expected
+			System.out.println(indexOfMax(intArray));
+			                             ^
+	Exercise3.java:9: error: ';' expected
+			System.out.println(indexOfMax(intArray));
+			                              ^
+	Exercise3.java:9: error: illegal start of type
+			System.out.println(indexOfMax(intArray));
+			                                      ^
+	Exercise3.java:9: error: <identifier> expected
+			System.out.println(indexOfMax(intArray));
+			                                       ^
+	Exercise3.java:12: error: class, interface, or enum expected
+		public static int indexOfMax(int[] nums) {
+		              ^
+	Exercise3.java:14: error: class, interface, or enum expected
+			int index = 0;
+			^
+	Exercise3.java:15: error: class, interface, or enum expected
+			for(int i =0; i < nums.length; i++){
+			^
+	Exercise3.java:15: error: class, interface, or enum expected
+			for(int i =0; i < nums.length; i++){
+			              ^
+	Exercise3.java:15: error: class, interface, or enum expected
+			for(int i =0; i < nums.length; i++){
+			                               ^
+	Exercise3.java:18: error: class, interface, or enum expected
+					index = i;
+					^
+	Exercise3.java:19: error: class, interface, or enum expected
+				} 
+				^
+	Exercise3.java:21: error: class, interface, or enum expected
+		} 
+		^
+	71 errors
+	
+[COMPILING] Exercise4.java
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[SUCCESSFUL COMPILE] TestCh7Ex4.java
+[RUNNING] TestCh7Ex4
+-->
+
+	<br>Chapter7, Exercise4.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.sieve("2")  </td><td align="left">[false, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("3")  </td><td align="left">[false, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("4")  </td><td align="left">[false, false, true, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("5")  </td><td align="left">[false, false, true, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("6")  </td><td align="left">[false, false, true, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("7")  </td><td align="left">[false, false, true, true, false, true, false]</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.sieve("8")  </td><td align="left">[false, false, true, true, false, true, false, true]</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['Exercise3: COMPILE ERROR (- 0.30)'
+	 'Exercise4: PASSED - EXCELLENT!']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
@@ -77,10 +434,72 @@ Run date: 2018-12-04
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
-	[ERROR] No chapter work for:chapter7
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+
+	<br>Chapter7, Exercise5.areFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.12]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[SUCCESSFUL COMPILE] Exercise6.java
+[TESTING WITH] TestCh7Ex6
+[COMPILING] TestCh7Ex6.java
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.12]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[ERROR] javac failed TestCh7Ex8.java
+ ----begin compile output------- 
+TestCh7Ex8.java:68: error: cannot find symbol
+	            boolean gotBack = Exercise8.isAnagram(s1, s2);
+	                                       ^
+	  symbol:   method isAnagram(String,String)
+	  location: class Exercise8
+	1 error
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise6: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise8: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.46</b>
 
 <hr>
 
@@ -89,10 +508,11 @@ Run date: 2018-12-04
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
-	[ERROR] No chapter work for:chapter11
+[SUMMARY] 
+	['Tile: MISSING (- 0.50)']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.50</b>
 
 <hr>
 
@@ -101,9 +521,54 @@ Run date: 2018-12-04
 
 *[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:chapter12
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[SUCCESSFUL COMPILE] TestCheckPokerHands.java
+[RUNNING] TestCheckPokerHands
+-->
+
+	<br>Chapter12, Test Royal Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isRoyalFlush("[Ace of Hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[Queen of Hearts, Jack of Hearts, Ace of Hearts, King of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[Queen of Hearts, Queen of Clubs, Ace of Hearts, King of Hearts, 10 of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Straight Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isStraightFlush("[Ace of Diamonds, King of Diamonds, Queen of Diamonds, Jack of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[Queen of Diamonds, Jack of Diamonds, Ace of Diamonds, King of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 7 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFlush("[Ace of Clubs, King of Clubs, Queen of Clubs, Jack of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[Queen of Clubs, Jack of Clubs, Ace of Clubs, King of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 5 of Clubs, 6 of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Hearts, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Full House
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFullHouse("[Ace of Clubs, Ace of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isFullHouse("[Ace of Clubs, King of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test High Card
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isHighCard("[Ace of Clubs, Ace of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isHighCard("[2 of Clubs, 3 of Diamonds, 2 of Hearts, 3 of Hearts, 2 of Diamonds]")  </td><td align="left">3</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.06]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['CheckPokerHands: PASSED - GOOD JOB BUT SOME EDGE CASE ERRORS WERE FOUND.']
 [DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">0.94</font></b>
 
 </pre></body></html>
