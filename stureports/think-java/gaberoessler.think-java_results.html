@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-12-04
+Run date: 2018-12-19
 <br>Student User: gaberoessler
 <br>Project: think-java
 <br>
@@ -71,8 +71,8 @@ How many seconds? 13 seconds = 0 hours, 0 minutes, and 0 seconds
 I'm thinking of a number between 1 and 100, inclusive.
 	Can you guess what it is?
 	Type your guess: Your guess is: 13
-	The number I was thinking of was: 73
-	You were off by: 60
+	The number I was thinking of was: 30
+	You were off by: 17
 	
 <--
 	[OUTPUT OK]
@@ -175,10 +175,11 @@ The result is 5.0
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
-	[ERROR] No chapter work for:chapter11
+[SUMMARY] 
+	['Tile: MISSING (- 0.50)']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.50</b>
 
 <hr>
 
@@ -187,9 +188,34 @@ The result is 5.0
 
 *[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:chapter12
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[ERROR] javac failed TestCheckPokerHands.java
+ ----begin compile output------- 
+TestCheckPokerHands.java:174: error: cannot find symbol
+	                addResult("isHighCard", Arrays.toString(hand), String.valueOf(resultCard.getRank()), 
+	                                                                                        ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:175: error: cannot find symbol
+	                    String.valueOf(expectedRank), resultCard.getRank() == expectedRank);            
+	                                                            ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	TestCheckPokerHands.java:176: error: cannot find symbol
+	                if(resultCard.getRank() != expectedRank){
+	                             ^
+	  symbol:   method getRank()
+	  location: variable resultCard of type Card
+	3 errors
+	
+-----------END COMPILE-------
+[SUMMARY] 
+	['CheckPokerHands: COMPILE ERROR (- 0.30)']
 [DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] 0.70</b>
 
 </pre></body></html>

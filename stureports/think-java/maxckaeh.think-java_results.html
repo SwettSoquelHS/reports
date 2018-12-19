@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-12-04
+Run date: 2018-12-19
 <br>Student User: maxckaeh
 <br>Project: think-java
 <br>
@@ -66,8 +66,8 @@ Total number of seconds: 13 seconds = 0 hours, 0 minutes, and 13 seconds.
 -->
 I'm thinking of a number between 0 and 100 (including both). Can you guess what it is? 
 	Your guess is: 13
-	The number I was thinking of is: 60
-	You were off by: -47
+	The number I was thinking of is: 90
+	You were off by: -77
 	
 <--
 	[OUTPUT OK]
@@ -213,23 +213,47 @@ I'm thinking of a number between 0 and 100 (including both). Can you guess what 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise3', 'Exercise4']
 [COMPILING] Exercise3.java
-	[ERROR] javac failed Exercise3.java Exercise3.java:12: error: reached end of file while parsing
-	}
-	 ^
-	1 error
+	[SUCCESSFUL COMPILE] Exercise3.java
+[TESTING WITH] TestCh7Ex3
+[COMPILING] TestCh7Ex3.java
+	[SUCCESSFUL COMPILE] TestCh7Ex3.java
+[RUNNING] TestCh7Ex3
+-->
+
+	<br>Chapter7, Exercise3.indexOfMax()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise4.indexOfMax("[33, 12, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[98, 12, 99]")  </td><td align="left">2</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[99, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[100000, 100, 98, 5, 4, 3, 2, 1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 1, 2, 3, 4, 5]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, 4, 3, 5, 2, 7]")  </td><td align="left">5</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[-5, 0]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise4.indexOfMax("[0, -1]")  </td><td align="left">0</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.0]
 	
+	
+<--
+	[OUTPUT OK]
+
 [COMPILING] Exercise4.java
-	[ERROR] javac failed Exercise4.java Exercise4.java:9: error: missing return statement
-		}
-		^
+	[SUCCESSFUL COMPILE] Exercise4.java
+[TESTING WITH] TestCh7Ex4
+[COMPILING] TestCh7Ex4.java
+	[ERROR] javac failed TestCh7Ex4.java
+ ----begin compile output------- 
+TestCh7Ex4.java:47: error: incompatible types: String cannot be converted to boolean[]
+	            boolean[] gotBack = Exercise4.sieve(n);
+	                                               ^
 	1 error
 	
+-----------END COMPILE-------
 [SUMMARY] 
-	['Exercise3: COMPILE ERROR (- 0.30)'
+	['Exercise3: PASSED - EXCELLENT!'
 	 'Exercise4: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt1 
-<b>          [SCORE] 0.40</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 
@@ -238,13 +262,73 @@ I'm thinking of a number between 0 and 100 (including both). Can you guess what 
 
 *[BEGIN chapter7]
   [EXPECTING TARGETS] ['Exercise5', 'Exercise6', 'Exercise8']
+[COMPILING] Exercise5.java
+	[SUCCESSFUL COMPILE] Exercise5.java
+[TESTING WITH] TestCh7Ex5
+[COMPILING] TestCh7Ex5.java
+	[SUCCESSFUL COMPILE] TestCh7Ex5.java
+[RUNNING] TestCh7Ex5
+-->
+
+	<br>Chapter7, Exercise5.areFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise5.areFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("13, [1, 12, 99]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("26, [13, 26, 1]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("35, [5, 7, 34]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise5.areFactors("12, [1, 12, 4, 6, 2, 3]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.12]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise6.java
+	[SUCCESSFUL COMPILE] Exercise6.java
+[TESTING WITH] TestCh7Ex6
+[COMPILING] TestCh7Ex6.java
+	[SUCCESSFUL COMPILE] TestCh7Ex6.java
+[RUNNING] TestCh7Ex6
+-->
+
+	<br>Chapter7, Exercise6.arePrimeFactors()
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [4, 2, 1]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("8, [2, 2, 2]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("15, [3, 5]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("35, [5, 7, 1]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("30, [2, 3, 5]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("31, [2, 3, 5]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">Exercise6.arePrimeFactors("2431, [11, 13, 17]")  </td><td align="left">Exception Thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	[deductions=0.29000000000000004]
+	
+	
+<--
+	[OUTPUT OK]
+
+[COMPILING] Exercise8.java
+	[SUCCESSFUL COMPILE] Exercise8.java
+[TESTING WITH] TestCh7Ex8
+[COMPILING] TestCh7Ex8.java
+	[ERROR] javac failed TestCh7Ex8.java
+ ----begin compile output------- 
+TestCh7Ex8.java:68: error: cannot access Exercise8
+	            boolean gotBack = Exercise8.isAnagram(s1, s2);
+	                              ^
+	  bad source file: ./Exercise8.java
+	    file does not contain class Exercise8
+	    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+	1 error
+	
+-----------END COMPILE-------
 [SUMMARY] 
-	['Exercise5: MISSING (- 0.50)'
-	 'Exercise6: MISSING (- 0.50)'
-	 'Exercise8: MISSING (- 0.50)']
+	['Exercise5: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise6: PASSED - BUT TEST CASES FOUND SOME ERRORS'
+	 'Exercise8: COMPILE ERROR (- 0.30)']
 [DONE chapter7]
 [ASSIGNMENT DONE]  Think Java: Ch7 - pt2 
-<b>          [SCORE] 0.00</b>
+<b>          [SCORE] 0.29</b>
 
 <hr>
 
@@ -294,9 +378,54 @@ I'm thinking of a number between 0 and 100 (including both). Can you guess what 
 
 *[BEGIN chapter12]
   [EXPECTING TARGETS] ['CheckPokerHands']
-	[ERROR] No chapter work for:chapter12
+[COMPILING] CheckPokerHands.java
+	[SUCCESSFUL COMPILE] CheckPokerHands.java
+[TESTING WITH] TestCheckPokerHands
+[COMPILING] TestCheckPokerHands.java
+	[SUCCESSFUL COMPILE] TestCheckPokerHands.java
+[RUNNING] TestCheckPokerHands
+-->
+
+	<br>Chapter12, Test Royal Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isRoyalFlush("[Ace of Hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 10 of Hearts]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[Queen of Hearts, Jack of Hearts, Ace of Hearts, King of Hearts, 10 of Hearts]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[Queen of Hearts, Queen of Clubs, Ace of Hearts, King of Hearts, 10 of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Straight Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isStraightFlush("[Ace of Diamonds, King of Diamonds, Queen of Diamonds, Jack of Diamonds, 10 of Diamonds]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[Queen of Diamonds, Jack of Diamonds, Ace of Diamonds, King of Diamonds, 10 of Diamonds]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 10 of Diamonds]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 7 of Diamonds]")  </td><td align="left">Exception thrown</td><td bgcolor="red"><b>true </b></td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFlush("[Ace of Clubs, King of Clubs, Queen of Clubs, Jack of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[Queen of Clubs, Jack of Clubs, Ace of Clubs, King of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 5 of Clubs, 6 of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Hearts, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Full House
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFullHouse("[Ace of Clubs, Ace of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFullHouse("[Ace of Clubs, King of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test High Card
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isHighCard("[Ace of Clubs, Ace of Diamonds, Queen of Clubs, Queen of Diamonds, Queen of Hearts]")  </td><td align="left">1</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isHighCard("[2 of Clubs, 3 of Diamonds, 2 of Hearts, 3 of Hearts, 2 of Diamonds]")  </td><td align="left">3</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	[deductions=0.13]
+	
+	
+<--
+	[OUTPUT OK]
+
+[SUMMARY] 
+	['CheckPokerHands: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.25</b>
+<b>          [SCORE] <font color="green">0.87</font></b>
 
 </pre></body></html>

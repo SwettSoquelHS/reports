@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-12-04
+Run date: 2018-12-19
 <br>Student User: Crevin921
 <br>Project: think-java
 <br>
@@ -72,8 +72,8 @@ Seconds to minutes to hours
 Im thinking of a number between 1 and 100
 	Can you guess what it is? 
 	your guess was: 13
-	The number i was thinking of was: 76
-	you were off by -63
+	The number i was thinking of was: 70
+	you were off by -57
 	
 <--
 	[OUTPUT OK]
@@ -512,26 +512,12 @@ TestCheckPokerHands.java:107: error: method isRoyalFlush in class CheckPokerHand
 	  required: Card[],Card[],Card[],Card[],Card[]
 	  found: Card[]
 	  reason: actual and formal argument lists differ in length
-	TestCheckPokerHands.java:123: error: cannot find symbol
+	TestCheckPokerHands.java:123: error: method isStraightFlush in class CheckPokerHands cannot be applied to given types;
 	            boolean result = CheckPokerHands.isStraightFlush(hand);
 	                                            ^
-	  symbol:   method isStraightFlush(Card[])
-	  location: class CheckPokerHands
-	TestCheckPokerHands.java:139: error: cannot find symbol
-	            boolean result = CheckPokerHands.isFlush(hand);
-	                                            ^
-	  symbol:   method isFlush(Card[])
-	  location: class CheckPokerHands
-	TestCheckPokerHands.java:154: error: cannot find symbol
-	            boolean result = CheckPokerHands.isFullHouse(hand);
-	                                            ^
-	  symbol:   method isFullHouse(Card[])
-	  location: class CheckPokerHands
-	TestCheckPokerHands.java:172: error: cannot find symbol
-	            Card resultCard = CheckPokerHands.highCard(hand);
-	                                             ^
-	  symbol:   method highCard(Card[])
-	  location: class CheckPokerHands
+	  required: Card[],Card[]
+	  found: Card[]
+	  reason: actual and formal argument lists differ in length
 	TestCheckPokerHands.java:174: error: cannot find symbol
 	                addResult("isHighCard", Arrays.toString(hand), String.valueOf(resultCard.getRank()), 
 	                                                                                        ^
@@ -547,7 +533,7 @@ TestCheckPokerHands.java:107: error: method isRoyalFlush in class CheckPokerHand
 	                             ^
 	  symbol:   method getRank()
 	  location: variable resultCard of type Card
-	8 errors
+	5 errors
 	
 -----------END COMPILE-------
 [SUMMARY] 

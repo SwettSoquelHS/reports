@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-12-04
+Run date: 2018-12-19
 <br>Student User: KaylaRidesBikes
 <br>Project: think-java
 <br>
@@ -149,11 +149,45 @@ Exercise 6:
 
 *[BEGIN chapter11]
   [EXPECTING TARGETS] ['Tile']
+[COMPILING] Tile.java
+	[SUCCESSFUL COMPILE] Tile.java
+[TESTING WITH] TestTile
+[COMPILING] TestTile.java
+	[ERROR] javac failed TestTile.java
+ ----begin compile output------- 
+TestTile.java:38: error: incompatible types: char cannot be converted to String
+	            Tile t = new Tile(c, value);        
+	                              ^
+	TestTile.java:56: error: incompatible types: char cannot be converted to String
+	            Tile t = new Tile(c, value);        
+	                              ^
+	TestTile.java:58: error: incomparable types: char and String
+	                if( c != t.getLetter()){
+	                      ^
+	TestTile.java:72: error: incompatible types: char cannot be converted to String
+	                t.setLetter('A');
+	                            ^
+	TestTile.java:73: error: incomparable types: String and char
+	                if( t.getLetter() != 'A'){
+	                                  ^
+	TestTile.java:100: error: incompatible types: char cannot be converted to String
+	            Tile t = new Tile(c, value);        
+	                              ^
+	TestTile.java:122: error: incompatible types: char cannot be converted to String
+	            Tile t = new Tile(c, value);
+	                              ^
+	TestTile.java:123: error: incompatible types: char cannot be converted to String
+	            Tile t2 = new Tile(c, value);        
+	                               ^
+	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+	8 errors
+	
+-----------END COMPILE-------
 [SUMMARY] 
-	['Tile: MISSING (- 0.50)']
+	['Tile: COMPILE ERROR (- 0.30)']
 [DONE chapter11]
 [ASSIGNMENT DONE]  Think Java: Ch11
-<b>          [SCORE] 0.50</b>
+<b>          [SCORE] 0.70</b>
 
 <hr>
 

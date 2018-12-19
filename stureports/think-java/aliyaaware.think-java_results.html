@@ -1,5 +1,5 @@
 <html><head><title>think-java status</title></head><body>
-Run date: 2018-12-04
+Run date: 2018-12-19
 <br>Student User: aliyaaware
 <br>Project: think-java
 <br>
@@ -64,8 +64,8 @@ How many seconds do you want to convert? 13 seconds = 0 hours, 0 minutes, 13 sec
 -->
 Im thinking of a number between 1-100, can you guess it?
 	Type a number : Your Guess is 13
-	THe number I was thinkin of is: 7
-	You were off by: 6
+	THe number I was thinkin of is: 32
+	You were off by: 19
 	
 <--
 	[OUTPUT OK]
@@ -418,30 +418,48 @@ TestTile.java:38: error: incompatible types: possible lossy conversion from int 
 	[SUCCESSFUL COMPILE] CheckPokerHands.java
 [TESTING WITH] TestCheckPokerHands
 [COMPILING] TestCheckPokerHands.java
-	[ERROR] javac failed TestCheckPokerHands.java
- ----begin compile output------- 
-TestCheckPokerHands.java:174: error: cannot find symbol
-	                addResult("isHighCard", Arrays.toString(hand), String.valueOf(resultCard.getRank()), 
-	                                                                                        ^
-	  symbol:   method getRank()
-	  location: variable resultCard of type Card
-	TestCheckPokerHands.java:175: error: cannot find symbol
-	                    String.valueOf(expectedRank), resultCard.getRank() == expectedRank);            
-	                                                            ^
-	  symbol:   method getRank()
-	  location: variable resultCard of type Card
-	TestCheckPokerHands.java:176: error: cannot find symbol
-	                if(resultCard.getRank() != expectedRank){
-	                             ^
-	  symbol:   method getRank()
-	  location: variable resultCard of type Card
-	3 errors
+	[SUCCESSFUL COMPILE] TestCheckPokerHands.java
+[RUNNING] TestCheckPokerHands
+-->
+
+	<br>Chapter12, Test Royal Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isRoyalFlush("[Ace of Hearts, 4 of Hearts, 3 of Hearts, 2 of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[3 of Hearts, 2 of Hearts, Ace of Hearts, 4 of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isRoyalFlush("[3 of Hearts, 3 of Clubs, Ace of Hearts, 4 of Hearts, 10 of Hearts]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	</table><br>
 	
------------END COMPILE-------
+	<br>Chapter12, Test Straight Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isStraightFlush("[Ace of Diamonds, 4 of Diamonds, 3 of Diamonds, 2 of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 2 of Diamonds, Ace of Diamonds, 4 of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 10 of Diamonds]")  </td><td align="left">true</td><td bgcolor="red"><b>false </b></td></tr>
+	<tr><td align="right" width="200">isStraightFlush("[3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 7 of Diamonds]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Flush
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFlush("[Ace of Clubs, 4 of Clubs, 3 of Clubs, 2 of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 2 of Clubs, Ace of Clubs, 4 of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 5 of Clubs, 6 of Clubs, 10 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Clubs, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">true</td><td width="50" bgcolor="green"> :) </td></tr>
+	<tr><td align="right" width="200">isFlush("[3 of Clubs, 4 of Hearts, 10 of Clubs, 6 of Clubs, 6 of Clubs]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test Full House
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr><tr><td align="right" width="200">isFullHouse("[Ace of Clubs, Ace of Diamonds, 3 of Clubs, 3 of Diamonds, 3 of Hearts]")  </td><td align="left">false</td><td bgcolor="red"><b>true </b></td></tr>
+	<tr><td align="right" width="200">isFullHouse("[Ace of Clubs, 4 of Diamonds, 3 of Clubs, 3 of Diamonds, 3 of Hearts]")  </td><td align="left">false</td><td width="50" bgcolor="green"> :) </td></tr>
+	</table><br>
+	
+	<br>Chapter12, Test High Card
+	<table width="600" border="1"><tr><th align="right" width="200"> Function Call</th><th align= "left"> -->Your output<--</th><th width="50"> Expected Output </th></tr></table><br>
+	[deductions=0.2]
+	
+	
+<--
+	[OUTPUT OK]
+
 [SUMMARY] 
-	['CheckPokerHands: COMPILE ERROR (- 0.30)']
+	['CheckPokerHands: PASSED - BUT TEST CASES FOUND SOME ERRORS']
 [DONE chapter12]
 [ASSIGNMENT DONE]  Think Java: Ch12
-<b>          [SCORE] 0.70</b>
+<b>          [SCORE] 0.80</b>
 
 </pre></body></html>
