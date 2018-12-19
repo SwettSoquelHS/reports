@@ -347,8 +347,8 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
         "checkWith": "TEST",      #How to verify assignment         
     }
 
-    ch11_bDescriptor = {
-        "assignment_dir": "ch11b - Poker Hands",
+    ch12Descriptor = {
+        "assignment_dir": "chapter12",
         "targets" : [("CheckPokerHands","TestCheckPokerHands")], #Files to look for
         "score" : 0.4 ,              #weight for the assignment
         "checkWith": "TEST",      #How to verify assignment         
@@ -386,10 +386,10 @@ def handle_think_java( stuProjDir, studentReport, studentGithubUser ):
             "enabled": True,
             "desc": "HW11: HW Assignment, Ch11 Ex3" },            
 
-        " Think Java: Ch11" : {   #<-- key, value is map 
-            "work": [ch11_bDescriptor],
+        " Think Java: Ch12" : {   #<-- key, value is map 
+            "work": [ch12Descriptor],
             "enabled": True,
-            "desc": "HW11: Poker Hand Test" },            
+            "desc": "HW12: Poker Hand Test" },            
 
 
 
